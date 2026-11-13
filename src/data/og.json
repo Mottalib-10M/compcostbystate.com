@@ -1,0 +1,13 @@
+{
+ "accent": "#7A2E1F",
+ "symbol": "WC",
+ "variants": [
+  {
+   "file": "og-en.png",
+   "title": "Workers' comp cost\nby state and class code",
+   "subtitle": "Rate per $100 of payroll · 51 states · 53 classes · experience mod",
+   "badge": "Oregon DCBS study · WA L&I 2026-2027 rates",
+   "brand": "Comp Cost By State"
+  }
+ ]
+}

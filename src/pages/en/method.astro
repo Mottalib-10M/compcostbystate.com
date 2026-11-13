@@ -1,0 +1,42 @@
+---
+/** Method: the documents, how each figure is built, a worked example, the limits. Figures from the kit. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { KIT as K } from '../../lib/kit';
+import { src, table } from '../../lib/helpers';
+import { VALUE } from '../../content/home';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('method', lang);
+const title = 'Workers Comp Cost Method 2026: State Study and L&I Data';
+const description = 'How the workers comp cost figures are built in 2026: the Oregon DCBS study of 51 states and 53 classes, Washington L&I hourly rates, and coverage rules read.';
+const { st: ST, code: CODE, payroll: PAY } = K.EX;
+const R = K.rate(CODE, ST);
+const nRules = Object.keys(K.RULES).length;
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'How the figures are built', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'How the figures are built', path }])]} breadcrumbs={[{ label: 'How the figures are built' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>How the workers’ comp cost figures are built</h1>
+    <p><strong>Every premium on this site is payroll divided by 100, times a published average rate for one class of work in one state, times the experience modification you enter. The rates come from a state study and a state fund; nothing is a quote, and no insurer’s price is reproduced.</strong></p>
+    <p>{VALUE}</p>
+    <h2>1. Rates of 51 jurisdictions and 53 classes</h2>
+    <p>The class rates and the state index come from the <Fragment set:html={src('dcbs_2024', 'Workers’ Compensation Premium Rate Ranking, Calendar Year 2024')} /> of the Oregon Department of Consumer and Business Services (DCBS), published in June 2025 and read on {K.day(K.P.retrieved_at)}. The department surveyed regulators and rating bureaus for the rates in effect on January 1, 2024, then computed for each class a manual rate: the bureau rate, times the premium-weighted average expense multiplier of the insurers covering at least 60% of the state’s market, plus the state taxes and assessments not already included. Appendix 6 of the study gives that rate and its rank for {K.NCLASS} classes in each of the {K.N} jurisdictions; table 1 gives the index, which weights the classes by Oregon’s payroll. This site reads both tables from the PDF with a script and keeps every value as published, to the cent.</p>
+    <p>Where a state has no class comparable to a code, the study prints N/A and the calculators leave that state out for that code. The study itself states its limits: index rates are not the premium rates employers pay, and a state’s index is not strictly comparable from one study to the next. The site follows both warnings. Oregon publishes the study without any restriction on reuse that this site could find; it is cited and linked on every page that uses it.</p>
+    <h2>2. Washington state fund</h2>
+    <p>Washington prices by the hour worked. The site reads the spreadsheets of the Department of Labor &amp; Industries: <Fragment set:html={src('wa_fund2026', '2026 rates by class and fund')} /> and <Fragment set:html={src('wa_fund2027', 'proposed 2027 rates')} />, keeping the composite rate and the payroll deduction of each of {K.num(K.NWA)} hourly classes, both stated by L&I at an experience factor of 1.0000. {K.WASQ.length} wallboard classes priced per square foot are left out. The all-class averages, {K.r4(K.CH.wa.avg2026)} in 2026 and {K.r4(K.CH.wa.avg2027)} proposed for 2027, come from the <Fragment set:html={src('wa_bus2027', 'table by business type')} />.</p>
+    <h2>3. Coverage rules</h2>
+    <p>The rule of {nRules} states was read on the state agency’s employer page or in the statute, on {K.day(K.P.retrieved_at)}, and summarized in plain words with its link. Agency pages of other states refused automated reading or returned errors, and the site did not work around them: for those states, the tool says the rule was not read. Announced changes come from the <Fragment set:html={src('ca_cdi', 'California Department of Insurance')} />, the <Fragment set:html={src('or_cost', 'Oregon DCBS')} /> and Washington L&I.</p>
+    <h2>4. A worked example</h2>
+    <p>The example case of the site is an electrical contractor in California, class {CODE}, with {K.usd(PAY)} of payroll and a mod of 1.00. The study rate is {K.r100(R)} per $100. {K.usd(PAY)} divided by 100 is {K.num(PAY / 100)}; times {K.r100(R)} gives {K.usd(K.prem(PAY, R))} a year. With a mod of 0.85 the premium becomes {K.usd(K.prem(PAY, R, 0.85))}.</p>
+    <Fragment set:html={table(['Step', 'Value'], [['Payroll', K.usd(PAY)], ['Units of $100', K.num(PAY / 100)], ['Rate per $100 (January 1, 2024)', K.r100(R)], ['Premium at mod 1.00', K.usd(K.prem(PAY, R))], ['Premium at mod 0.85', K.usd(K.prem(PAY, R, 0.85))]], 'The example case, step by step', ['l', 'r'])} />
+    <h2>5. Limits</h2>
+    <ul>
+      <li>The rates are averages across insurers at January 1, 2024; many states have changed rates since. California’s advisory rate rose {K.pct(K.CH.ca.pct, 1)} from {K.day(K.CH.ca.effective)}.</li>
+      <li>No loss cost of the National Council on Compensation Insurance is reproduced: the figures are the state study’s calculated rates.</li>
+      <li>Minimum premiums, expense constants, schedule credits, premium discounts and state surcharges outside the study are not applied.</li>
+      <li>Owners’ payroll rules, tips and overtime treatment differ by state and are not modeled.</li>
+      <li>Nothing here is a quote, insurance advice or legal advice; your insurer and your state agency decide.</li>
+    </ul>
+    <p>Corrections: <a href={route('contact', lang)}>contact page</a>.</p>
+  </article>
+</PageLayout>

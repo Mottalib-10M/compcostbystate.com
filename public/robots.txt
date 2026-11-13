@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /*?*
+
+Sitemap: https://compcostbystate.com/sitemap-index.xml

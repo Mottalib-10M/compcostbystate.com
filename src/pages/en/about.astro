@@ -1,0 +1,31 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, AUTHOR_DESC, CONTACT_EMAIL } from '../../data/site-config';
+import { VALUE } from '../../content/home';
+import { KIT as K } from '../../lib/kit';
+import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('about', lang);
+const title = 'Comp Cost By State 2026: Who Publishes These Calculators';
+const description = 'Comp Cost By State in 2026: who publishes these workers comp cost calculators, the state study and state fund tables behind them, and what the site never sells.';
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path }])]} breadcrumbs={[{ label: 'About' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>About Comp Cost By State</h1>
+    <p>{AUTHOR_DESC.en}</p>
+    <h2>Why these workers’ comp calculators exist</h2>
+    <p>A business owner hiring a first employee, a contractor bidding in a new state or a bookkeeper checking a renewal asks a plain question: what does workers’ compensation cost for this kind of work, here. The pages that rank for it belong to insurers, agents and lead sites. Most give a national average per employee that fits no one, then ask for a phone number before they show anything specific.</p>
+    <p>{VALUE}</p>
+    <h2>Who publishes it</h2>
+    <p>The site is published by {AUTHOR_NAME}, a company that builds calculators on public data. It is an independent site, not an insurer, an agent or a broker. It sells no policy, takes no commission, has no partner to send you to, carries no affiliate link and asks for no contact details.</p>
+    <LegalIdentity lang={lang} />
+    <h2>What it relies on</h2>
+    <p>The premium rate ranking of the Oregon Department of Consumer and Business Services, with the rates of {K.NCLASS} classes in {K.N} jurisdictions in effect on January 1, 2024; the 2026 and proposed 2027 hourly rates of the Washington Department of Labor &amp; Industries; the coverage rules published by {Object.keys(K.RULES).length} state agencies or legislatures; and the rate decisions of California and Oregon.</p>
+    <h2>What it leaves out</h2>
+    <p>Quotes and insurer prices, which only an insurer can give; the loss costs of the National Council on Compensation Insurance; claims advice; and the rules of states whose sites could not be read. The <a href={route('method', lang)}>method page</a> lists every simplification and the <a href={route('editorial', lang)}>editorial policy</a> explains corrections.</p>
+    <h2>Contact</h2>
+    <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, for a rate that changed or a rule we read wrong. We answer questions about a figure or a source, not about your own policy, which only your insurer or state agency can decide.</p>
+  </article>
+</PageLayout>

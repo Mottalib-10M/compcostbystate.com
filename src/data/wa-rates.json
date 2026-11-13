@@ -1,0 +1,3212 @@
+{
+"_source": "Washington State Department of Labor & Industries: 2026 hourly rates by risk classification code and fund (adopted) and proposed 2027 rates; composite base rates by business type. State fund rates per hour worked.",
+"urls": {
+"page": "https://lni.wa.gov/insurance/rates-risk-classes/rates-for-workers-compensation/index",
+"fund2026": "https://lni.wa.gov/insurance/_docs/2026RatesByClassCodeFund.xlsx",
+"fund2027": "https://lni.wa.gov/insurance/_docs/Proposed2027RatesByClassCodeFund.xlsx",
+"bus2027": "https://lni.wa.gov/insurance/_docs/Proposed2027RatesBusTypeClassCode.xlsx"
+},
+"retrieved_at": "2026-11-13",
+"classes": {
+"0101": {
+"desc": "Excavation, Road Construction, Land Clearing, NOC",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.0272,
+"ded2026": 0.3532,
+"comp2027": 1.9777,
+"ded2027": 0.3674,
+"base2026": 2.0272,
+"base2027": 1.9777
+},
+"0103": {
+"desc": "Drilling and Geophysical Exploration, NOC",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.6768,
+"ded2026": 0.53185,
+"comp2027": 2.8243,
+"ded2027": 0.53755,
+"base2026": 2.6768,
+"base2027": 2.8243
+},
+"0104": {
+"desc": "Dredging, NOC",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.2207,
+"ded2026": 0.33965,
+"comp2027": 2.3173,
+"ded2027": 0.36,
+"base2026": 2.2207,
+"base2027": 2.3173
+},
+"0105": {
+"desc": "Fence Erection and Repair, NOC",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.2888,
+"ded2026": 0.43745,
+"comp2027": 2.2576,
+"ded2027": 0.44315,
+"base2026": 2.2888,
+"base2027": 2.2576
+},
+"0106": {
+"desc": "Tree Care and Pruning Services, NOC",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 7.0142,
+"ded2026": 1.2785,
+"comp2027": 7.3634,
+"ded2027": 1.3257,
+"base2026": 7.0142,
+"base2027": 7.3634
+},
+"0107": {
+"desc": "Underground Utility Line Construction and Pipelaying, NOC",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 1.92,
+"ded2026": 0.33125,
+"comp2027": 1.9626,
+"ded2027": 0.34325,
+"base2026": 1.92,
+"base2027": 1.9626
+},
+"0108": {
+"desc": "Sewer & Septic System Const, Underground Tank Install, Repair, Remove",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.2207,
+"ded2026": 0.33965,
+"comp2027": 2.3173,
+"ded2027": 0.36,
+"base2026": 2.2207,
+"base2027": 2.3173
+},
+"0112": {
+"desc": "Sand and Gravel Production including Dealers",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 1.6761,
+"ded2026": 0.32805,
+"comp2027": 1.7224,
+"ded2027": 0.33985,
+"base2026": 1.6761,
+"base2027": 1.7224
+},
+"0201": {
+"desc": "Bridge, Bulkhead and Tunnel Construction",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 4.6218,
+"ded2026": 0.583,
+"comp2027": 4.7828,
+"ded2027": 0.61295,
+"base2026": 4.6218,
+"base2027": 4.7828
+},
+"0202": {
+"desc": "Pile Construction, Wharf, Pier & Dock Construction, Diving Operations",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 4.0281,
+"ded2026": 0.5393,
+"comp2027": 4.3057,
+"ded2027": 0.55395,
+"base2026": 4.0281,
+"base2027": 4.3057
+},
+"0210": {
+"desc": "Asphalt Paving - Highway, Streets and Roads",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.4051,
+"ded2026": 0.37625,
+"comp2027": 2.392,
+"ded2027": 0.3917,
+"base2026": 2.4051,
+"base2027": 2.392
+},
+"0212": {
+"desc": "Asphalt Paving or Surfacing, NOC",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.6686,
+"ded2026": 0.45365,
+"comp2027": 3.1596,
+"ded2027": 0.5246,
+"base2026": 2.6686,
+"base2027": 3.1596
+},
+"0214": {
+"desc": "Concrete Work - Highways, Streets, Roads and Sidewalks",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 3.4743,
+"ded2026": 0.45155,
+"comp2027": 3.7828,
+"ded2027": 0.4855,
+"base2026": 3.4743,
+"base2027": 3.7828
+},
+"0217": {
+"desc": "Concrete Work - Foundations and Flatwork",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.2985,
+"ded2026": 0.3937,
+"comp2027": 2.4493,
+"ded2027": 0.414,
+"base2026": 2.2985,
+"base2027": 2.4493
+},
+"0219": {
+"desc": "Guardrails, Street Signs and Traffic Lights Installation",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 1.5532,
+"ded2026": 0.287,
+"comp2027": 1.588,
+"ded2027": 0.2945,
+"base2026": 1.5532,
+"base2027": 1.588
+},
+"0301": {
+"desc": "Landscape Construction and Renovation",
+"group": "Building Construction And Trades",
+"comp2026": 2.1811,
+"ded2026": 0.4279,
+"comp2027": 2.1594,
+"ded2027": 0.42665,
+"base2026": 2.1811,
+"base2027": 2.1594
+},
+"0302": {
+"desc": "Masonry Construction",
+"group": "Building Construction And Trades",
+"comp2026": 3.6401,
+"ded2026": 0.5353,
+"comp2027": 3.8354,
+"ded2027": 0.5621,
+"base2026": 3.6401,
+"base2027": 3.8354
+},
+"0303": {
+"desc": "Plastering, Stuccoing and Lathing: Buildings",
+"group": "Building Construction And Trades",
+"comp2026": 4.1115,
+"ded2026": 0.6081,
+"comp2027": 4.3365,
+"ded2027": 0.64235,
+"base2026": 4.1115,
+"base2027": 4.3365
+},
+"0306": {
+"desc": "Plumbing",
+"group": "Building Construction And Trades",
+"comp2026": 1.8222,
+"ded2026": 0.3129,
+"comp2027": 2.0029,
+"ded2027": 0.32995,
+"base2026": 1.8222,
+"base2027": 2.0029
+},
+"0307": {
+"desc": "HVAC-R System/Wood stove-Install, Svs, Repair",
+"group": "Building Construction And Trades",
+"comp2026": 1.9751,
+"ded2026": 0.34015,
+"comp2027": 2.045,
+"ded2027": 0.35185,
+"base2026": 1.9751,
+"base2027": 2.045
+},
+"0308": {
+"desc": "Lawn Care Maintenance",
+"group": "Building Construction And Trades",
+"comp2026": 1.4948,
+"ded2026": 0.33235,
+"comp2027": 1.5638,
+"ded2027": 0.3455,
+"base2026": 1.4948,
+"base2027": 1.5638
+},
+"0403": {
+"desc": "Sign- Erection, Repair, Removal",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 3.2776,
+"ded2026": 0.5159,
+"comp2027": 3.4832,
+"ded2027": 0.5426,
+"base2026": 3.2776,
+"base2027": 3.4832
+},
+"0502": {
+"desc": "Floor and Counter Covering Installation",
+"group": "Building Construction And Trades",
+"comp2026": 2.1296,
+"ded2026": 0.36545,
+"comp2027": 2.3057,
+"ded2027": 0.392,
+"base2026": 2.1296,
+"base2027": 2.3057
+},
+"0504": {
+"desc": "Painting: Building and Structures - Exterior Work",
+"group": "Building Construction And Trades",
+"comp2026": 3.7129,
+"ded2026": 0.60045,
+"comp2027": 3.7419,
+"ded2027": 0.62175,
+"base2026": 3.7129,
+"base2027": 3.7419
+},
+"0507": {
+"desc": "Roof Work - Construction and Repair",
+"group": "Building Construction And Trades",
+"comp2026": 5.793,
+"ded2026": 1.0034,
+"comp2027": 6.0407,
+"ded2027": 1.0594,
+"base2026": 5.793,
+"base2027": 6.0407
+},
+"0508": {
+"desc": "Tower, Tank, Windmill and Crane Construction",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 3.3235,
+"ded2026": 0.44665,
+"comp2027": 3.1992,
+"ded2027": 0.44305,
+"base2026": 3.3235,
+"base2027": 3.1992
+},
+"0509": {
+"desc": "Overhead Power and Transmission Line Construction",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.1729,
+"ded2026": 0.29615,
+"comp2027": 2.1744,
+"ded2027": 0.3063,
+"base2026": 2.1729,
+"base2027": 2.1744
+},
+"0510": {
+"desc": "Wood Frame Building Construction and Alterations",
+"group": "Building Construction And Trades",
+"comp2026": 4.6938,
+"ded2026": 0.78965,
+"comp2027": 4.7452,
+"ded2027": 0.8093,
+"base2026": 4.6938,
+"base2027": 4.7452
+},
+"0511": {
+"desc": "Glass Installation: Buildings",
+"group": "Building Construction And Trades",
+"comp2026": 3.6183,
+"ded2026": 0.54255,
+"comp2027": 4.0733,
+"ded2027": 0.5989,
+"base2026": 3.6183,
+"base2027": 4.0733
+},
+"0512": {
+"desc": "Insulation Installation and Asbestos Abatement Work",
+"group": "Building Construction And Trades",
+"comp2026": 2.624,
+"ded2026": 0.4659,
+"comp2027": 2.6827,
+"ded2027": 0.48235,
+"base2026": 2.624,
+"base2027": 2.6827
+},
+"0513": {
+"desc": "Interior Finish Carpentry",
+"group": "Building Construction And Trades",
+"comp2026": 2.1088,
+"ded2026": 0.37765,
+"comp2027": 2.3138,
+"ded2027": 0.40125,
+"base2026": 2.1088,
+"base2027": 2.3138
+},
+"0514": {
+"desc": "Garage Door Installation, Service and Repair",
+"group": "Building Construction And Trades",
+"comp2026": 3.0113,
+"ded2026": 0.5081,
+"comp2027": 3.1483,
+"ded2027": 0.5387,
+"base2026": 3.0113,
+"base2027": 3.1483
+},
+"0516": {
+"desc": "Building Repair, Remodeling and Carpentry, NOC",
+"group": "Building Construction And Trades",
+"comp2026": 2.9469,
+"ded2026": 0.4912,
+"comp2027": 2.9834,
+"ded2027": 0.5099,
+"base2026": 2.9469,
+"base2027": 2.9834
+},
+"0517": {
+"desc": "Factory Built Home Set-up by Contractor/Manufacturer",
+"group": "Building Construction And Trades",
+"comp2026": 3.5608,
+"ded2026": 0.56225,
+"comp2027": 3.6632,
+"ded2027": 0.5842,
+"base2026": 3.5608,
+"base2027": 3.6632
+},
+"0518": {
+"desc": "Non-Wood Frame Building Construction",
+"group": "Building Construction And Trades",
+"comp2026": 2.6722,
+"ded2026": 0.41305,
+"comp2027": 2.576,
+"ded2027": 0.41265,
+"base2026": 2.6722,
+"base2027": 2.576
+},
+"0519": {
+"desc": "Sheet Metal Siding, Gutter and Downspout Installation",
+"group": "Building Construction And Trades",
+"comp2026": 3.9378,
+"ded2026": 0.579,
+"comp2027": 3.7385,
+"ded2027": 0.56535,
+"base2026": 3.9378,
+"base2027": 3.7385
+},
+"0521": {
+"desc": "Painting: Buildings - Interior Work",
+"group": "Building Construction And Trades",
+"comp2026": 1.8962,
+"ded2026": 0.356,
+"comp2027": 1.888,
+"ded2027": 0.36385,
+"base2026": 1.8962,
+"base2027": 1.888
+},
+"0540": {
+"desc": "Wallboard Installation - Discounted Rate",
+"group": "Building Construction And Trades",
+"comp2026": 0.0404,
+"ded2026": 0.00675,
+"comp2027": 0.0448,
+"ded2027": 0.00755,
+"base2026": 0.0404,
+"base2027": 0.0448
+},
+"0541": {
+"desc": "Wallboard Taping -       Discounted Rate",
+"group": "Building Construction And Trades",
+"comp2026": 0.0195,
+"ded2026": 0.00325,
+"comp2027": 0.0198,
+"ded2027": 0.00335,
+"base2026": 0.0195,
+"base2027": 0.0198
+},
+"0550": {
+"desc": "Wallboard Installation - Undiscounted Rate",
+"group": "Building Construction And Trades",
+"comp2026": 0.0896,
+"ded2026": 0.0125,
+"comp2027": 0.0854,
+"ded2027": 0.01195,
+"base2026": 0.0896,
+"base2027": 0.0854
+},
+"0551": {
+"desc": "Wallboard Taping -       Undiscounted Rate",
+"group": "Building Construction And Trades",
+"comp2026": 0.0324,
+"ded2026": 0.0047,
+"comp2027": 0.0314,
+"ded2027": 0.00455,
+"base2026": 0.0324,
+"base2027": 0.0314
+},
+"0601": {
+"desc": "Electrical Wiring: Buildings and Structures",
+"group": "Building Construction And Trades",
+"comp2026": 1.437,
+"ded2026": 0.2449,
+"comp2027": 1.4988,
+"ded2027": 0.25965,
+"base2026": 1.437,
+"base2027": 1.4988
+},
+"0602": {
+"desc": "Elevator Installation, Service and Repair",
+"group": "Building Construction And Trades",
+"comp2026": 1.8819,
+"ded2026": 0.2562,
+"comp2027": 2.0476,
+"ded2027": 0.2693,
+"base2026": 1.8819,
+"base2027": 2.0476
+},
+"0603": {
+"desc": "Machinery Installation, Service and Repair",
+"group": "Building Construction And Trades",
+"comp2026": 2.0921,
+"ded2026": 0.31185,
+"comp2027": 2.2059,
+"ded2027": 0.32255,
+"base2026": 2.0921,
+"base2027": 2.2059
+},
+"0604": {
+"desc": "Scrap Metal Dealers and Processors",
+"group": "Dealers And Wholesalers",
+"comp2026": 2.2488,
+"ded2026": 0.43755,
+"comp2027": 2.3505,
+"ded2027": 0.4626,
+"base2026": 2.2488,
+"base2027": 2.3505
+},
+"0606": {
+"desc": "Vending Machine Installation, Service and Repair",
+"group": "Building Construction And Trades",
+"comp2026": 1.4153,
+"ded2026": 0.2839,
+"comp2027": 1.4618,
+"ded2027": 0.28955,
+"base2026": 1.4153,
+"base2027": 1.4618
+},
+"0607": {
+"desc": "Appliance Install, Svc, Repair & Store Display Svs Contractor",
+"group": "Building Construction And Trades",
+"comp2026": 1.7894,
+"ded2026": 0.32525,
+"comp2027": 1.8371,
+"ded2027": 0.3351,
+"base2026": 1.7894,
+"base2027": 1.8371
+},
+"0608": {
+"desc": "Telephone and Electrical Alarm System Installation",
+"group": "Building Construction And Trades",
+"comp2026": 1.0155,
+"ded2026": 0.20495,
+"comp2027": 1.0682,
+"ded2027": 0.2159,
+"base2026": 1.0155,
+"base2027": 1.0682
+},
+"0701": {
+"desc": "Dam Construction",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 1.8022,
+"ded2026": 0.27285,
+"comp2027": 1.898,
+"ded2027": 0.2895,
+"base2026": 1.8022,
+"base2027": 1.898
+},
+"0803": {
+"desc": "Cities and Towns - All Other Employees, NOC",
+"group": "Government And Schools",
+"comp2026": 1.5508,
+"ded2026": 0.28035,
+"comp2027": 1.6697,
+"ded2027": 0.29235,
+"base2026": 1.5508,
+"base2027": 1.6697
+},
+"0901": {
+"desc": "Shipbuilding and Repair, NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 2.6722,
+"ded2026": 0.41305,
+"comp2027": 2.576,
+"ded2027": 0.41265,
+"base2026": 2.6722,
+"base2027": 2.576
+},
+"1002": {
+"desc": "Sawmills and Automated Shake and Shingle Mills",
+"group": "Forest Products",
+"comp2026": 1.8033,
+"ded2026": 0.3366,
+"comp2027": 1.8695,
+"ded2027": 0.3628,
+"base2026": 1.8033,
+"base2027": 1.8695
+},
+"1003": {
+"desc": "Pole Yards and Log Home Manufacturing",
+"group": "Forest Products",
+"comp2026": 1.4637,
+"ded2026": 0.29,
+"comp2027": 1.5681,
+"ded2027": 0.3101,
+"base2026": 1.4637,
+"base2027": 1.5681
+},
+"1004": {
+"desc": "Log Storage or Sorting Yards",
+"group": "Forest Products",
+"comp2026": 1.4302,
+"ded2026": 0.2358,
+"comp2027": 1.5056,
+"ded2027": 0.24635,
+"base2026": 1.4302,
+"base2027": 1.5056
+},
+"1005": {
+"desc": "Shake and Shingle Mills - Non-automated",
+"group": "Forest Products",
+"comp2026": 12.1205,
+"ded2026": 1.87885,
+"comp2027": 12.5687,
+"ded2027": 2.0517,
+"base2026": 12.1205,
+"base2027": 12.5687
+},
+"1006": {
+"desc": "Land surveying services, NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.7692,
+"ded2026": 0.18195,
+"comp2027": 0.8244,
+"ded2027": 0.1935,
+"base2026": 0.7692,
+"base2027": 0.8244
+},
+"1007": {
+"desc": "Environmental Surveyors, Grading Bureaus, Foresters",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.9178,
+"ded2026": 0.20835,
+"comp2027": 0.9408,
+"ded2027": 0.21225,
+"base2026": 0.9178,
+"base2027": 0.9408
+},
+"1101": {
+"desc": "Delivery Services",
+"group": "Transportation And Warehousing",
+"comp2026": 2.2674,
+"ded2026": 0.40725,
+"comp2027": 2.1203,
+"ded2027": 0.39685,
+"base2026": 2.2674,
+"base2027": 2.1203
+},
+"1102": {
+"desc": "Trucking, NOC",
+"group": "Transportation And Warehousing",
+"comp2026": 3.8195,
+"ded2026": 0.52035,
+"comp2027": 3.7733,
+"ded2027": 0.5333,
+"base2026": 3.8195,
+"base2027": 3.7733
+},
+"1103": {
+"desc": "Solid Fuel, Firewood, Composting, Topsoil and Pallet Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 2.3724,
+"ded2026": 0.40525,
+"comp2027": 2.3911,
+"ded2027": 0.4173,
+"base2026": 2.3724,
+"base2027": 2.3911
+},
+"1104": {
+"desc": "Auto Wrecking",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.6117,
+"ded2026": 0.34175,
+"comp2027": 1.6564,
+"ded2027": 0.3479,
+"base2026": 1.6117,
+"base2027": 1.6564
+},
+"1105": {
+"desc": "Septic Tank Pumping and Street Sweeping Services",
+"group": "Transportation And Warehousing",
+"comp2026": 1.7998,
+"ded2026": 0.328,
+"comp2027": 1.9314,
+"ded2027": 0.3432,
+"base2026": 1.7998,
+"base2027": 1.9314
+},
+"1106": {
+"desc": "Rental Stores NOC; Truck Canopy Sales",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.0761,
+"ded2026": 0.25825,
+"comp2027": 1.1391,
+"ded2027": 0.27235,
+"base2026": 1.0761,
+"base2027": 1.1391
+},
+"1108": {
+"desc": "Glass Merchants",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.6215,
+"ded2026": 0.32405,
+"comp2027": 1.7576,
+"ded2027": 0.3408,
+"base2026": 1.6215,
+"base2027": 1.7576
+},
+"1109": {
+"desc": "Auto and Truck Towing Services",
+"group": "Transportation And Warehousing",
+"comp2026": 4.5874,
+"ded2026": 0.67505,
+"comp2027": 4.7484,
+"ded2027": 0.67285,
+"base2026": 4.5874,
+"base2027": 4.7484
+},
+"1301": {
+"desc": "Electric Light & Power Companies",
+"group": "Utilities And Communications",
+"comp2026": 1.5867,
+"ded2026": 0.3061,
+"comp2027": 1.6533,
+"ded2027": 0.3114,
+"base2026": 1.5867,
+"base2027": 1.6533
+},
+"1303": {
+"desc": "Telephone Companies - All Other Employees, NOC",
+"group": "Utilities And Communications",
+"comp2026": 1.1126,
+"ded2026": 0.2206,
+"comp2027": 1.1925,
+"ded2027": 0.23775,
+"base2026": 1.1126,
+"base2027": 1.1925
+},
+"1304": {
+"desc": "Telephone Companies - Office and Administrative Staff",
+"group": "Utilities And Communications",
+"comp2026": 0.2318,
+"ded2026": 0.1012,
+"comp2027": 0.2402,
+"ded2027": 0.1046,
+"base2026": 0.2318,
+"base2027": 0.2402
+},
+"1305": {
+"desc": "TV Cable Companies - All Other Employees, NOC",
+"group": "Utilities And Communications",
+"comp2026": 1.2626,
+"ded2026": 0.233,
+"comp2027": 1.3773,
+"ded2027": 0.2491,
+"base2026": 1.2626,
+"base2027": 1.3773
+},
+"1401": {
+"desc": "Taxi Cab Companies",
+"group": "Transportation And Warehousing",
+"comp2026": 0.9896,
+"ded2026": 0.245,
+"comp2027": 1.0856,
+"ded2027": 0.2637,
+"base2026": 0.9896,
+"base2027": 1.0856
+},
+"1404": {
+"desc": "Cabulance and Paratransit",
+"group": "Transportation And Warehousing",
+"comp2026": 2.0322,
+"ded2026": 0.43155,
+"comp2027": 2.1652,
+"ded2027": 0.45295,
+"base2026": 2.0322,
+"base2027": 2.1652
+},
+"1405": {
+"desc": "Ambulance Services",
+"group": "Transportation And Warehousing",
+"comp2026": 1.9665,
+"ded2026": 0.37645,
+"comp2027": 2.1279,
+"ded2027": 0.40215,
+"base2026": 1.9665,
+"base2027": 2.1279
+},
+"1407": {
+"desc": "Bus Companies",
+"group": "Transportation And Warehousing",
+"comp2026": 2.0109,
+"ded2026": 0.3767,
+"comp2027": 2.4488,
+"ded2027": 0.43855,
+"base2026": 2.0109,
+"base2027": 2.4488
+},
+"1408": {
+"desc": "Passenger Transportation Network Companies",
+"group": "Transportation And Warehousing",
+"comp2026": 0.94,
+"ded2026": 0.2116,
+"comp2027": 1.0242,
+"ded2027": 0.2138,
+"base2026": 0.94,
+"base2027": 1.0242
+},
+"1501": {
+"desc": "County and Tribal Councils - All Other Employees, NOC",
+"group": "Government And Schools",
+"comp2026": 2.2523,
+"ded2026": 0.3708,
+"comp2027": 2.4027,
+"ded2027": 0.38735,
+"base2026": 2.2523,
+"base2027": 2.4027
+},
+"1507": {
+"desc": "Waterworks Operations, Repair and Maintenance",
+"group": "Utilities And Communications",
+"comp2026": 1.2092,
+"ded2026": 0.2723,
+"comp2027": 1.2266,
+"ded2027": 0.27895,
+"base2026": 1.2092,
+"base2027": 1.2266
+},
+"1701": {
+"desc": "Ore Reduction",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.8675,
+"ded2026": 0.34565,
+"comp2027": 1.9222,
+"ded2027": 0.35855,
+"base2026": 1.8675,
+"base2027": 1.9222
+},
+"1702": {
+"desc": "Underground Mines",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.9912,
+"ded2026": 0.35615,
+"comp2027": 3.1345,
+"ded2027": 0.3723,
+"base2026": 2.9912,
+"base2027": 3.1345
+},
+"1703": {
+"desc": "Open Cut Mines",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 2.3458,
+"ded2026": 0.3442,
+"comp2027": 2.4451,
+"ded2027": 0.3602,
+"base2026": 2.3458,
+"base2027": 2.4451
+},
+"1704": {
+"desc": "Quarries",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 1.8675,
+"ded2026": 0.34565,
+"comp2027": 1.9222,
+"ded2027": 0.35855,
+"base2026": 1.8675,
+"base2027": 1.9222
+},
+"1801": {
+"desc": "Lead Smelting, Rolling Mills and Metal Recovery",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.4924,
+"ded2026": 0.26035,
+"comp2027": 1.6043,
+"ded2027": 0.27765,
+"base2026": 1.4924,
+"base2027": 1.6043
+},
+"1802": {
+"desc": "Aluminum Smelting",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 2.2732,
+"ded2026": 0.3592,
+"comp2027": 2.4482,
+"ded2027": 0.38495,
+"base2026": 2.2732,
+"base2027": 2.4482
+},
+"2002": {
+"desc": "Freight Handling Services",
+"group": "Transportation And Warehousing",
+"comp2026": 1.8533,
+"ded2026": 0.3423,
+"comp2027": 1.9961,
+"ded2027": 0.3719,
+"base2026": 1.8533,
+"base2027": 1.9961
+},
+"2004": {
+"desc": "Iron and Steel Merchants",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.5629,
+"ded2026": 0.347,
+"comp2027": 1.6496,
+"ded2027": 0.3641,
+"base2026": 1.5629,
+"base2027": 1.6496
+},
+"2007": {
+"desc": "Grain, Bean and Pea Elevators and Warehouses",
+"group": "Transportation And Warehousing",
+"comp2026": 1.657,
+"ded2026": 0.34355,
+"comp2027": 1.711,
+"ded2027": 0.35405,
+"base2026": 1.657,
+"base2027": 1.711
+},
+"2008": {
+"desc": "Field Bonded Warehouses",
+"group": "Transportation And Warehousing",
+"comp2026": 0.8172,
+"ded2026": 0.1984,
+"comp2027": 0.8772,
+"ded2027": 0.20575,
+"base2026": 0.8172,
+"base2027": 0.8772
+},
+"2009": {
+"desc": "Bldg Material Dlrs, Lumber Yrds, Elect Supply Dlrs, Farm Supply",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.0423,
+"ded2026": 0.25735,
+"comp2027": 1.0558,
+"ded2027": 0.262,
+"base2026": 1.0423,
+"base2027": 1.0558
+},
+"2101": {
+"desc": "Grain, Feed and Flour Mills and Dealers",
+"group": "Food Processing And Manufacturing",
+"comp2026": 1.624,
+"ded2026": 0.35565,
+"comp2027": 1.6653,
+"ded2027": 0.37675,
+"base2026": 1.624,
+"base2027": 1.6653
+},
+"2102": {
+"desc": "Warehouses, NOC, Grocery Distribution and Recycle Centers",
+"group": "Transportation And Warehousing",
+"comp2026": 1.6525,
+"ded2026": 0.35795,
+"comp2027": 1.6909,
+"ded2027": 0.37015,
+"base2026": 1.6525,
+"base2027": 1.6909
+},
+"2103": {
+"desc": "Fulfillment Centers",
+"group": "Transportation And Warehousing",
+"comp2026": 3.5217,
+"ded2026": 0.60725,
+"comp2027": 3.7076,
+"ded2027": 0.6365,
+"base2026": 3.5217,
+"base2027": 3.7076
+},
+"2104": {
+"desc": "Fruit and Vegetable Packing - Fresh",
+"group": "Food Processing And Manufacturing",
+"comp2026": 1.0985,
+"ded2026": 0.31495,
+"comp2027": 1.2034,
+"ded2027": 0.3412,
+"base2026": 1.0985,
+"base2027": 1.2034
+},
+"2105": {
+"desc": "Beer, Wine, and Soft Drink Distributors",
+"group": "Transportation And Warehousing",
+"comp2026": 2.242,
+"ded2026": 0.3907,
+"comp2027": 2.6611,
+"ded2027": 0.445,
+"base2026": 2.242,
+"base2027": 2.6611
+},
+"2106": {
+"desc": "Fertilizer Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.4906,
+"ded2026": 0.32825,
+"comp2027": 1.6202,
+"ded2027": 0.356,
+"base2026": 1.4906,
+"base2027": 1.6202
+},
+"2201": {
+"desc": "Laundry and Dry Cleaning Services",
+"group": "Miscellaneous Services",
+"comp2026": 0.9938,
+"ded2026": 0.25445,
+"comp2027": 1.0502,
+"ded2027": 0.26265,
+"base2026": 0.9938,
+"base2027": 1.0502
+},
+"2202": {
+"desc": "Carpet Cleaning",
+"group": "Miscellaneous Services",
+"comp2026": 2.1446,
+"ded2026": 0.37875,
+"comp2027": 2.3439,
+"ded2027": 0.4078,
+"base2026": 2.1446,
+"base2027": 2.3439
+},
+"2203": {
+"desc": "Laundries -  Commercial NOC",
+"group": "Miscellaneous Services",
+"comp2026": 1.4303,
+"ded2026": 0.3285,
+"comp2027": 1.5701,
+"ded2027": 0.3498,
+"base2026": 1.4303,
+"base2027": 1.5701
+},
+"2204": {
+"desc": "Laundries - Coin Operated",
+"group": "Miscellaneous Services",
+"comp2026": 0.9938,
+"ded2026": 0.25445,
+"comp2027": 1.0502,
+"ded2027": 0.26265,
+"base2026": 0.9938,
+"base2027": 1.0502
+},
+"2401": {
+"desc": "Pulp and Paper Goods Manufacturing, NOC",
+"group": "Forest Products",
+"comp2026": 1.1401,
+"ded2026": 0.23435,
+"comp2027": 1.1736,
+"ded2027": 0.24475,
+"base2026": 1.1401,
+"base2027": 1.1736
+},
+"2903": {
+"desc": "Wood Products Manufacturing, NOC",
+"group": "Forest Products",
+"comp2026": 1.602,
+"ded2026": 0.36005,
+"comp2027": 1.7366,
+"ded2027": 0.3877,
+"base2026": 1.602,
+"base2027": 1.7366
+},
+"2904": {
+"desc": "Plywood and Veneer Manufacturing",
+"group": "Forest Products",
+"comp2026": 1.6383,
+"ded2026": 0.31855,
+"comp2027": 1.6784,
+"ded2027": 0.3372,
+"base2026": 1.6383,
+"base2027": 1.6784
+},
+"2905": {
+"desc": "Furniture and Casket Manufacturing - Wood",
+"group": "Forest Products",
+"comp2026": 1.4817,
+"ded2026": 0.33945,
+"comp2027": 1.5217,
+"ded2027": 0.3535,
+"base2026": 1.4817,
+"base2027": 1.5217
+},
+"2906": {
+"desc": "Pattern and Model Manufacturing; Wood Instrument Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.4346,
+"ded2026": 0.3066,
+"comp2027": 1.4736,
+"ded2027": 0.3135,
+"base2026": 1.4346,
+"base2027": 1.4736
+},
+"2907": {
+"desc": "Cabinet and Countertop Manufacturing - Wood",
+"group": "Forest Products",
+"comp2026": 1.1765,
+"ded2026": 0.2897,
+"comp2027": 1.2655,
+"ded2027": 0.3089,
+"base2026": 1.1765,
+"base2027": 1.2655
+},
+"2908": {
+"desc": "Factory Built Housing; Campers/Trailers Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.9034,
+"ded2026": 0.41445,
+"comp2027": 1.9418,
+"ded2027": 0.42365,
+"base2026": 1.9034,
+"base2027": 1.9418
+},
+"2909": {
+"desc": "Woodenware Products Manufacturing",
+"group": "Forest Products",
+"comp2026": 1.2034,
+"ded2026": 0.28935,
+"comp2027": 1.2577,
+"ded2027": 0.3017,
+"base2026": 1.2034,
+"base2027": 1.2577
+},
+"3101": {
+"desc": "Ready-mix Concrete Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.9454,
+"ded2026": 0.3775,
+"comp2027": 2.0709,
+"ded2027": 0.3962,
+"base2026": 1.9454,
+"base2027": 2.0709
+},
+"3102": {
+"desc": "Stone Wool Insulation Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.913,
+"ded2026": 0.1967,
+"comp2027": 0.972,
+"ded2027": 0.2065,
+"base2026": 0.913,
+"base2027": 0.972
+},
+"3103": {
+"desc": "Cement Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.9868,
+"ded2026": 0.21735,
+"comp2027": 1.039,
+"ded2027": 0.2275,
+"base2026": 0.9868,
+"base2027": 1.039
+},
+"3104": {
+"desc": "Soapstone & Plasterboard Manufacturing; Wood preserving",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.9496,
+"ded2026": 0.4014,
+"comp2027": 2.0305,
+"ded2027": 0.4191,
+"base2026": 1.9496,
+"base2027": 2.0305
+},
+"3105": {
+"desc": "Concrete Products Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 2.1281,
+"ded2026": 0.45065,
+"comp2027": 2.1839,
+"ded2027": 0.4705,
+"base2026": 2.1281,
+"base2027": 2.1839
+},
+"3303": {
+"desc": "Meat, Fish and Poultry Dealers -  Retail only",
+"group": "Stores",
+"comp2026": 1.0737,
+"ded2026": 0.2394,
+"comp2027": 1.1605,
+"ded2027": 0.2536,
+"base2026": 1.0737,
+"base2027": 1.1605
+},
+"3304": {
+"desc": "Meat, Fish and Poultry Dealers -  with Wholesale Operations",
+"group": "Food Processing And Manufacturing",
+"comp2026": 1.7957,
+"ded2026": 0.38045,
+"comp2027": 1.8579,
+"ded2027": 0.39305,
+"base2026": 1.7957,
+"base2027": 1.8579
+},
+"3309": {
+"desc": "Golf cart, Motorcycle, Motorized Sport Vehicle Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.1387,
+"ded2026": 0.2428,
+"comp2027": 1.2782,
+"ded2027": 0.264,
+"base2026": 1.1387,
+"base2027": 1.2782
+},
+"3402": {
+"desc": "Machine Shops and Machinery Manufacturing, NOC",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.203,
+"ded2026": 0.26945,
+"comp2027": 1.3061,
+"ded2027": 0.28775,
+"base2026": 1.203,
+"base2027": 1.3061
+},
+"3403": {
+"desc": "Aircraft Manufacturing",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 0.5274,
+"ded2026": 0.15175,
+"comp2027": 0.5438,
+"ded2027": 0.15865,
+"base2026": 0.5274,
+"base2027": 0.5438
+},
+"3404": {
+"desc": "Metal Goods Manufacturing, NOC - Under 9 Gauge",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.471,
+"ded2026": 0.2982,
+"comp2027": 1.577,
+"ded2027": 0.3133,
+"base2026": 1.471,
+"base2027": 1.577
+},
+"3405": {
+"desc": "Precision Machined Parts and Products, N.O.C",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 0.7735,
+"ded2026": 0.1985,
+"comp2027": 0.7941,
+"ded2027": 0.2074,
+"base2026": 0.7735,
+"base2027": 0.7941
+},
+"3406": {
+"desc": "Gas Stations-Full Service, Car Washes and Detailers",
+"group": "Miscellaneous Services",
+"comp2026": 0.7649,
+"ded2026": 0.19295,
+"comp2027": 0.8272,
+"ded2027": 0.20405,
+"base2026": 0.7649,
+"base2027": 0.8272
+},
+"3407": {
+"desc": "Gas, Oil, and Asphalt Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 2.2644,
+"ded2026": 0.35245,
+"comp2027": 2.3031,
+"ded2027": 0.3626,
+"base2026": 2.2644,
+"base2027": 2.3031
+},
+"3408": {
+"desc": "Natural Gas Companies",
+"group": "Utilities And Communications",
+"comp2026": 0.7842,
+"ded2026": 0.18575,
+"comp2027": 0.8101,
+"ded2027": 0.1931,
+"base2026": 0.7842,
+"base2027": 0.8101
+},
+"3409": {
+"desc": "Gas Stations-Self Service - No Groceries",
+"group": "Miscellaneous Services",
+"comp2026": 0.5918,
+"ded2026": 0.1699,
+"comp2027": 0.6337,
+"ded2027": 0.17895,
+"base2026": 0.5918,
+"base2027": 0.6337
+},
+"3410": {
+"desc": "Convenience Grocery Store - with Self Service Gas",
+"group": "Stores",
+"comp2026": 0.5918,
+"ded2026": 0.1699,
+"comp2027": 0.6337,
+"ded2027": 0.17895,
+"base2026": 0.5918,
+"base2027": 0.6337
+},
+"3411": {
+"desc": "Automobile Dealers, Rentals and Service Shops",
+"group": "Miscellaneous Services",
+"comp2026": 1.2681,
+"ded2026": 0.25645,
+"comp2027": 1.3253,
+"ded2027": 0.26485,
+"base2026": 1.2681,
+"base2027": 1.3253
+},
+"3412": {
+"desc": "Automobile/truck: Body and Fender Repair Shops",
+"group": "Miscellaneous Services",
+"comp2026": 1.64,
+"ded2026": 0.2759,
+"comp2027": 1.6729,
+"ded2027": 0.2826,
+"base2026": 1.64,
+"base2027": 1.6729
+},
+"3414": {
+"desc": "Boat Dealers, Marinas and Boat House Operations: Boat Storage Facilities",
+"group": "Miscellaneous Services",
+"comp2026": 2.0444,
+"ded2026": 0.36805,
+"comp2027": 2.1163,
+"ded2027": 0.38405,
+"base2026": 2.0444,
+"base2027": 2.1163
+},
+"3415": {
+"desc": "Factory Built Housing Dealers",
+"group": "Miscellaneous Services",
+"comp2026": 3.3444,
+"ded2026": 0.5719,
+"comp2027": 3.6324,
+"ded2027": 0.61485,
+"base2026": 3.3444,
+"base2027": 3.6324
+},
+"3501": {
+"desc": "Brick and Clay Product Manufacturing, NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.9562,
+"ded2026": 0.2358,
+"comp2027": 0.9812,
+"ded2027": 0.24545,
+"base2026": 0.9562,
+"base2027": 0.9812
+},
+"3503": {
+"desc": "Decorative Tile, Pottery, Glassware Manufacturing, NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.053,
+"ded2026": 0.2426,
+"comp2027": 1.1709,
+"ded2027": 0.26565,
+"base2026": 1.053,
+"base2027": 1.1709
+},
+"3506": {
+"desc": "Mobile Crane, Hoisting Services and Concrete Pumping",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 1.928,
+"ded2026": 0.3267,
+"comp2027": 2.0689,
+"ded2027": 0.34765,
+"base2026": 1.928,
+"base2027": 2.0689
+},
+"3509": {
+"desc": "Statuary and Ornament Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.3257,
+"ded2026": 0.2762,
+"comp2027": 1.4233,
+"ded2027": 0.29305,
+"base2026": 1.3257,
+"base2027": 1.4233
+},
+"3510": {
+"desc": "Plastic Products Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.0691,
+"ded2026": 0.2681,
+"comp2027": 1.0783,
+"ded2027": 0.2745,
+"base2026": 1.0691,
+"base2027": 1.0783
+},
+"3511": {
+"desc": "Fiberglass Products Manufacturing, NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 2.1078,
+"ded2026": 0.4328,
+"comp2027": 2.2369,
+"ded2027": 0.4581,
+"base2026": 2.1078,
+"base2027": 2.2369
+},
+"3512": {
+"desc": "Plastic - Cutting, Bending and Milling",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.008,
+"ded2026": 0.2491,
+"comp2027": 1.0518,
+"ded2027": 0.263,
+"base2026": 1.008,
+"base2027": 1.0518
+},
+"3513": {
+"desc": "Rubber Goods Manufacturing, NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.3569,
+"ded2026": 0.2733,
+"comp2027": 1.4821,
+"ded2027": 0.2949,
+"base2026": 1.3569,
+"base2027": 1.4821
+},
+"3602": {
+"desc": "Electronic Products, Jewelry and Instrument Mfg, Dental Labs",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.4056,
+"ded2026": 0.13195,
+"comp2027": 0.4225,
+"ded2027": 0.1364,
+"base2026": 0.4056,
+"base2027": 0.4225
+},
+"3603": {
+"desc": "Furniture Stripping/Refinish; Electroplating/Detinning; Painting in Shop NOC",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.3083,
+"ded2026": 0.29065,
+"comp2027": 1.4043,
+"ded2027": 0.30815,
+"base2026": 1.3083,
+"base2027": 1.4043
+},
+"3604": {
+"desc": "Galvanizing and Tinning-Not Electrolytic, NOC",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 2.3507,
+"ded2026": 0.46375,
+"comp2027": 2.4871,
+"ded2027": 0.4928,
+"base2026": 2.3507,
+"base2027": 2.4871
+},
+"3605": {
+"desc": "Truck Manufacturing or Assembly",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.203,
+"ded2026": 0.26945,
+"comp2027": 1.3061,
+"ded2027": 0.28775,
+"base2026": 1.203,
+"base2027": 1.3061
+},
+"3701": {
+"desc": "Chemicals NOC: Mixing and Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.913,
+"ded2026": 0.1967,
+"comp2027": 0.972,
+"ded2027": 0.2065,
+"base2026": 0.913,
+"base2027": 0.972
+},
+"3702": {
+"desc": "Breweries, Wineries and Beverage Bottling",
+"group": "Food Processing And Manufacturing",
+"comp2026": 0.9138,
+"ded2026": 0.22945,
+"comp2027": 0.9198,
+"ded2027": 0.2359,
+"base2026": 0.9138,
+"base2027": 0.9198
+},
+"3708": {
+"desc": "Mattress, Textile, Felt, and Rope Manufacturing, NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.675,
+"ded2026": 0.32925,
+"comp2027": 1.7202,
+"ded2027": 0.3417,
+"base2026": 1.675,
+"base2027": 1.7202
+},
+"3802": {
+"desc": "Soft Goods Manufacturing/Embellishing NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.6306,
+"ded2026": 0.1746,
+"comp2027": 0.6609,
+"ded2027": 0.1806,
+"base2026": 0.6306,
+"base2027": 0.6609
+},
+"3808": {
+"desc": "Upholstery Work, NOC",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.0385,
+"ded2026": 0.22665,
+"comp2027": 1.0496,
+"ded2027": 0.22885,
+"base2026": 1.0385,
+"base2027": 1.0496
+},
+"3901": {
+"desc": "Bakeries - Retail",
+"group": "Stores",
+"comp2026": 0.4971,
+"ded2026": 0.1596,
+"comp2027": 0.5242,
+"ded2027": 0.16625,
+"base2026": 0.4971,
+"base2027": 0.5242
+},
+"3902": {
+"desc": "Fruit/Vegetable Canneries/Food Product Manufacturing, NOC",
+"group": "Food Processing And Manufacturing",
+"comp2026": 1.4501,
+"ded2026": 0.3302,
+"comp2027": 1.5333,
+"ded2027": 0.3462,
+"base2026": 1.4501,
+"base2027": 1.5333
+},
+"3903": {
+"desc": "Sugar Refining; Molasses, Syrup, NOC: Manufacturing",
+"group": "Food Processing And Manufacturing",
+"comp2026": 2.0463,
+"ded2026": 0.4413,
+"comp2027": 2.2435,
+"ded2027": 0.4777,
+"base2026": 2.0463,
+"base2027": 2.2435
+},
+"3905": {
+"desc": "Restaurants and Taverns",
+"group": "Miscellaneous Services",
+"comp2026": 0.5126,
+"ded2026": 0.16165,
+"comp2027": 0.5478,
+"ded2027": 0.1692,
+"base2026": 0.5126,
+"base2027": 0.5478
+},
+"3906": {
+"desc": "Bakeries, Cracker, Pasta, Confection - Manufacturing/Wholesale, NOC",
+"group": "Food Processing And Manufacturing",
+"comp2026": 1.4467,
+"ded2026": 0.32485,
+"comp2027": 1.5553,
+"ded2027": 0.3408,
+"base2026": 1.4467,
+"base2027": 1.5553
+},
+"3909": {
+"desc": "Caterers",
+"group": "Miscellaneous Services",
+"comp2026": 0.8528,
+"ded2026": 0.22775,
+"comp2027": 0.9695,
+"ded2027": 0.253,
+"base2026": 0.8528,
+"base2027": 0.9695
+},
+"4101": {
+"desc": "Printing Services and Book Binding",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.6145,
+"ded2026": 0.1761,
+"comp2027": 0.6304,
+"ded2027": 0.18195,
+"base2026": 0.6145,
+"base2027": 0.6304
+},
+"4103": {
+"desc": "Newspaper Publishing",
+"group": "Utilities And Communications",
+"comp2026": 1.6536,
+"ded2026": 0.3614,
+"comp2027": 1.8005,
+"ded2027": 0.39895,
+"base2026": 1.6536,
+"base2027": 1.8005
+},
+"4107": {
+"desc": "Business Machines- Installation, Service and Repair; Piano Tuning",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.617,
+"ded2026": 0.15405,
+"comp2027": 0.6458,
+"ded2027": 0.15995,
+"base2026": 0.617,
+"base2027": 0.6458
+},
+"4108": {
+"desc": "Letter Service Shops and Mailing or Addressing Companies",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.6804,
+"ded2026": 0.1793,
+"comp2027": 0.7262,
+"ded2027": 0.18785,
+"base2026": 0.6804,
+"base2027": 0.7262
+},
+"4109": {
+"desc": "Sign Painting - In Shop and Buildings",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.7146,
+"ded2026": 0.1913,
+"comp2027": 0.7402,
+"ded2027": 0.19895,
+"base2026": 0.7146,
+"base2027": 0.7402
+},
+"4201": {
+"desc": "Longshore and Stevedoring; Port Districts",
+"group": "Government And Schools",
+"comp2026": 2.2052,
+"ded2026": 0.3102,
+"comp2027": 2.2823,
+"ded2027": 0.32905,
+"base2026": 2.2052,
+"base2027": 2.2823
+},
+"4301": {
+"desc": "Meat Products Manufacturing/ Slaughter and Packing Houses",
+"group": "Food Processing And Manufacturing",
+"comp2026": 2.0562,
+"ded2026": 0.44685,
+"comp2027": 2.1636,
+"ded2027": 0.4648,
+"base2026": 2.0562,
+"base2027": 2.1636
+},
+"4302": {
+"desc": "Custom Meat Cutting",
+"group": "Food Processing And Manufacturing",
+"comp2026": 2.0712,
+"ded2026": 0.3946,
+"comp2027": 2.2443,
+"ded2027": 0.4228,
+"base2026": 2.0712,
+"base2027": 2.2443
+},
+"4304": {
+"desc": "Feedlots or Stockyards; Livestock Auction/Sales Yards; Livestock Buyers",
+"group": "Food Processing And Manufacturing",
+"comp2026": 2.064,
+"ded2026": 0.4755,
+"comp2027": 2.1757,
+"ded2027": 0.49775,
+"base2026": 2.064,
+"base2027": 2.1757
+},
+"4305": {
+"desc": "Solid Waste Collection Svs/Landfill Operations/Hazardous Waste Processing",
+"group": "Transportation And Warehousing",
+"comp2026": 3.0891,
+"ded2026": 0.47985,
+"comp2027": 3.2385,
+"ded2027": 0.5125,
+"base2026": 3.0891,
+"base2027": 3.2385
+},
+"4401": {
+"desc": "Cold Storage Lockers",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.0737,
+"ded2026": 0.2394,
+"comp2027": 1.1605,
+"ded2027": 0.2536,
+"base2026": 1.0737,
+"base2027": 1.1605
+},
+"4402": {
+"desc": "Ice Manufacturing and Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.6911,
+"ded2026": 0.3204,
+"comp2027": 1.7929,
+"ded2027": 0.33745,
+"base2026": 1.6911,
+"base2027": 1.7929
+},
+"4404": {
+"desc": "Cold Storage Warehouse",
+"group": "Transportation And Warehousing",
+"comp2026": 1.6182,
+"ded2026": 0.34245,
+"comp2027": 1.681,
+"ded2027": 0.36155,
+"base2026": 1.6182,
+"base2027": 1.681
+},
+"4501": {
+"desc": "Radio and Television - Field Employees",
+"group": "Utilities And Communications",
+"comp2026": 0.5661,
+"ded2026": 0.16195,
+"comp2027": 0.5854,
+"ded2027": 0.16745,
+"base2026": 0.5661,
+"base2027": 0.5854
+},
+"4502": {
+"desc": "Radio and Television - All Other Employees",
+"group": "Utilities And Communications",
+"comp2026": 0.3231,
+"ded2026": 0.11545,
+"comp2027": 0.3321,
+"ded2027": 0.11885,
+"base2026": 0.3231,
+"base2027": 0.3321
+},
+"4504": {
+"desc": "Theaters",
+"group": "Miscellaneous Services",
+"comp2026": 0.5374,
+"ded2026": 0.16935,
+"comp2027": 0.5726,
+"ded2027": 0.17885,
+"base2026": 0.5374,
+"base2027": 0.5726
+},
+"4802": {
+"desc": "Farms: Veg - Machine Harvest; Berry, Bulbs; Picking Forest Products, NOC",
+"group": "Agriculture",
+"comp2026": 1.3693,
+"ded2026": 0.3035,
+"comp2027": 1.4229,
+"ded2027": 0.31845,
+"base2026": 1.3693,
+"base2027": 1.4229
+},
+"4803": {
+"desc": "Orchards",
+"group": "Agriculture",
+"comp2026": 1.2878,
+"ded2026": 0.33305,
+"comp2027": 1.4527,
+"ded2027": 0.36225,
+"base2026": 1.2878,
+"base2027": 1.4527
+},
+"4804": {
+"desc": "Egg and Poultry Farms",
+"group": "Agriculture",
+"comp2026": 1.4963,
+"ded2026": 0.3235,
+"comp2027": 1.6625,
+"ded2027": 0.3448,
+"base2026": 1.4963,
+"base2027": 1.6625
+},
+"4805": {
+"desc": "Nurseries and Shellfish Farms",
+"group": "Agriculture",
+"comp2026": 1.0879,
+"ded2026": 0.2823,
+"comp2027": 1.1919,
+"ded2027": 0.2987,
+"base2026": 1.0879,
+"base2027": 1.1919
+},
+"4806": {
+"desc": "Hand Harvesting: Berries, Nuts, Flowers",
+"group": "Agriculture",
+"comp2026": 0.5408,
+"ded2026": 0.1663,
+"comp2027": 0.5397,
+"ded2027": 0.1669,
+"base2026": 0.5408,
+"base2027": 0.5397
+},
+"4808": {
+"desc": "Diversified Field Crops and Cereal Grains",
+"group": "Agriculture",
+"comp2026": 1.486,
+"ded2026": 0.31855,
+"comp2027": 1.5576,
+"ded2027": 0.33755,
+"base2026": 1.486,
+"base2027": 1.5576
+},
+"4809": {
+"desc": "Greenhouses and Mushroom Farms",
+"group": "Agriculture",
+"comp2026": 0.8316,
+"ded2026": 0.2209,
+"comp2027": 0.9264,
+"ded2027": 0.2407,
+"base2026": 0.8316,
+"base2027": 0.9264
+},
+"4810": {
+"desc": "Vegetable Farms - Hand Harvest",
+"group": "Agriculture",
+"comp2026": 0.7794,
+"ded2026": 0.2072,
+"comp2027": 0.8085,
+"ded2027": 0.21385,
+"base2026": 0.7794,
+"base2027": 0.8085
+},
+"4811": {
+"desc": "Hop and Mint Farms",
+"group": "Agriculture",
+"comp2026": 1.3977,
+"ded2026": 0.3504,
+"comp2027": 1.5487,
+"ded2027": 0.38785,
+"base2026": 1.3977,
+"base2027": 1.5487
+},
+"4812": {
+"desc": "Fish and Shellfish Hatcheries",
+"group": "Agriculture",
+"comp2026": 1.1805,
+"ded2026": 0.26185,
+"comp2027": 1.2194,
+"ded2027": 0.2704,
+"base2026": 1.1805,
+"base2027": 1.2194
+},
+"4813": {
+"desc": "Vineyards",
+"group": "Agriculture",
+"comp2026": 1.0554,
+"ded2026": 0.2755,
+"comp2027": 1.1852,
+"ded2027": 0.29895,
+"base2026": 1.0554,
+"base2027": 1.1852
+},
+"4814": {
+"desc": "Farm Internship program A",
+"group": "Agriculture",
+"comp2026": 0.4684,
+"ded2026": 0.16535,
+"comp2027": 0.4803,
+"ded2027": 0.17055,
+"base2026": 0.4684,
+"base2027": 0.4803
+},
+"4815": {
+"desc": "Farm Internship program B",
+"group": "Agriculture",
+"comp2026": 0.9266,
+"ded2026": 0.26695,
+"comp2027": 0.9065,
+"ded2027": 0.26625,
+"base2026": 0.9266,
+"base2027": 0.9065
+},
+"4816": {
+"desc": "Farm Internship program C",
+"group": "Agriculture",
+"comp2026": 0.943,
+"ded2026": 0.27655,
+"comp2027": 0.873,
+"ded2027": 0.2678,
+"base2026": 0.943,
+"base2027": 0.873
+},
+"4900": {
+"desc": "Construction Project or Site Superintendent/Manager",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 0.519,
+"ded2026": 0.1408,
+"comp2027": 0.5326,
+"ded2027": 0.1415,
+"base2026": 0.519,
+"base2027": 0.5326
+},
+"4901": {
+"desc": "Consulting Engineer, Architectural Services, Geologists NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2886,
+"ded2026": 0.10825,
+"comp2027": 0.2989,
+"ded2027": 0.1122,
+"base2026": 0.2886,
+"base2027": 0.2989
+},
+"4902": {
+"desc": "State Government - Office and Administrative Employees",
+"group": "Government And Schools",
+"comp2026": 0.3365,
+"ded2026": 0.1169,
+"comp2027": 0.3382,
+"ded2027": 0.1194,
+"base2026": 0.3365,
+"base2027": 0.3382
+},
+"4903": {
+"desc": "Inspection/Valuation Services - Building, Elevator, Boiler, Marine",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.6731,
+"ded2026": 0.16285,
+"comp2027": 0.7271,
+"ded2027": 0.1721,
+"base2026": 0.6731,
+"base2027": 0.7271
+},
+"4904": {
+"desc": "Clerical Office, NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2223,
+"ded2026": 0.1007,
+"comp2027": 0.2309,
+"ded2027": 0.10425,
+"base2026": 0.2223,
+"base2027": 0.2309
+},
+"4905": {
+"desc": "Motels and Hotels",
+"group": "Miscellaneous Services",
+"comp2026": 1.2117,
+"ded2026": 0.2916,
+"comp2027": 1.2735,
+"ded2027": 0.3071,
+"base2026": 1.2117,
+"base2027": 1.2735
+},
+"4906": {
+"desc": "Colleges and Universities",
+"group": "Government And Schools",
+"comp2026": 0.4649,
+"ded2026": 0.1363,
+"comp2027": 0.4921,
+"ded2027": 0.14195,
+"base2026": 0.4649,
+"base2027": 0.4921
+},
+"4907": {
+"desc": "Inmates - Prison Industries",
+"group": "Government And Schools",
+"comp2026": 0.324,
+"ded2026": 0.1248,
+"comp2027": 0.3368,
+"ded2027": 0.1285,
+"base2026": 0.324,
+"base2027": 0.3368
+},
+"4908": {
+"desc": "Inmates - Adult Camps",
+"group": "Government And Schools",
+"comp2026": 0.4324,
+"ded2026": 0.1533,
+"comp2027": 0.4468,
+"ded2027": 0.15655,
+"base2026": 0.4324,
+"base2027": 0.4468
+},
+"4909": {
+"desc": "Inmates - Juvenile Camps",
+"group": "Government And Schools",
+"comp2026": 0.2877,
+"ded2026": 0.1187,
+"comp2027": 0.2974,
+"ded2027": 0.12195,
+"base2026": 0.2877,
+"base2027": 0.2974
+},
+"4910": {
+"desc": "Property and Building Management Services",
+"group": "Miscellaneous Services",
+"comp2026": 1.361,
+"ded2026": 0.27915,
+"comp2027": 1.4671,
+"ded2027": 0.2918,
+"base2026": 1.361,
+"base2027": 1.4671
+},
+"4911": {
+"desc": "Construction Estimator",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 0.3538,
+"ded2026": 0.11905,
+"comp2027": 0.3689,
+"ded2027": 0.12345,
+"base2026": 0.3538,
+"base2027": 0.3689
+},
+"5001": {
+"desc": "Logging Operations, NOC*",
+"group": "Forest Products",
+"comp2026": 19.6415,
+"ded2026": 2.283,
+"comp2027": 20.5711,
+"ded2027": 2.39345,
+"base2026": 19.6415,
+"base2027": 20.5711
+},
+"5002": {
+"desc": "Log Booming and Rafting",
+"group": "Forest Products",
+"comp2026": 1.5356,
+"ded2026": 0.29715,
+"comp2027": 1.6654,
+"ded2027": 0.31355,
+"base2026": 1.5356,
+"base2027": 1.6654
+},
+"5003": {
+"desc": "Log Hauling",
+"group": "Forest Products",
+"comp2026": 6.3882,
+"ded2026": 0.8276,
+"comp2027": 6.6819,
+"ded2027": 0.8145,
+"base2026": 6.3882,
+"base2027": 6.6819
+},
+"5004": {
+"desc": "Forestry and Timberland Services - Manual Labor",
+"group": "Forest Products",
+"comp2026": 2.4632,
+"ded2026": 0.4891,
+"comp2027": 2.564,
+"ded2027": 0.50455,
+"base2026": 2.4632,
+"base2027": 2.564
+},
+"5005": {
+"desc": "Mechanized Logging",
+"group": "Forest Products",
+"comp2026": 2.5479,
+"ded2026": 0.37805,
+"comp2027": 2.7763,
+"ded2027": 0.4178,
+"base2026": 2.5479,
+"base2027": 2.7763
+},
+"5006": {
+"desc": "Forestry/Timberland Services - Machine Operations",
+"group": "Forest Products",
+"comp2026": 3.0326,
+"ded2026": 0.42345,
+"comp2027": 3.097,
+"ded2027": 0.43135,
+"base2026": 3.0326,
+"base2027": 3.097
+},
+"5101": {
+"desc": "Pipe Manufacturing -  Iron or Steel",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 2.2571,
+"ded2026": 0.37085,
+"comp2027": 2.3772,
+"ded2027": 0.4025,
+"base2026": 2.2571,
+"base2027": 2.3772
+},
+"5103": {
+"desc": "Foundries, NOC",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 2.2912,
+"ded2026": 0.46575,
+"comp2027": 2.3229,
+"ded2027": 0.47775,
+"base2026": 2.2912,
+"base2027": 2.3229
+},
+"5106": {
+"desc": "Blacksmithing and Forging Works",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 2.2912,
+"ded2026": 0.46575,
+"comp2027": 2.3229,
+"ded2027": 0.47775,
+"base2026": 2.2912,
+"base2027": 2.3229
+},
+"5108": {
+"desc": "Cable and Wire Rope Manufacturing",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 2.0641,
+"ded2026": 0.3606,
+"comp2027": 2.0923,
+"ded2027": 0.36645,
+"base2026": 2.0641,
+"base2027": 2.0923
+},
+"5109": {
+"desc": "Heavy Machinery Manufacturing",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.2302,
+"ded2026": 0.2468,
+"comp2027": 1.2526,
+"ded2027": 0.25975,
+"base2026": 1.2302,
+"base2027": 1.2526
+},
+"5201": {
+"desc": "Electric Equipment Manufacturing",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 0.849,
+"ded2026": 0.21515,
+"comp2027": 0.9065,
+"ded2027": 0.2266,
+"base2026": 0.849,
+"base2027": 0.9065
+},
+"5204": {
+"desc": "Railroad Car Manufacturing",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 2.8558,
+"ded2026": 0.3956,
+"comp2027": 3.0449,
+"ded2027": 0.43185,
+"base2026": 2.8558,
+"base2027": 3.0449
+},
+"5206": {
+"desc": "Construction/Logging/Trucking  - Permanent Yard",
+"group": "Miscellaneous Construction And Mining",
+"comp2026": 0.9828,
+"ded2026": 0.2148,
+"comp2027": 0.8966,
+"ded2027": 0.20975,
+"base2026": 0.9828,
+"base2027": 0.8966
+},
+"5207": {
+"desc": "Bowling Centers and Skating Rinks",
+"group": "Miscellaneous Services",
+"comp2026": 0.6246,
+"ded2026": 0.1833,
+"comp2027": 0.6914,
+"ded2027": 0.1988,
+"base2026": 0.6246,
+"base2027": 0.6914
+},
+"5208": {
+"desc": "Iron and Steel Works - Shop",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.4689,
+"ded2026": 0.31235,
+"comp2027": 1.5248,
+"ded2027": 0.32845,
+"base2026": 1.4689,
+"base2027": 1.5248
+},
+"5209": {
+"desc": "Metal Goods Manufacturing, NOC - 9 Gauge or More",
+"group": "Metal And Machinery Manufacturing",
+"comp2026": 1.4339,
+"ded2026": 0.2995,
+"comp2027": 1.5255,
+"ded2027": 0.3232,
+"base2026": 1.4339,
+"base2027": 1.5255
+},
+"5300": {
+"desc": "State Government - Administrative Field Staff",
+"group": "Government And Schools",
+"comp2026": 0.3924,
+"ded2026": 0.12605,
+"comp2027": 0.4055,
+"ded2027": 0.12985,
+"base2026": 0.3924,
+"base2027": 0.4055
+},
+"5301": {
+"desc": "Accounting, Law and Service Companies",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2427,
+"ded2026": 0.10455,
+"comp2027": 0.2501,
+"ded2027": 0.1081,
+"base2026": 0.2427,
+"base2027": 0.2501
+},
+"5302": {
+"desc": "Computer Consulting, Program, Software design, Web dev, ISP NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2061,
+"ded2026": 0.0976,
+"comp2027": 0.2122,
+"ded2027": 0.10085,
+"base2026": 0.2061,
+"base2027": 0.2122
+},
+"5305": {
+"desc": "Cities - Office and Administrative Employees",
+"group": "Government And Schools",
+"comp2026": 0.3096,
+"ded2026": 0.11385,
+"comp2027": 0.3248,
+"ded2027": 0.1181,
+"base2026": 0.3096,
+"base2027": 0.3248
+},
+"5306": {
+"desc": "Counties - Office and Administrative Employees",
+"group": "Government And Schools",
+"comp2026": 0.292,
+"ded2026": 0.11115,
+"comp2027": 0.3174,
+"ded2027": 0.116,
+"base2026": 0.292,
+"base2027": 0.3174
+},
+"5307": {
+"desc": "State Government - All Other Employees, NOC",
+"group": "Government And Schools",
+"comp2026": 1.8213,
+"ded2026": 0.3178,
+"comp2027": 1.9631,
+"ded2027": 0.33875,
+"base2026": 1.8213,
+"base2027": 1.9631
+},
+"5308": {
+"desc": "Community Action Organizations",
+"group": "Miscellaneous Services",
+"comp2026": 0.4394,
+"ded2026": 0.1411,
+"comp2027": 0.4836,
+"ded2027": 0.1495,
+"base2026": 0.4394,
+"base2027": 0.4836
+},
+"6103": {
+"desc": "Schools, Churches and Day Care - Professional/Clerical Staff",
+"group": "Government And Schools",
+"comp2026": 0.4289,
+"ded2026": 0.14455,
+"comp2027": 0.482,
+"ded2027": 0.15635,
+"base2026": 0.4289,
+"base2027": 0.482
+},
+"6104": {
+"desc": "Schools, Churches and Day Care - All Other Staff",
+"group": "Government And Schools",
+"comp2026": 1.0899,
+"ded2026": 0.24235,
+"comp2027": 1.2153,
+"ded2027": 0.26105,
+"base2026": 1.0899,
+"base2027": 1.2153
+},
+"6105": {
+"desc": "Hospitals, NOC",
+"group": "Health Care",
+"comp2026": 1.5527,
+"ded2026": 0.27875,
+"comp2027": 1.6422,
+"ded2027": 0.2926,
+"base2026": 1.5527,
+"base2027": 1.6422
+},
+"6107": {
+"desc": "Veterinary Services",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.6137,
+"ded2026": 0.19775,
+"comp2027": 0.6459,
+"ded2027": 0.2066,
+"base2026": 0.6137,
+"base2027": 0.6459
+},
+"6108": {
+"desc": "Nursing Homes and Skilled Nursing Centers",
+"group": "Health Care",
+"comp2026": 0.8372,
+"ded2026": 0.22905,
+"comp2027": 0.8513,
+"ded2027": 0.2372,
+"base2026": 0.8372,
+"base2027": 0.8513
+},
+"6109": {
+"desc": "Physicians and Medical Clinics",
+"group": "Health Care",
+"comp2026": 0.5139,
+"ded2026": 0.1403,
+"comp2027": 0.5273,
+"ded2027": 0.14605,
+"base2026": 0.5139,
+"base2027": 0.5273
+},
+"6110": {
+"desc": "Home Health Services and Nursing Care, NOC",
+"group": "Health Care",
+"comp2026": 1.2569,
+"ded2026": 0.2318,
+"comp2027": 1.3253,
+"ded2027": 0.2354,
+"base2026": 1.2569,
+"base2027": 1.3253
+},
+"6120": {
+"desc": "Acute Care Hospitals with Safe Patient Handling",
+"group": "Health Care",
+"comp2026": 1.0736,
+"ded2026": 0.20745,
+"comp2027": 1.0964,
+"ded2027": 0.21305,
+"base2026": 1.0736,
+"base2027": 1.0964
+},
+"6121": {
+"desc": "Acute Care Hospitals without Safe Patient Handling",
+"group": "Health Care",
+"comp2026": 1.3311,
+"ded2026": 0.24705,
+"comp2027": 1.3421,
+"ded2027": 0.2533,
+"base2026": 1.3311,
+"base2027": 1.3421
+},
+"6201": {
+"desc": "Mortuaries",
+"group": "Miscellaneous Services",
+"comp2026": 1.4194,
+"ded2026": 0.2895,
+"comp2027": 1.4441,
+"ded2027": 0.30115,
+"base2026": 1.4194,
+"base2027": 1.4441
+},
+"6202": {
+"desc": "Cemeteries",
+"group": "Miscellaneous Services",
+"comp2026": 2.3421,
+"ded2026": 0.46445,
+"comp2027": 2.5824,
+"ded2027": 0.5029,
+"base2026": 2.3421,
+"base2027": 2.5824
+},
+"6203": {
+"desc": "YMCA, YWCA, Boys and Girls Clubs",
+"group": "Miscellaneous Services",
+"comp2026": 0.4427,
+"ded2026": 0.1574,
+"comp2027": 0.4945,
+"ded2027": 0.17,
+"base2026": 0.4427,
+"base2027": 0.4945
+},
+"6204": {
+"desc": "Health Clubs, Gyms, Exercise Facilities and Baths NOC",
+"group": "Miscellaneous Services",
+"comp2026": 0.489,
+"ded2026": 0.15405,
+"comp2027": 0.5309,
+"ded2027": 0.1621,
+"base2026": 0.489,
+"base2027": 0.5309
+},
+"6205": {
+"desc": "Clubs NOC",
+"group": "Miscellaneous Services",
+"comp2026": 0.6808,
+"ded2026": 0.18875,
+"comp2027": 0.7647,
+"ded2027": 0.20545,
+"base2026": 0.6808,
+"base2027": 0.7647
+},
+"6206": {
+"desc": "Golf Courses NOC",
+"group": "Miscellaneous Services",
+"comp2026": 0.6524,
+"ded2026": 0.1826,
+"comp2027": 0.6747,
+"ded2027": 0.1883,
+"base2026": 0.6524,
+"base2027": 0.6747
+},
+"6207": {
+"desc": "Carnivals, Circuses, Rodeos - Traveling",
+"group": "Miscellaneous Services",
+"comp2026": 2.25,
+"ded2026": 0.44775,
+"comp2027": 2.3134,
+"ded2027": 0.46365,
+"base2026": 2.25,
+"base2027": 2.3134
+},
+"6208": {
+"desc": "Amusement Parks, Race Tracks and Fairs-Permanent site",
+"group": "Miscellaneous Services",
+"comp2026": 0.6796,
+"ded2026": 0.20905,
+"comp2027": 0.7012,
+"ded2027": 0.217,
+"base2026": 0.6796,
+"base2027": 0.7012
+},
+"6209": {
+"desc": "Campgrounds and Public Swimming Pools",
+"group": "Miscellaneous Services",
+"comp2026": 0.8583,
+"ded2026": 0.237,
+"comp2027": 0.9013,
+"ded2027": 0.24905,
+"base2026": 0.8583,
+"base2027": 0.9013
+},
+"6301": {
+"desc": "Sales Personnel - Vehicles/Boats; Driving school Instructor, Limo Drivers",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.5027,
+"ded2026": 0.1397,
+"comp2027": 0.505,
+"ded2027": 0.1418,
+"base2026": 0.5027,
+"base2027": 0.505
+},
+"6303": {
+"desc": "Sales Personnel - Outside, NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.3019,
+"ded2026": 0.11335,
+"comp2027": 0.3151,
+"ded2027": 0.1176,
+"base2026": 0.3019,
+"base2027": 0.3151
+},
+"6305": {
+"desc": "Clothing and Shoe Stores",
+"group": "Stores",
+"comp2026": 0.4403,
+"ded2026": 0.1466,
+"comp2027": 0.4562,
+"ded2027": 0.1535,
+"base2026": 0.4403,
+"base2027": 0.4562
+},
+"6306": {
+"desc": "Furniture and Appliance Stores",
+"group": "Stores",
+"comp2026": 1.1838,
+"ded2026": 0.26005,
+"comp2027": 1.2684,
+"ded2027": 0.27725,
+"base2026": 1.1838,
+"base2027": 1.2684
+},
+"6308": {
+"desc": "Jewelry and Optical Goods Stores",
+"group": "Stores",
+"comp2026": 0.3918,
+"ded2026": 0.12665,
+"comp2027": 0.4134,
+"ded2027": 0.13195,
+"base2026": 0.3918,
+"base2027": 0.4134
+},
+"6309": {
+"desc": "Hardware, Auto Parts, Lawn & Garden Stores",
+"group": "Stores",
+"comp2026": 0.7401,
+"ded2026": 0.1934,
+"comp2027": 0.7805,
+"ded2027": 0.2021,
+"base2026": 0.7401,
+"base2027": 0.7805
+},
+"6402": {
+"desc": "Supermarkets",
+"group": "Stores",
+"comp2026": 0.7065,
+"ded2026": 0.206,
+"comp2027": 0.736,
+"ded2027": 0.2148,
+"base2026": 0.7065,
+"base2027": 0.736
+},
+"6403": {
+"desc": "Convenience Grocery Stores - No Gas",
+"group": "Stores",
+"comp2026": 0.6002,
+"ded2026": 0.1721,
+"comp2027": 0.6633,
+"ded2027": 0.1818,
+"base2026": 0.6002,
+"base2027": 0.6633
+},
+"6404": {
+"desc": "Florists",
+"group": "Stores",
+"comp2026": 0.9554,
+"ded2026": 0.23975,
+"comp2027": 0.9731,
+"ded2027": 0.2465,
+"base2026": 0.9554,
+"base2027": 0.9731
+},
+"6405": {
+"desc": "Tire Sales and Service Centers",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.582,
+"ded2026": 0.31705,
+"comp2027": 1.6812,
+"ded2027": 0.3331,
+"base2026": 1.582,
+"base2027": 1.6812
+},
+"6406": {
+"desc": "Housewares, Drug, Sports, Hobby, Variety Stores",
+"group": "Stores",
+"comp2026": 0.6185,
+"ded2026": 0.17305,
+"comp2027": 0.6818,
+"ded2027": 0.18625,
+"base2026": 0.6185,
+"base2027": 0.6818
+},
+"6407": {
+"desc": "Wholesale Stores, NOC incl wholesale/retail combination",
+"group": "Dealers And Wholesalers",
+"comp2026": 0.8847,
+"ded2026": 0.22035,
+"comp2027": 0.9468,
+"ded2027": 0.2321,
+"base2026": 0.8847,
+"base2027": 0.9468
+},
+"6408": {
+"desc": "Farm Machinery Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.6413,
+"ded2026": 0.33395,
+"comp2027": 1.6363,
+"ded2027": 0.33305,
+"base2026": 1.6413,
+"base2027": 1.6363
+},
+"6409": {
+"desc": "Machinery and Equipment Dealers and Repair NOC",
+"group": "Dealers And Wholesalers",
+"comp2026": 1.8492,
+"ded2026": 0.3332,
+"comp2027": 1.8368,
+"ded2027": 0.3349,
+"base2026": 1.8492,
+"base2027": 1.8368
+},
+"6410": {
+"desc": "Janitorial Supply Dealers",
+"group": "Dealers And Wholesalers",
+"comp2026": 0.9263,
+"ded2026": 0.22435,
+"comp2027": 0.9952,
+"ded2027": 0.2425,
+"base2026": 0.9263,
+"base2027": 0.9952
+},
+"6411": {
+"desc": "Book, Coin, Camera, Phone, Music Instrument Stores",
+"group": "Stores",
+"comp2026": 0.3292,
+"ded2026": 0.1232,
+"comp2027": 0.3683,
+"ded2027": 0.13185,
+"base2026": 0.3292,
+"base2027": 0.3683
+},
+"6501": {
+"desc": "Barber, Beauty, Tattoo, Piercing, Tanning Shops",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.3995,
+"ded2026": 0.1285,
+"comp2027": 0.4163,
+"ded2027": 0.13255,
+"base2026": 0.3995,
+"base2027": 0.4163
+},
+"6502": {
+"desc": "Banks and Financial Institutions",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2367,
+"ded2026": 0.1032,
+"comp2027": 0.2466,
+"ded2027": 0.1071,
+"base2026": 0.2367,
+"base2027": 0.2466
+},
+"6503": {
+"desc": "Labor Unions",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.3973,
+"ded2026": 0.1198,
+"comp2027": 0.42,
+"ded2027": 0.12585,
+"base2026": 0.3973,
+"base2027": 0.42
+},
+"6504": {
+"desc": "Thrift Stores, non and for Profit",
+"group": "Stores",
+"comp2026": 0.8047,
+"ded2026": 0.22895,
+"comp2027": 0.8537,
+"ded2027": 0.24255,
+"base2026": 0.8047,
+"base2027": 0.8537
+},
+"6505": {
+"desc": "Welfare Special Works Programs",
+"group": "Government And Schools",
+"comp2026": 0.5624,
+"ded2026": 0.18355,
+"comp2027": 0.6259,
+"ded2027": 0.2054,
+"base2026": 0.5624,
+"base2027": 0.6259
+},
+"6506": {
+"desc": "Photography Studios and Film Print Shops",
+"group": "Stores",
+"comp2026": 0.4715,
+"ded2026": 0.14285,
+"comp2027": 0.4907,
+"ded2027": 0.1485,
+"base2026": 0.4715,
+"base2027": 0.4907
+},
+"6509": {
+"desc": "Assisted Living, Adult Family Homes, Retirement Centers",
+"group": "Miscellaneous Services",
+"comp2026": 0.8789,
+"ded2026": 0.22905,
+"comp2027": 0.9571,
+"ded2027": 0.24495,
+"base2026": 0.8789,
+"base2027": 0.9571
+},
+"6510": {
+"desc": "Domestic Workers in Private Residence",
+"group": "Miscellaneous Services",
+"comp2026": 1.2309,
+"ded2026": 0.2089,
+"comp2027": 1.2991,
+"ded2027": 0.21735,
+"base2026": 1.2309,
+"base2027": 1.2991
+},
+"6511": {
+"desc": "Chore Services",
+"group": "Miscellaneous Services",
+"comp2026": 0.7947,
+"ded2026": 0.2073,
+"comp2027": 0.8505,
+"ded2027": 0.21945,
+"base2026": 0.7947,
+"base2027": 0.8505
+},
+"6512": {
+"desc": "Home Care Services/Consumer Directed Employer Program",
+"group": "Miscellaneous Services",
+"comp2026": 0.4331,
+"ded2026": 0.133,
+"comp2027": 0.4706,
+"ded2027": 0.13985,
+"base2026": 0.4331,
+"base2027": 0.4706
+},
+"6601": {
+"desc": "Security Guard Agencies and Armored Car Services",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.764,
+"ded2026": 0.18965,
+"comp2027": 0.8703,
+"ded2027": 0.20465,
+"base2026": 0.764,
+"base2027": 0.8703
+},
+"6602": {
+"desc": "Janitorial Services and Pest Control",
+"group": "Miscellaneous Services",
+"comp2026": 1.6799,
+"ded2026": 0.36515,
+"comp2027": 1.732,
+"ded2027": 0.38025,
+"base2026": 1.6799,
+"base2027": 1.732
+},
+"6603": {
+"desc": "Auction Sales",
+"group": "Dealers And Wholesalers",
+"comp2026": 0.8708,
+"ded2026": 0.2247,
+"comp2027": 0.9123,
+"ded2027": 0.2349,
+"base2026": 0.8708,
+"base2027": 0.9123
+},
+"6604": {
+"desc": "Optical Goods Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 0.3421,
+"ded2026": 0.1222,
+"comp2027": 0.3612,
+"ded2027": 0.1279,
+"base2026": 0.3421,
+"base2027": 0.3612
+},
+"6605": {
+"desc": "Actors, Entertainers and Musicians, NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.9178,
+"ded2026": 0.226,
+"comp2027": 1.0147,
+"ded2027": 0.2547,
+"base2026": 0.9178,
+"base2027": 1.0147
+},
+"6607": {
+"desc": "Card Rooms, Bingo Parlors and Recreational Centers",
+"group": "Miscellaneous Services",
+"comp2026": 0.501,
+"ded2026": 0.1558,
+"comp2027": 0.5217,
+"ded2027": 0.16235,
+"base2026": 0.501,
+"base2027": 0.5217
+},
+"6608": {
+"desc": "Motion Picture Production",
+"group": "Misc. Professional And Clerical",
+"comp2026": 1.3157,
+"ded2026": 0.2059,
+"comp2027": 1.3458,
+"ded2027": 0.2115,
+"base2026": 1.3157,
+"base2027": 1.3458
+},
+"6620": {
+"desc": "Entertainers and Dancers",
+"group": "Misc. Professional And Clerical",
+"comp2026": 8.6892,
+"ded2026": 1.26155,
+"comp2027": 9.0528,
+"ded2027": 1.31045,
+"base2026": 8.6892,
+"base2027": 9.0528
+},
+"6704": {
+"desc": "Parking Lot Operations",
+"group": "Miscellaneous Services",
+"comp2026": 0.5071,
+"ded2026": 0.14805,
+"comp2027": 0.5537,
+"ded2027": 0.15785,
+"base2026": 0.5071,
+"base2027": 0.5537
+},
+"6705": {
+"desc": "Ski Facilities and Outdoor Recreation Guides",
+"group": "Miscellaneous Services",
+"comp2026": 2.2828,
+"ded2026": 0.59325,
+"comp2027": 2.3312,
+"ded2027": 0.6112,
+"base2026": 2.2828,
+"base2027": 2.3312
+},
+"6706": {
+"desc": "Sports Teams - Operations and Facilities",
+"group": "Miscellaneous Services",
+"comp2026": 0.767,
+"ded2026": 0.21015,
+"comp2027": 0.8379,
+"ded2027": 0.2234,
+"base2026": 0.767,
+"base2027": 0.8379
+},
+"6707": {
+"desc": "Contact Sports, NOC",
+"group": "Miscellaneous Services",
+"comp2026": 23.2807,
+"ded2026": 6.3459,
+"comp2027": 27.299,
+"ded2027": 7.561,
+"base2026": 23.2807,
+"base2027": 27.299
+},
+"6708": {
+"desc": "Auto & Boat Racing",
+"group": "Miscellaneous Services",
+"comp2026": 22.0321,
+"ded2026": 5.1085,
+"comp2027": 23.1547,
+"ded2027": 5.3706,
+"base2026": 22.0321,
+"base2027": 23.1547
+},
+"6709": {
+"desc": "Sheltered Workshops and work activity centers",
+"group": "Miscellaneous Services",
+"comp2026": 0.778,
+"ded2026": 0.2032,
+"comp2027": 0.801,
+"ded2027": 0.21425,
+"base2026": 0.778,
+"base2027": 0.801
+},
+"6801": {
+"desc": "Scheduled Airlines -        Flight Crew",
+"group": "Transportation And Warehousing",
+"comp2026": 1.9401,
+"ded2026": 0.27615,
+"comp2027": 2.0153,
+"ded2027": 0.29745,
+"base2026": 1.9401,
+"base2027": 2.0153
+},
+"6802": {
+"desc": "Scheduled Airlines -        Ground Crew",
+"group": "Transportation And Warehousing",
+"comp2026": 2.533,
+"ded2026": 0.4516,
+"comp2027": 2.6568,
+"ded2027": 0.4835,
+"base2026": 2.533,
+"base2027": 2.6568
+},
+"6803": {
+"desc": "Non Scheduled Airlines - Flight Crew",
+"group": "Transportation And Warehousing",
+"comp2026": 1.5155,
+"ded2026": 0.2192,
+"comp2027": 1.6011,
+"ded2027": 0.2257,
+"base2026": 1.5155,
+"base2027": 1.6011
+},
+"6804": {
+"desc": "Non Scheduled Airlines - Ground Crew",
+"group": "Transportation And Warehousing",
+"comp2026": 0.8854,
+"ded2026": 0.20625,
+"comp2027": 0.9747,
+"ded2027": 0.21905,
+"base2026": 0.8854,
+"base2027": 0.9747
+},
+"6809": {
+"desc": "Baseball, Basketball and Soccer Teams",
+"group": "Miscellaneous Services",
+"comp2026": 7.9129,
+"ded2026": 1.6144,
+"comp2027": 8.3432,
+"ded2027": 1.77455,
+"base2026": 7.9129,
+"base2027": 8.3432
+},
+"6901": {
+"desc": "Volunteers, Student Volunteers, Unpaid Students",
+"group": "Government And Schools",
+"comp2026": 0.0677,
+"ded2026": 0,
+"comp2027": 0.0702,
+"ded2027": 0,
+"base2026": 0.0677,
+"base2027": 0.0702
+},
+"6902": {
+"desc": "Log Road Construction",
+"group": "Forest Products",
+"comp2026": 2.0903,
+"ded2026": 0.3585,
+"comp2027": 2.1773,
+"ded2027": 0.3702,
+"base2026": 2.0903,
+"base2027": 2.1773
+},
+"6903": {
+"desc": "Aerial Fire Fighting, Spraying, Seeding and Crop Dusting",
+"group": "Transportation And Warehousing",
+"comp2026": 8.7942,
+"ded2026": 1.0648,
+"comp2027": 8.6784,
+"ded2027": 1.05595,
+"base2026": 8.7942,
+"base2027": 8.6784
+},
+"6904": {
+"desc": "County and City Fire Fighters - Salaried**",
+"group": "Government And Schools",
+"comp2026": 4.5932,
+"ded2026": 0.49545,
+"comp2027": 5.2822,
+"ded2027": 0.58365,
+"base2026": 4.5932,
+"base2027": 5.2822
+},
+"6905": {
+"desc": "County and City Law Enforcement Officers",
+"group": "Government And Schools",
+"comp2026": 3.586,
+"ded2026": 0.3625,
+"comp2027": 4.1239,
+"ded2027": 0.42595,
+"base2026": 3.586,
+"base2027": 4.1239
+},
+"6906": {
+"desc": "Volunteer Law Enforcement Officers",
+"group": "Government And Schools",
+"comp2026": 0.7328,
+"ded2026": 0,
+"comp2027": 0.8658,
+"ded2027": 0,
+"base2026": 0.7328,
+"base2027": 0.8658
+},
+"6907": {
+"desc": "Moving and Storage Companies",
+"group": "Transportation And Warehousing",
+"comp2026": 2.0282,
+"ded2026": 0.4188,
+"comp2027": 2.2253,
+"ded2027": 0.45735,
+"base2026": 2.0282,
+"base2027": 2.2253
+},
+"6908": {
+"desc": "Paper Products Manufacturing",
+"group": "Miscellaneous Manufacturing",
+"comp2026": 1.1805,
+"ded2026": 0.2695,
+"comp2027": 1.2852,
+"ded2027": 0.28915,
+"base2026": 1.1805,
+"base2027": 1.2852
+},
+"6909": {
+"desc": "Medical and Testing Labs/Blood Banks",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.4688,
+"ded2026": 0.14325,
+"comp2027": 0.4879,
+"ded2027": 0.15075,
+"base2026": 0.4688,
+"base2027": 0.4879
+},
+"7100": {
+"desc": "Exempt Limited Liability Members NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2325,
+"ded2026": 0.1008,
+"comp2027": 0.2418,
+"ded2027": 0.10435,
+"base2026": 0.2325,
+"base2027": 0.2418
+},
+"7101": {
+"desc": "Exempt Corporate Officers, NOC",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2595,
+"ded2026": 0.10395,
+"comp2027": 0.2721,
+"ded2027": 0.1079,
+"base2026": 0.2595,
+"base2027": 0.2721
+},
+"7103": {
+"desc": "State Government - Law Enforcement Officers",
+"group": "Government And Schools",
+"comp2026": 2.9377,
+"ded2026": 0.41625,
+"comp2027": 2.9104,
+"ded2027": 0.4078,
+"base2026": 2.9377,
+"base2027": 2.9104
+},
+"7104": {
+"desc": "Temp. Help -  Administrative Staff",
+"group": "Temporary Help",
+"comp2026": 0.2577,
+"ded2026": 0.1056,
+"comp2027": 0.2717,
+"ded2027": 0.11015,
+"base2026": 0.2577,
+"base2027": 0.2717
+},
+"7105": {
+"desc": "Temp. Help - Office Services",
+"group": "Temporary Help",
+"comp2026": 0.2373,
+"ded2026": 0.10265,
+"comp2027": 0.2501,
+"ded2027": 0.10685,
+"base2026": 0.2373,
+"base2027": 0.2501
+},
+"7106": {
+"desc": "Temp. Help - Retail and Wholesale Store Services",
+"group": "Temporary Help",
+"comp2026": 0.7697,
+"ded2026": 0.2003,
+"comp2027": 0.8004,
+"ded2027": 0.21,
+"base2026": 0.7697,
+"base2027": 0.8004
+},
+"7107": {
+"desc": "Temp. Help - Food Services",
+"group": "Temporary Help",
+"comp2026": 1.2058,
+"ded2026": 0.26155,
+"comp2027": 1.2895,
+"ded2027": 0.27835,
+"base2026": 1.2058,
+"base2027": 1.2895
+},
+"7108": {
+"desc": "Temp. Help - Warehousing Services",
+"group": "Temporary Help",
+"comp2026": 0.9833,
+"ded2026": 0.24805,
+"comp2027": 1.0837,
+"ded2027": 0.2646,
+"base2026": 0.9833,
+"base2027": 1.0837
+},
+"7109": {
+"desc": "Temp. Help - Light Assembly Work",
+"group": "Temporary Help",
+"comp2026": 0.4661,
+"ded2026": 0.13825,
+"comp2027": 0.5072,
+"ded2027": 0.14695,
+"base2026": 0.4661,
+"base2027": 0.5072
+},
+"7110": {
+"desc": "Temp. Help - Field Technical Services",
+"group": "Temporary Help",
+"comp2026": 1.2969,
+"ded2026": 0.2608,
+"comp2027": 1.3188,
+"ded2027": 0.2668,
+"base2026": 1.2969,
+"base2027": 1.3188
+},
+"7111": {
+"desc": "Temp. Help - Health Care Services",
+"group": "Temporary Help",
+"comp2026": 1.1275,
+"ded2026": 0.18525,
+"comp2027": 1.1873,
+"ded2027": 0.19655,
+"base2026": 1.1275,
+"base2027": 1.1873
+},
+"7112": {
+"desc": "Temp. Help - Agricultural Services",
+"group": "Temporary Help",
+"comp2026": 1.8171,
+"ded2026": 0.4119,
+"comp2027": 1.9013,
+"ded2027": 0.42985,
+"base2026": 1.8171,
+"base2027": 1.9013
+},
+"7113": {
+"desc": "Temp. Help - Maintenance Services",
+"group": "Temporary Help",
+"comp2026": 1.3361,
+"ded2026": 0.28995,
+"comp2027": 1.3641,
+"ded2027": 0.29775,
+"base2026": 1.3361,
+"base2027": 1.3641
+},
+"7114": {
+"desc": "Temp. Help - Assembly Work and Freight Handling",
+"group": "Temporary Help",
+"comp2026": 1.8999,
+"ded2026": 0.4238,
+"comp2027": 1.981,
+"ded2027": 0.44005,
+"base2026": 1.8999,
+"base2027": 1.981
+},
+"7115": {
+"desc": "Temp. Help - Food Processing Services",
+"group": "Temporary Help",
+"comp2026": 1.6541,
+"ded2026": 0.3761,
+"comp2027": 1.7616,
+"ded2027": 0.39905,
+"base2026": 1.6541,
+"base2027": 1.7616
+},
+"7116": {
+"desc": "Temp. Help - Flagging for Public Utility Construction",
+"group": "Temporary Help",
+"comp2026": 1.7017,
+"ded2026": 0.3249,
+"comp2027": 1.7643,
+"ded2027": 0.33675,
+"base2026": 1.7017,
+"base2027": 1.7643
+},
+"7117": {
+"desc": "Temp. Help - Machine Operators and Skilled Craftsmen",
+"group": "Temporary Help",
+"comp2026": 2.5288,
+"ded2026": 0.4767,
+"comp2027": 2.5117,
+"ded2027": 0.46815,
+"base2026": 2.5288,
+"base2027": 2.5117
+},
+"7118": {
+"desc": "Temp. Help - Flagging for Construction Services NOC",
+"group": "Temporary Help",
+"comp2026": 3.6845,
+"ded2026": 0.6158,
+"comp2027": 3.5289,
+"ded2027": 0.59325,
+"base2026": 3.6845,
+"base2027": 3.5289
+},
+"7119": {
+"desc": "Temp. Help - Vehicle Operations",
+"group": "Temporary Help",
+"comp2026": 4.5052,
+"ded2026": 0.6945,
+"comp2027": 4.7331,
+"ded2027": 0.7174,
+"base2026": 4.5052,
+"base2027": 4.7331
+},
+"7120": {
+"desc": "Temp. Help - Hazardous Waste Services",
+"group": "Temporary Help",
+"comp2026": 14.6807,
+"ded2026": 2.0168,
+"comp2027": 15.4011,
+"ded2027": 2.1668,
+"base2026": 14.6807,
+"base2027": 15.4011
+},
+"7121": {
+"desc": "Temp. Help - Logging and Aircraft Services",
+"group": "Temporary Help",
+"comp2026": 17.7245,
+"ded2026": 2.0685,
+"comp2027": 18.2315,
+"ded2027": 2.13115,
+"base2026": 17.7245,
+"base2027": 18.2315
+},
+"7122": {
+"desc": "Temp. Help - Laborers for Manufacturing",
+"group": "Temporary Help",
+"comp2026": 1.0728,
+"ded2026": 0.271,
+"comp2027": 1.1278,
+"ded2027": 0.28085,
+"base2026": 1.0728,
+"base2027": 1.1278
+},
+"7200": {
+"desc": "State Acute Health Care Facilities w/Safe Patient Handling",
+"group": "Government And Schools",
+"comp2026": 6.7512,
+"ded2026": 0.77705,
+"comp2027": 7.0293,
+"ded2027": 0.8201,
+"base2026": 6.7512,
+"base2027": 7.0293
+},
+"7201": {
+"desc": "State Patient and Health Care Personnel, NOC",
+"group": "Government And Schools",
+"comp2026": 4.627,
+"ded2026": 0.61225,
+"comp2027": 5.1593,
+"ded2027": 0.66105,
+"base2026": 4.627,
+"base2027": 5.1593
+},
+"7202": {
+"desc": "Real Estate Agencies/Brokers",
+"group": "Misc. Professional And Clerical",
+"comp2026": 0.2319,
+"ded2026": 0.1019,
+"comp2027": 0.2394,
+"ded2027": 0.10545,
+"base2026": 0.2319,
+"base2027": 0.2394
+},
+"7203": {
+"desc": "Community Service Workers-Elective Coverage",
+"group": "Miscellaneous Services",
+"comp2026": 0.4208,
+"ded2026": 0.1475,
+"comp2027": 0.4412,
+"ded2027": 0.15405,
+"base2026": 0.4208,
+"base2027": 0.4412
+},
+"7204": {
+"desc": "Preferred Workers",
+"group": "Miscellaneous Services",
+"comp2026": 0.1912,
+"ded2026": 0.0956,
+"comp2027": 0.1978,
+"ded2027": 0.0989,
+"base2026": 0.1912,
+"base2027": 0.1978
+},
+"7205": {
+"desc": "Life and rescue emergency personnel",
+"group": "Miscellaneous Services",
+"comp2026": 0.1912,
+"ded2026": 0.0956,
+"comp2027": 0.1978,
+"ded2027": 0.0989,
+"base2026": 0.1912,
+"base2027": 0.1978
+},
+"7301": {
+"desc": "Dairy Farms",
+"group": "Agriculture",
+"comp2026": 1.7867,
+"ded2026": 0.40725,
+"comp2027": 1.7991,
+"ded2027": 0.41605,
+"base2026": 1.7867,
+"base2027": 1.7991
+},
+"7302": {
+"desc": "Livestock Farms and Stables; Riding Academies",
+"group": "Agriculture",
+"comp2026": 2.5395,
+"ded2026": 0.54735,
+"comp2027": 2.6813,
+"ded2027": 0.5826,
+"base2026": 2.5395,
+"base2027": 2.6813
+},
+"7307": {
+"desc": "Tree Farms",
+"group": "Agriculture",
+"comp2026": 1.1392,
+"ded2026": 0.26965,
+"comp2027": 1.172,
+"ded2027": 0.2801,
+"base2026": 1.1392,
+"base2027": 1.172
+},
+"7308": {
+"desc": "Pet Grooming/Boarding Services/Animal Shelters",
+"group": "Miscellaneous Services",
+"comp2026": 0.9176,
+"ded2026": 0.2529,
+"comp2027": 1.022,
+"ded2027": 0.26955,
+"base2026": 0.9176,
+"base2027": 1.022
+},
+"7400": {
+"desc": "State Acute Health Care Facilities w/o Safe Patient Handling",
+"group": "Government And Schools",
+"comp2026": 7.7351,
+"ded2026": 0.87925,
+"comp2027": 8.054,
+"ded2027": 0.9283,
+"base2026": 7.7351,
+"base2027": 8.054
+}
+}
+}

@@ -1,0 +1,303 @@
+{
+  "_lisezmoi": "Every legal or published figure of the site lives here or in dcbs-2024.json and wa-rates.json (built by scripts/data/build-data.py). Each value was read on the official source cited, on the date of retrieved_at.",
+  "year": 2026,
+  "retrieved_at": "2026-11-13",
+  "sources": {
+    "dcbs_2024": {
+      "url": "https://www.oregon.gov/DCBS/DCBSPubs/reports/general/prem-rpt/24-2083.pdf",
+      "label": {
+        "en": "Oregon Department of Consumer and Business Services, Workers’ Compensation Premium Rate Ranking, Calendar Year 2024 (published June 2025)"
+      }
+    },
+    "dcbs_page": {
+      "url": "https://www.oregon.gov/dcbs/reports/compensation/pages/wc-across-states.aspx",
+      "label": {
+        "en": "Oregon DCBS, workers’ compensation premium rate ranking: study page and past editions"
+      }
+    },
+    "or_cost": {
+      "url": "https://www.oregon.gov/dcbs/cost/Pages/index.aspx",
+      "label": {
+        "en": "Oregon DCBS, Oregon workers’ compensation costs for 2027 (pure premium, assessments)"
+      }
+    },
+    "wa_rates": {
+      "url": "https://lni.wa.gov/insurance/rates-risk-classes/rates-for-workers-compensation/index",
+      "label": {
+        "en": "Washington State Department of Labor & Industries, rates for workers’ compensation"
+      }
+    },
+    "wa_fund2026": {
+      "url": "https://lni.wa.gov/insurance/_docs/2026RatesByClassCodeFund.xlsx",
+      "label": {
+        "en": "Washington L&I, 2026 hourly rates by risk class and fund (spreadsheet)"
+      }
+    },
+    "wa_fund2027": {
+      "url": "https://lni.wa.gov/insurance/_docs/Proposed2027RatesByClassCodeFund.xlsx",
+      "label": {
+        "en": "Washington L&I, proposed 2027 hourly rates by risk class and fund (spreadsheet)"
+      }
+    },
+    "wa_bus2027": {
+      "url": "https://lni.wa.gov/insurance/_docs/Proposed2027RatesBusTypeClassCode.xlsx",
+      "label": {
+        "en": "Washington L&I, proposed 2027 rates by business type, with the all-class average (spreadsheet)"
+      }
+    },
+    "wa_account": {
+      "url": "https://lni.wa.gov/insurance/insurance-requirements/do-i-need-a-workers-comp-account/",
+      "label": {
+        "en": "Washington L&I, do I need a workers’ comp account?"
+      }
+    },
+    "ca_cdi": {
+      "url": "https://www.insurance.ca.gov/0400-news/0100-press-releases/2026/release024-2026.cfm",
+      "label": {
+        "en": "California Department of Insurance, 2026 advisory pure premium rate decision"
+      }
+    },
+    "ca_dwc": {
+      "url": "https://www.dir.ca.gov/dwc/employer.htm",
+      "label": {
+        "en": "California Division of Workers’ Compensation, information for employers"
+      }
+    },
+    "fl_dwc": {
+      "url": "https://myfloridacfo.com/division/wc/employer/coverage-requirements",
+      "label": {
+        "en": "Florida Division of Workers’ Compensation, coverage requirements"
+      }
+    },
+    "wi_dwd": {
+      "url": "https://dwd.wisconsin.gov/wc/employers/",
+      "label": {
+        "en": "Wisconsin Department of Workforce Development, workers’ compensation for employers"
+      }
+    },
+    "tx_tdi": {
+      "url": "https://www.tdi.texas.gov/wc/employer/index.html",
+      "label": {
+        "en": "Texas Department of Insurance, Division of Workers’ Compensation, employer resources"
+      }
+    },
+    "sd_dlr": {
+      "url": "https://dlr.sd.gov/workers_compensation/default.aspx",
+      "label": {
+        "en": "South Dakota Department of Labor & Regulation, workers’ compensation"
+      }
+    },
+    "ga_sbwc": {
+      "url": "https://sbwc.georgia.gov/employer-information",
+      "label": {
+        "en": "Georgia State Board of Workers’ Compensation, employer information"
+      }
+    },
+    "mo_rsmo": {
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=287.030",
+      "label": {
+        "en": "Missouri Revised Statutes, section 287.030 (employer defined)"
+      }
+    },
+    "sc_code": {
+      "url": "https://www.scstatehouse.gov/code/t42c001.php",
+      "label": {
+        "en": "South Carolina Code, title 42, chapter 1 (scope of the Workers’ Compensation Law)"
+      }
+    },
+    "va_code": {
+      "url": "https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/",
+      "label": {
+        "en": "Code of Virginia, section 65.2-101 (definitions, employee)"
+      }
+    },
+    "ks_ksa": {
+      "url": "https://www.ksrevisor.gov/statutes/chapters/ch44/044_005_0005.html",
+      "label": {
+        "en": "Kansas Statutes, K.S.A. 44-505 (application of the act)"
+      }
+    },
+    "mt_mca": {
+      "url": "https://mca.legmt.gov/bills/mca/title_0390/chapter_0710/part_0040/section_0010/0390-0710-0040-0010.html",
+      "label": {
+        "en": "Montana Code Annotated, 39-71-401 (employers and employees covered)"
+      }
+    },
+    "co_dwc": {
+      "url": "https://cdle.colorado.gov/dwc",
+      "label": {
+        "en": "Colorado Division of Workers’ Compensation"
+      }
+    },
+    "hi_dcd": {
+      "url": "https://labor.hawaii.gov/dcd/",
+      "label": {
+        "en": "Hawaii Disability Compensation Division"
+      }
+    },
+    "az_ars": {
+      "url": "https://www.azleg.gov/ars/23/00902.htm",
+      "label": {
+        "en": "Arizona Revised Statutes, 23-902 (employers subject to the chapter)"
+      }
+    },
+    "pa_dli": {
+      "url": "https://www.pa.gov/agencies/dli/programs-services/workers-compensation",
+      "label": {
+        "en": "Pennsylvania Department of Labor & Industry, workers’ compensation"
+      }
+    }
+  },
+  "changes": {
+    "ca": {
+      "rate": 1.65,
+      "pct": 6.6,
+      "requested": 10.4,
+      "effective": "2026-09-01",
+      "source": "ca_cdi"
+    },
+    "or2027": {
+      "purePremiumPct": 2.1,
+      "since2018": -36.5,
+      "assessmentPct": 9.8,
+      "wbfCents": 2.2,
+      "boliCents": 0.2,
+      "source": "or_cost",
+      "selfInsuredPct": 9.9,
+      "selfGroupsPct": 10.3
+    },
+    "wa": {
+      "avg2026": 0.7885,
+      "chg2026": 4.9,
+      "avg2027": 0.8274,
+      "chg2027": 4.9,
+      "source": "wa_bus2027"
+    }
+  },
+  "gaPenalty": {
+    "min": 500,
+    "max": 5000,
+    "criminalMin": 1000,
+    "criminalMax": 10000,
+    "jailMonths": 12,
+    "source": "ga_sbwc"
+  },
+  "rules": {
+    "CA": {
+      "kind": "all",
+      "min": 1,
+      "text": "Every employer with one or more employees must carry workers’ compensation; a roofing business with no employees must be insured too.",
+      "src": "ca_dwc"
+    },
+    "FL": {
+      "kind": "count",
+      "min": 4,
+      "constr": 1,
+      "text": "Construction: from one employee, corporate officers counted. Other industries: from 4 employees. Agriculture: 6 regular or 12 seasonal workers.",
+      "src": "fl_dwc"
+    },
+    "WI": {
+      "kind": "count",
+      "min": 3,
+      "text": "Three or more employees, or a single employee paid $500 or more in a calendar quarter; farmers from 6 employees on 20 days of a year.",
+      "src": "wi_dwd",
+      "quarterPay": 500
+    },
+    "TX": {
+      "kind": "optional",
+      "min": null,
+      "text": "Private employers can choose to carry coverage, but it is not required in most cases; an employer without it (a non-subscriber) must report to the state that it has no coverage.",
+      "src": "tx_tdi"
+    },
+    "SD": {
+      "kind": "optional",
+      "min": null,
+      "text": "No South Dakota law requires an employer to carry workers’ compensation; an uninsured employer may be sued in civil court by an injured worker.",
+      "src": "sd_dlr"
+    },
+    "GA": {
+      "kind": "count",
+      "min": 3,
+      "text": "Three or more persons regularly employed, part-time or full time; the State Board may assess a civil penalty of $500 to $5,000 per occurrence on an employer that fails to provide coverage.",
+      "src": "ga_sbwc"
+    },
+    "MO": {
+      "kind": "count",
+      "min": 5,
+      "constr": 1,
+      "text": "Five or more employees; in construction, from one employee.",
+      "src": "mo_rsmo"
+    },
+    "SC": {
+      "kind": "count",
+      "min": 4,
+      "payrollMin": 3000,
+      "text": "Exempt with fewer than 4 employees, or with a total payroll under $3,000 in the previous year.",
+      "src": "sc_code"
+    },
+    "VA": {
+      "kind": "count",
+      "min": 3,
+      "text": "Exempt with fewer than 3 employees regularly in service; farm workers exempt unless more than 3 work full time.",
+      "src": "va_code"
+    },
+    "KS": {
+      "kind": "payroll",
+      "min": null,
+      "payrollMin": 20001,
+      "text": "Exempt with a gross annual payroll of $20,000 or less last year and expected this year, wages of family members left out.",
+      "src": "ks_ksa"
+    },
+    "MT": {
+      "kind": "all",
+      "min": 1,
+      "text": "All employers, with listed exceptions such as household work, casual work, family members and owners.",
+      "src": "mt_mca"
+    },
+    "CO": {
+      "kind": "all",
+      "min": 1,
+      "text": "Every business with employees, whatever their number.",
+      "src": "co_dwc"
+    },
+    "HI": {
+      "kind": "all",
+      "min": 1,
+      "text": "One or more employees, full time or part time.",
+      "src": "hi_dcd"
+    },
+    "AZ": {
+      "kind": "all",
+      "min": 1,
+      "text": "Anyone who employs regular employees, domestic workers excepted.",
+      "src": "az_ars"
+    },
+    "PA": {
+      "kind": "all",
+      "min": 1,
+      "text": "Required for most employers; domestic workers optional; farm workers exempt when they work fewer than 30 days or earn less than $1,200 in a year from one employer.",
+      "src": "pa_dli"
+    },
+    "WA": {
+      "kind": "all",
+      "min": 1,
+      "text": "Every employer with workers, through the state fund of Labor & Industries or self-insurance: private insurers are not allowed.",
+      "src": "wa_account"
+    }
+  },
+  "orStudy": {
+    "purePremium": 0.63,
+    "ppChange": -9.9,
+    "lcm": 1.533,
+    "lcmChange": 5.5,
+    "insurers": 30,
+    "insurerShare": 89,
+    "peakPct": 149,
+    "peakYear": 1990,
+    "lowPct": 68,
+    "lowYear": 2018,
+    "index2022": 0.93,
+    "voluntaryLowRank": 14,
+    "source": "dcbs_2024"
+  }
+}

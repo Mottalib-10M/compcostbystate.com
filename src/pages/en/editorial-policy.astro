@@ -1,0 +1,19 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME } from '../../data/site-config';
+const lang = 'en';
+---
+<PageLayout title="Editorial policy of Comp Cost By State: state data, dated" description="How Comp Cost By State writes its pages: rates read in a state study and state fund tables, rules read on state sites, each cited with its date, and no quote ever." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Editorial policy</h1>
+    <h2>Where the figures come from</h2>
+    <p>A rate enters the site only when it was read in a publication of a state: the Oregon premium rate ranking, the Washington Labor &amp; Industries rate tables, or a rate decision of a state insurance department. A coverage rule enters only when it was read on the state agency’s site or in the statute. Each figure is stored with the address of the document and the date it was read. Insurer and agent pages are read to see what readers ask, never to take a number.</p>
+    <h2>How pages are written</h2>
+    <p>No rate is typed into the text. The data live in three files built from the official documents by a script, and every page computes its figures from them when the site is built, with the same engine as the calculators. A figure that could not be read at its source is not shown.</p>
+    <h2>Money</h2>
+    <p>{AUTHOR_NAME} receives nothing from insurers, agents, brokers or lead buyers and links to none of them as a sponsor. There is no advertising today; if some is added it will be labeled and never placed above a calculator.</p>
+    <h2>Updates and corrections</h2>
+    <p>Nothing on the site updates by itself. Each page shows the date its sources were last read, and every rate says which date it applied on. When a state publishes new rates, the pages keep the figures they show until the new document is read. A reported error is checked against the official document and, once fixed, moves the date. Write through the <a href={route('contact', lang)}>contact page</a>; the rules are on the <a href={route('method', lang)}>method page</a>.</p>
+  </article>
+</PageLayout>
