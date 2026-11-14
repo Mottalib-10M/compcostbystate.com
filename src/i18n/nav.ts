@@ -4,6 +4,7 @@ import type { Group } from '../lib/page-types';
 export interface NavLink { href: string; label: string } export interface NavCategory { label: string; links: NavLink[] }
 const CORE: Record<string, string> = { home: 'Workers’ comp cost calculator', method: 'How the figures are built', about: 'About', widget: 'Embed the calculator', contact: 'Contact', editorial: 'Editorial policy', privacy: 'Privacy', terms: 'Legal notice', cookies: 'Cookies' };
 export const GROUPS: Array<{ id: Group; label: string }> = [
+  { id: 'insurance', label: 'Workers’ comp insurance' },
   { id: 'cost', label: 'Cost and rules' },
   { id: 'states', label: 'Rates by state' },
   { id: 'classes', label: 'Rates by class code' },
@@ -21,4 +22,4 @@ export const footerColumns = (lang: Locale): NavCategory[] => [
   { label: 'This site', links: ['home', 'method', 'about', 'contact', 'editorial', 'widget', 'terms', 'privacy', 'cookies'].map((i) => link(i, lang)) },
 ];
 /** Most read pages from the footer: one click from any page (RECETTE §18.2). */
-export const popularLinks = (lang: Locale): NavLink[] => ['workers-comp-rates-by-state', 'workers-comp-class-codes', 'how-much-does-workers-comp-cost', 'workers-comp-requirements-by-state', 'class-code-8810', 'california-workers-comp-rates'].filter((id) => pageById(id)).map((id) => link(id, lang));
+export const popularLinks = (lang: Locale): NavLink[] => ['workmans-comp', 'workers-comp-insurance', 'workers-comp-rates-by-state', 'workers-comp-class-codes', 'how-much-does-workers-comp-cost', 'workers-comp-requirements-by-state', 'class-code-8810', 'california-workers-comp-rates'].filter((id) => pageById(id)).map((id) => link(id, lang));

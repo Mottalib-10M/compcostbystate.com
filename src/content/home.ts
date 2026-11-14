@@ -18,10 +18,10 @@ const MOD = 0.85;
 export const VALUE = `Insurance sites ask for your phone number before they show a price, and most cost pages quote a national average that means nothing for a roofer or for an office. This site starts from the rate tables states themselves publish: the calculated rate of ${K.NCLASS} classes of work in ${K.N} jurisdictions from the Oregon Department of Consumer and Business Services study, and the ${K.num(K.NWA)} hourly classes of the Washington state fund. Pick your class and your state and you see the price level per $100 of payroll, where it ranks, and what your payroll would cost, without giving a name.`;
 
 export const HOME = {
-  title: 'Workers Comp Cost by State 2026: Class Code Calculator',
-  description: 'Workers comp cost by state in 2026: estimate a premium from your class code, payroll and mod, with rates of 51 states from a state study. No quote, no sign-up.',
-  h1: 'Workers’ comp cost by state and class code',
-  answer: `Workers’ comp costs a median ${K.r100(K.MEDIAN)} per $100 of payroll across the states, from ${K.r100(ND.index)} in North Dakota to ${K.r100(HI.index)} in Hawaii. Your class of work moves it far more: office staff cost cents, roofers dollars.`,
+  title: 'Workers Compensation Cost by State 2026: Class Calculator',
+  description: 'Workers compensation cost by state in 2026: estimate a premium from your class code, payroll and mod, with rates of 51 states from a state study. No sign-up.',
+  h1: 'Workers compensation cost by state',
+  answer: `Workers compensation costs a median ${K.r100(K.MEDIAN)} per $100 of payroll across the states, from ${K.r100(ND.index)} in North Dakota to ${K.r100(HI.index)} in Hawaii. Your class of work moves it far more: office staff cost cents, roofers dollars.`,
   intro: 'Pick your class code and state, enter the payroll, and the calculator estimates the yearly premium.',
   resume: `Workers’ compensation is priced per $100 of payroll, class of work by class of work, state by state. The Oregon Department of Consumer and Business Services (DCBS) compares the ${K.N} jurisdictions every two years on ${K.NCLASS} classes, and its latest study, of rates in effect on January 1, 2024, puts the median state at ${K.r100(K.MEDIAN)} per $100 of payroll. Hawaii is the highest at ${K.r100(HI.index)} and North Dakota the lowest at ${K.r100(ND.index)}; California ranks ${K.ord(CA.rank)} at ${K.r100(CA.index)} and Texas ${K.ord(TX.rank)} at ${K.r100(TX.index)}. The class weighs more than the state. Clerical office work (class 8810) runs from ${K.r100(C8810.low.rate)} to ${K.r100(C8810.high.rate)} per $100, roofing (5551) from ${K.r100(C5551.low.rate)} to ${K.r100(C5551.high.rate)}. An electrical contractor in California with ${K.usd(PAY)} of payroll in class ${CODE} would pay about ${K.usd(EXP)} a year at the average rate of ${K.r100(R)}, before its experience modification, the factor that raises or lowers a premium by its claims record. Your insurer sets the final price.`,
   faqs: [
@@ -41,7 +41,7 @@ export const HOME = {
 `,
   /** Open sections. */
   guide: (h: Helpers) => `
-<h2>Workers’ comp cost by state: what the ranking says</h2>
+<h2>Workers compensation cost by state: what the ranking says</h2>
 <p>Every two years the Oregon Department of Consumer and Business Services asks insurance regulators and rating bureaus in all ${K.N} jurisdictions for the rate of the same ${K.NCLASS} classes of work, adds the average expense load of insurers and the state assessments, and weights the classes by Oregon’s payroll. The result, the premium index, puts every state on the same footing. In the latest edition the median was ${K.r100(K.MEDIAN)} per $100 of payroll (${h.src('dcbs_2024', 'Oregon DCBS study')}).</p>
 ${h.table(['Rank', 'State', 'Index per $100', '% of median'], [...idx.slice(0, 5), ...idx.slice(-5)].map((x) => [String(x.rank), K.name(x.st), K.r100(x.index), K.pct(x.pctMedian)]), 'Five highest and five lowest premium indexes, rates in effect on January 1, 2024', ['r', 'l', 'r', 'r'])}
 <p>The index is a price level, not a rate to multiply your payroll by: an office in Hawaii does not pay ${K.r100(HI.index)} per $100. The ${h.a('workers-comp-rates-by-state', 'state ranking page')} gives all ${K.N} jurisdictions with their rank in the previous study, and each state page lists its ${K.NCLASS} classes.</p>
@@ -49,8 +49,9 @@ ${h.table(['Rank', 'State', 'Index per $100', '% of median'], [...idx.slice(0, 5
 <p>Within one state, rates of the study run from a few cents to tens of dollars per $100. In the median state, clerical office work costs ${K.r100(C8810.median)} per $100, a restaurant (9082) ${K.r100(C9082.median)} and roofing ${K.r100(C5551.median)}. A firm of ${K.usd(OFFICE)} of office payroll pays about ${off('TX')} a year in Texas, ${off('FL')} in Florida and ${off('CA')} in California at the study rates. The same payroll in roofing would cost thousands.</p>
 ${h.mini('rank', { t: 'One class in every state', p: ['code'], d: { code: '8810', pay: OFFICE } })}
 <p>Classes follow the work, not the job title. A contractor’s estimator who works in the office can be clerical; the same person on a roof is a roofer for those hours, under the rules of the state. The ${h.a('workers-comp-class-codes', 'class code guide')} explains how the codes are assigned and which states use their own system.</p>
-<h2>Who has to carry it</h2>
+<h2>Who has to carry it, and who sells it</h2>
 <p>Almost every state requires coverage once you hire, but the threshold varies. This site has read the rule of ${nRules} states on the state’s own site. California requires it from the first employee, and even a roofer with no employees. Florida requires it from one employee in construction and from four elsewhere; Georgia from three; Missouri from five, or one in construction. Texas leaves it to the employer, and South Dakota has no law requiring it. Washington requires it but forbids private insurers: you buy from the state fund.</p>
+<p>New to the subject? The ${h.a('workmans-comp', 'workmans comp overview')} explains the system state by state, the ${h.a('workers-comp-insurance', 'workers’ comp insurance page')} how a policy is priced and bought, and the ${h.a('state-fund-workers-comp', 'state fund page')} where the state itself sells coverage. ${h.a('workers-comp-insurance-for-small-business', 'Small businesses')}, the ${h.a('workers-comp-insurance-for-self-employed', 'self-employed')} and ${h.a('workers-compensation-insurance-for-contractors', 'contractors')} each have their own page, and the ${h.a('workers-comp-quotes', 'quote checker')} compares a quote with the average rate.</p>
 ${h.mini('required', { t: 'Do you have to carry it?', p: ['st', 'emp'], d: { st: 'GA', emp: 3 } })}
 `,
   /** Folded sections (<details>, content kept in the HTML). */

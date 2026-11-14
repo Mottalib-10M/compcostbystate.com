@@ -10,6 +10,7 @@ import {
   CLASSES, NAMES, STATE_CODES, STATES, MEDIAN, WA, RULES, CHANGES, N_STATES,
   rate, rankOf, statesWith, premium, classRanking, stateClasses, modEffect, perHead, waCost, required, applyChange, stateName, classOf,
 } from './engine/comp';
+import { MARKET, US, ARP_AVG, COMPETITIVE, EXCLUSIVE, FUND_LABEL, shares, costRanking, whereToBuy, impliedRate } from './engine/market';
 
 export const usd = (x: number) => `${x < -0.5 ? '-' : ''}${formatMoney(Math.abs(Math.round(x)), 0)}`;
 /** A rate per $100 as published, to the cent: "$1.09". */
@@ -210,6 +211,70 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
       label: 'Premium after the average change', value: usd(next), example: `Example: ${usd(now)} a year and the ${s(v, 'ch') === 'ca' ? 'California' : 'selected'} change`, sub: `${c >= 0 ? '+' : ''}${formatNumber(c, 1)}%, so ${usd(next - now)} more a year`,
       rows: [['Premium now', usd(now)], ['Change applied', `${formatNumber(c, 1)}%`], ['Per month after', usd(next / 12)]],
       note: 'An average across classes: your own class can move more or less, and insurers price on top of it. California’s figure is advisory: insurers are not bound by it.',
+    };
+  }),
+
+  /** A state explained: who sells coverage, the rule read, the price level and the total employer cost (NASI 2022). */
+  profile: (arg = {}) => spec([ST('CA', 'Your state'), { ...PAYROLL(), label: 'Yearly payroll of your business', help: 'Gross wages of all employees' }], arg, (v) => {
+    const st = s(v, 'st'), pay = n(v, 'pay'), m = MARKET[st], x = STATES[st], rule = RULES[st];
+    const c = m.cost100 ?? null;
+    return {
+      label: `Workers’ comp in ${stateName(st)}`, value: c === null ? `${r100(x.index)} index` : `${r100(c)} per $100 of wages`,
+      example: `Example: ${stateName(st)}, ${usd(pay)} of payroll`, exampleAide: 'pick your state',
+      sub: c === null ? `premium index, ${ordinal(x.rank)} highest of ${N_STATES}` : `what employers paid in all in 2022, against ${r100(US.cost100)} nationally · premium index ${ordinal(x.rank)} highest of ${N_STATES}`,
+      rows: [
+        ['Who sells coverage', whereToBuy(st)],
+        ['Who must carry it', rule ? rule.text : 'Rule not read by this site: ask the state agency'],
+        ...(c === null ? [['Total cost 2022', 'not shown: the national report prints the same table for Kentucky and Louisiana'] as [string, string]] : [
+          [`Average cost on ${usd(pay)} of payroll`, `${usd(premium(pay, c))} a year, all classes mixed`] as [string, string],
+          ['Benefits paid per $100 of wages, 2022', r100(m.ben100!)] as [string, string],
+          ['Cost per $100 in 2018', r100(m.cost100_2018!)] as [string, string],
+        ]),
+        ['Premium index (Oregon study)', `${r100(x.index)} per $100, ${formatNumber(x.pctMedian, 0)}% of the median`],
+      ],
+      table: { caption: 'Employer cost per $100 of covered wages, 2018 and 2022, lowest first (NASI)', headers: ['State', '2022', '2018', 'Who sells coverage'], align: ['l', 'r', 'r', 'l'], rows: costRanking().map((y) => [NAMES[y.st], r100(y.cost100), r100(y.cost100_2018), FUND_LABEL[y.fund]]) },
+      note: 'The cost per $100 of wages is every employer of the state together: premiums, deductible benefits and self-insured costs (National Academy of Social Insurance, 2022 data). Your own price follows your class code: the class calculator gives it.',
+    };
+  }),
+
+  /** State funds: who sells, and the share of employer costs paid to the fund. */
+  fund: (arg = {}) => spec([ST('OH', 'State')], arg, (v) => {
+    const st = s(v, 'st'), m = MARKET[st], sh = shares(st);
+    const list = [...EXCLUSIVE, ...COMPETITIVE].filter((c) => shares(c)).sort((a, b) => shares(b)!.fund - shares(a)!.fund);
+    return {
+      label: `${stateName(st)}: state fund`, value: FUND_LABEL[m.fund], example: `Example: ${stateName(st)}`, exampleAide: 'pick your state',
+      sub: whereToBuy(st),
+      rows: [
+        ...(sh ? [
+          ['State fund share of employer costs, 2022', pct(sh.fund, 1)] as [string, string],
+          ['Private insurers', pct(sh.private, 1)] as [string, string],
+          ['Self-insured employers', pct(sh.self, 1)] as [string, string],
+        ] : [['Shares of costs', 'not shown: the national report prints the same table for Kentucky and Louisiana'] as [string, string]]),
+        ['Rates set by', m.bureau === 'ncci' ? 'NCCI, the national rating organization' : m.bureau === 'independent' ? 'An independent state rating bureau' : 'The state fund itself'],
+        ...(m.arp?.pct ? [['Assigned risk pool, 2023', `${formatNumber(m.arp.pct, 1)}% of premiums (average ${formatNumber(ARP_AVG.pct, 1)}%)`] as [string, string]] : []),
+      ],
+      table: { caption: 'States with a state fund: its share of all employer costs in 2022, highest first', headers: ['State', 'Kind of fund', 'State fund share', 'Private insurers'], align: ['l', 'l', 'r', 'r'], rows: list.map((c) => [NAMES[c], FUND_LABEL[MARKET[c].fund], pct(shares(c)!.fund, 1), pct(shares(c)!.private, 1)]) },
+      note: 'Shares of 2022 employer costs by type of insurer, from the National Academy of Social Insurance. Kentucky and Louisiana also have a competitive state fund; their figures are not shown because the report repeats one table for both.',
+    };
+  }),
+
+  /** A quote checked against the average rate of the class in the state. */
+  quote: (arg = {}) => spec([{ id: 'q', label: 'Yearly premium on the quote', def: 9500, unit: '$', max: 50000000, help: 'Total of the quote, fees included' }, CODE(), STW(), PAYROLL(), MOD], arg, (v) => {
+    const code = s(v, 'code'), st = s(v, 'st'), pay = n(v, 'pay'), mod = n(v, 'mod') || 1, q = n(v, 'q');
+    const r = rate(code, st);
+    if (r === null) return { label: 'Your quote against the state average', value: 'No rate', rows: [], note: `${stateName(st)} uses no class comparable to ${code} in the study. Pick another class or state.` };
+    const imp = impliedRate(q, pay, mod), avg = premium(pay, r, mod), gap = avg > 0 ? q / avg - 1 : 0;
+    const k = classRanking(code), above = k.list.filter((x) => x.rate > imp).length;
+    return {
+      label: 'Your quote against the state average', value: `${gap >= 0 ? '+' : ''}${formatNumber(gap * 100, 0)}%`, example: `Example: a ${usd(q)} quote for ${classOf(code).short.toLowerCase()} (${code}) in ${stateName(st)}`,
+      sub: `${r100(imp)} per $100 quoted, against an average of ${r100(r)} in the study`,
+      rows: [
+        ['Premium at the study rate', usd(avg)],
+        ['Difference a year', `${q - avg >= 0 ? '' : '-'}${usd(Math.abs(q - avg))}`],
+        ['Rate implied by the quote', `${r100(imp)} per $100${mod !== 1 ? ` before your mod of ${formatNumber(mod, 2)}` : ''}`],
+        [`States above that rate for class ${code}`, `${above} of ${k.count}`],
+      ],
+      note: `A quote adds the insurer’s own rate, a minimum premium, fees and state surcharges, and the study is of rates in effect on January 1, 2024: a gap of a few percent means nothing. A large gap is a reason to check the class code and the payroll on the quote. ${STUDY}`,
     };
   }),
 };

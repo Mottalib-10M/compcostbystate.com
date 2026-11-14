@@ -146,6 +146,30 @@
       "label": {
         "en": "Pennsylvania Department of Labor & Industry, workers’ compensation"
       }
+    },
+    "nasi_2022": {
+      "url": "https://www.nasi.org/wp-content/uploads/2024/11/Sources-Methods-and-State-Summaries-2022-Data-Report-FINAL-2024_11_13.pdf",
+      "label": {
+        "en": "National Academy of Social Insurance, Workers’ Compensation: Benefits, Costs, and Coverage, 2022 data, state summaries (November 2024)"
+      }
+    },
+    "ca_dwc_faq": {
+      "url": "https://www.dir.ca.gov/dwc/faqs.html",
+      "label": {
+        "en": "California Division of Workers’ Compensation, frequently asked questions (insurers, State Fund, self-insurance)"
+      }
+    },
+    "ny_wkc76": {
+      "url": "https://www.nysenate.gov/legislation/laws/WKC/76",
+      "label": {
+        "en": "New York Workers’ Compensation Law, section 76 (the state insurance fund)"
+      }
+    },
+    "cslb_wc": {
+      "url": "https://www.cslb.ca.gov/contractors/maintain_license/workers_compensation.aspx",
+      "label": {
+        "en": "California Contractors State License Board, workers’ compensation requirements"
+      }
     }
   },
   "changes": {

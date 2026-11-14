@@ -1,0 +1,807 @@
+{
+ "_source": "NASI 2022 data report (state summaries, November 2024) and Oregon DCBS 2024 study, appendixes 4 and 5",
+ "retrieved_at": "2026-11-14",
+ "us": {
+  "cost100": 0.95,
+  "cost100_2018": 1.19,
+  "ben100": 0.59,
+  "costTotalK": 94547873.0,
+  "sfK": 11639195.0,
+  "pcK": 62655739.0,
+  "siK": 20252938.0,
+  "workersK": 143523.0
+ },
+ "arpAvg": {
+  "pct": 5.2,
+  "risks": 9173
+ },
+ "competitive": [
+  "CA",
+  "CO",
+  "HI",
+  "ID",
+  "KY",
+  "LA",
+  "MD",
+  "MO",
+  "MT",
+  "NM",
+  "NY",
+  "OK",
+  "OR",
+  "PA",
+  "RI",
+  "TX"
+ ],
+ "exclusive": [
+  "ND",
+  "OH",
+  "WA",
+  "WY"
+ ],
+ "states": {
+  "AL": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.86,
+   "cost100_2018": 1.01,
+   "ben100": 0.57,
+   "workersK": 1896.0,
+   "costTotalK": 922959.0,
+   "sfK": 0.0,
+   "pcK": 566417.0,
+   "siK": 356542.0,
+   "arp": {
+    "pct": 3.2,
+    "risks": 1654
+   }
+  },
+  "AK": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.45,
+   "cost100_2018": 2.17,
+   "ben100": 0.9,
+   "workersK": 299.0,
+   "costTotalK": 276926.0,
+   "sfK": 0.0,
+   "pcK": 225927.0,
+   "siK": 50999.0,
+   "arp": {
+    "pct": 13.9,
+    "risks": 5737
+   }
+  },
+  "AZ": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.63,
+   "cost100_2018": 0.84,
+   "ben100": 0.38,
+   "workersK": 3018.0,
+   "costTotalK": 1223604.0,
+   "sfK": 0.0,
+   "pcK": 990649.0,
+   "siK": 232955.0,
+   "arp": {
+    "pct": 3.8,
+    "risks": 4421
+   }
+  },
+  "AR": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.56,
+   "cost100_2018": 0.76,
+   "ben100": 0.32,
+   "workersK": 1199.0,
+   "costTotalK": 363252.0,
+   "sfK": 0.0,
+   "pcK": 288020.0,
+   "siK": 75231.0,
+   "arp": {
+    "pct": 7.7,
+    "risks": 5317
+   }
+  },
+  "CA": {
+   "fund": "competitive",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 1.43,
+   "cost100_2018": 1.75,
+   "ben100": 0.88,
+   "workersK": 17667.0,
+   "costTotalK": 21340306.0,
+   "sfK": 1181101.0,
+   "pcK": 14318735.0,
+   "siK": 5840470.0
+  },
+  "CO": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.66,
+   "cost100_2018": 0.93,
+   "ben100": 0.38,
+   "workersK": 2745.0,
+   "costTotalK": 1347886.0,
+   "sfK": 571122.0,
+   "pcK": 560239.0,
+   "siK": 216525.0
+  },
+  "CT": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.95,
+   "cost100_2018": 1.13,
+   "ben100": 0.63,
+   "workersK": 1624.0,
+   "costTotalK": 1247708.0,
+   "sfK": 0.0,
+   "pcK": 972870.0,
+   "siK": 274839.0,
+   "arp": {
+    "pct": 4.0,
+    "risks": 12068
+   }
+  },
+  "DE": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 0.96,
+   "cost100_2018": 1.5,
+   "ben100": 0.54,
+   "workersK": 452.0,
+   "costTotalK": 292104.0,
+   "sfK": 0.0,
+   "pcK": 248695.0,
+   "siK": 43410.0,
+   "arp": {
+    "pct": 4.7,
+    "risks": 1573
+   }
+  },
+  "DC": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.34,
+   "cost100_2018": 0.49,
+   "ben100": 0.15,
+   "workersK": 556.0,
+   "costTotalK": 204880.0,
+   "sfK": 0.0,
+   "pcK": 174340.0,
+   "siK": 30540.0,
+   "arp": {
+    "pct": 2.1,
+    "risks": 672
+   }
+  },
+  "FL": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.99,
+   "cost100_2018": 1.43,
+   "ben100": 0.63,
+   "workersK": 8861.0,
+   "costTotalK": 5535598.0,
+   "sfK": 0.0,
+   "pcK": 4369061.0,
+   "siK": 1166537.0
+  },
+  "GA": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.85,
+   "cost100_2018": 1.07,
+   "ben100": 0.5,
+   "workersK": 4501.0,
+   "costTotalK": 2486737.0,
+   "sfK": 0.0,
+   "pcK": 2077428.0,
+   "siK": 409309.0,
+   "arp": {
+    "pct": 6.5,
+    "risks": 20336
+   }
+  },
+  "HI": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.63,
+   "cost100_2018": 1.54,
+   "ben100": 1.01,
+   "workersK": 585.0,
+   "costTotalK": 571273.0,
+   "sfK": 102085.0,
+   "pcK": 253167.0,
+   "siK": 216022.0
+  },
+  "ID": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.61,
+   "cost100_2018": 1.64,
+   "ben100": 0.73,
+   "workersK": 808.0,
+   "costTotalK": 700540.0,
+   "sfK": 398163.0,
+   "pcK": 281182.0,
+   "siK": 21195.0,
+   "arp": {
+    "pct": 1.7,
+    "risks": 3250
+   }
+  },
+  "IL": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.8,
+   "cost100_2018": 1.02,
+   "ben100": 0.48,
+   "workersK": 5825.0,
+   "costTotalK": 3366278.0,
+   "sfK": 0.0,
+   "pcK": 2763630.0,
+   "siK": 602648.0,
+   "arp": {
+    "pct": 3.1,
+    "risks": 26317
+   }
+  },
+  "IN": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 0.59,
+   "cost100_2018": 0.7,
+   "ben100": 0.33,
+   "workersK": 3061.0,
+   "costTotalK": 1040717.0,
+   "sfK": 0.0,
+   "pcK": 950117.0,
+   "siK": 90600.0,
+   "arp": {
+    "pct": 5.5,
+    "risks": 8520
+   }
+  },
+  "IA": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.1,
+   "cost100_2018": 1.36,
+   "ben100": 0.67,
+   "workersK": 1503.0,
+   "costTotalK": 944198.0,
+   "sfK": 0.0,
+   "pcK": 803553.0,
+   "siK": 140645.0,
+   "arp": {
+    "pct": 3.1,
+    "risks": 3566
+   }
+  },
+  "KS": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.87,
+   "cost100_2018": 0.98,
+   "ben100": 0.59,
+   "workersK": 1354.0,
+   "costTotalK": 653383.0,
+   "sfK": 0.0,
+   "pcK": 541298.0,
+   "siK": 112086.0,
+   "arp": {
+    "pct": 4.6,
+    "risks": 4920
+   }
+  },
+  "KY": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": true
+  },
+  "LA": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": true
+  },
+  "ME": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.15,
+   "cost100_2018": 1.33,
+   "ben100": 0.64,
+   "workersK": 604.0,
+   "costTotalK": 397696.0,
+   "sfK": 0.0,
+   "pcK": 302984.0,
+   "siK": 94713.0
+  },
+  "MD": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.78,
+   "cost100_2018": 1.01,
+   "ben100": 0.46,
+   "workersK": 2484.0,
+   "costTotalK": 1373056.0,
+   "sfK": 98992.0,
+   "pcK": 943286.0,
+   "siK": 330778.0
+  },
+  "MA": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 0.64,
+   "cost100_2018": 0.73,
+   "ben100": 0.43,
+   "workersK": 3551.0,
+   "costTotalK": 2047590.0,
+   "sfK": 0.0,
+   "pcK": 1611784.0,
+   "siK": 435806.0,
+   "arp": {
+    "pct": 15.2,
+    "risks": null
+   }
+  },
+  "MI": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 0.56,
+   "cost100_2018": 0.71,
+   "ben100": 0.31,
+   "workersK": 4219.0,
+   "costTotalK": 1509374.0,
+   "sfK": 0.0,
+   "pcK": 1195581.0,
+   "siK": 313793.0,
+   "arp": {
+    "pct": 4.6,
+    "risks": null
+   }
+  },
+  "MN": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 0.87,
+   "cost100_2018": 1.02,
+   "ben100": 0.55,
+   "workersK": 2803.0,
+   "costTotalK": 1695867.0,
+   "sfK": 0.0,
+   "pcK": 1326708.0,
+   "siK": 369160.0
+  },
+  "MS": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.97,
+   "cost100_2018": 1.19,
+   "ben100": 0.58,
+   "workersK": 1072.0,
+   "costTotalK": 486146.0,
+   "sfK": 0.0,
+   "pcK": 400808.0,
+   "siK": 85338.0,
+   "arp": {
+    "pct": null,
+    "risks": 1858
+   }
+  },
+  "MO": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.02,
+   "cost100_2018": 1.14,
+   "ben100": 0.62,
+   "workersK": 2646.0,
+   "costTotalK": 1588877.0,
+   "sfK": 238911.0,
+   "pcK": 1027460.0,
+   "siK": 322507.0
+  },
+  "MT": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.4,
+   "cost100_2018": 1.85,
+   "ben100": 0.88,
+   "workersK": 478.0,
+   "costTotalK": 361316.0,
+   "sfK": 172054.0,
+   "pcK": 151131.0,
+   "siK": 38131.0
+  },
+  "NE": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.95,
+   "cost100_2018": 1.16,
+   "ben100": 0.58,
+   "workersK": 955.0,
+   "costTotalK": 515423.0,
+   "sfK": 0.0,
+   "pcK": 446350.0,
+   "siK": 69073.0
+  },
+  "NV": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.84,
+   "cost100_2018": 0.95,
+   "ben100": 0.52,
+   "workersK": 1445.0,
+   "costTotalK": 750772.0,
+   "sfK": 0.0,
+   "pcK": 545119.0,
+   "siK": 205653.0,
+   "arp": {
+    "pct": 3.9,
+    "risks": 3605
+   }
+  },
+  "NH": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.75,
+   "cost100_2018": 1.0,
+   "ben100": 0.4,
+   "workersK": 662.0,
+   "costTotalK": 355521.0,
+   "sfK": 0.0,
+   "pcK": 266889.0,
+   "siK": 88631.0,
+   "arp": {
+    "pct": 6.2,
+    "risks": 3717
+   }
+  },
+  "NJ": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 1.3,
+   "cost100_2018": 1.51,
+   "ben100": 0.78,
+   "workersK": 4086.0,
+   "costTotalK": 4153129.0,
+   "sfK": 0.0,
+   "pcK": 3267875.0,
+   "siK": 885254.0,
+   "arp": {
+    "pct": 5.2,
+    "risks": 62474
+   }
+  },
+  "NM": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.09,
+   "cost100_2018": 1.35,
+   "ben100": 0.65,
+   "workersK": 781.0,
+   "costTotalK": 459327.0,
+   "sfK": 23121.0,
+   "pcK": 341312.0,
+   "siK": 94893.0,
+   "arp": {
+    "pct": 2.3,
+    "risks": 796
+   }
+  },
+  "NY": {
+   "fund": "competitive",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 1.17,
+   "cost100_2018": 1.54,
+   "ben100": 0.75,
+   "workersK": 9126.0,
+   "costTotalK": 9570998.0,
+   "sfK": 1688387.0,
+   "pcK": 5212082.0,
+   "siK": 2670529.0
+  },
+  "NC": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 0.66,
+   "cost100_2018": 0.9,
+   "ben100": 0.35,
+   "workersK": 4524.0,
+   "costTotalK": 1867520.0,
+   "sfK": 0.0,
+   "pcK": 1610729.0,
+   "siK": 256791.0,
+   "arp": {
+    "pct": 5.2,
+    "risks": 23832
+   }
+  },
+  "ND": {
+   "fund": "exclusive",
+   "bureau": "monopolistic",
+   "dup": false,
+   "cost100": 0.88,
+   "cost100_2018": 1.25,
+   "ben100": 0.45,
+   "workersK": 399.0,
+   "costTotalK": 210153.0,
+   "sfK": 204831.0,
+   "pcK": 5322.0,
+   "siK": 0.0
+  },
+  "OH": {
+   "fund": "exclusive",
+   "bureau": "monopolistic",
+   "dup": false,
+   "cost100": 0.61,
+   "cost100_2018": 0.71,
+   "ben100": 0.49,
+   "workersK": 5313.0,
+   "costTotalK": 1950140.0,
+   "sfK": 1549912.0,
+   "pcK": 18884.0,
+   "siK": 381344.0
+  },
+  "OK": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.97,
+   "cost100_2018": 1.2,
+   "ben100": 0.54,
+   "workersK": 1566.0,
+   "costTotalK": 805312.0,
+   "sfK": 245105.0,
+   "pcK": 460684.0,
+   "siK": 99523.0
+  },
+  "OR": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.96,
+   "cost100_2018": 1.06,
+   "ben100": 0.61,
+   "workersK": 1923.0,
+   "costTotalK": 1214920.0,
+   "sfK": 659179.0,
+   "pcK": 382225.0,
+   "siK": 173516.0,
+   "arp": {
+    "pct": 2.4,
+    "risks": 5106
+   }
+  },
+  "PA": {
+   "fund": "competitive",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 1.1,
+   "cost100_2018": 1.38,
+   "ben100": 0.7,
+   "workersK": 5742.0,
+   "costTotalK": 4222118.0,
+   "sfK": 98992.0,
+   "pcK": 3341887.0,
+   "siK": 781239.0
+  },
+  "RI": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.88,
+   "cost100_2018": 1.05,
+   "ben100": 0.46,
+   "workersK": 469.0,
+   "costTotalK": 263984.0,
+   "sfK": 107035.0,
+   "pcK": 136510.0,
+   "siK": 20439.0
+  },
+  "SC": {
+   "fund": "public-only",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.21,
+   "cost100_2018": 1.46,
+   "ben100": 0.78,
+   "workersK": 2083.0,
+   "costTotalK": 1392478.0,
+   "sfK": 71367.0,
+   "pcK": 1017767.0,
+   "siK": 303344.0,
+   "arp": {
+    "pct": 7.2,
+    "risks": 11951
+   }
+  },
+  "SD": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.88,
+   "cost100_2018": 1.13,
+   "ben100": 0.49,
+   "workersK": 426.0,
+   "costTotalK": 201195.0,
+   "sfK": 0.0,
+   "pcK": 198464.0,
+   "siK": 2731.0,
+   "arp": {
+    "pct": 3.1,
+    "risks": 897
+   }
+  },
+  "TN": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.58,
+   "cost100_2018": 0.8,
+   "ben100": 0.32,
+   "workersK": 3002.0,
+   "costTotalK": 1071639.0,
+   "sfK": 0.0,
+   "pcK": 957020.0,
+   "siK": 114619.0,
+   "arp": {
+    "pct": 4.9,
+    "risks": 7880
+   }
+  },
+  "TX": {
+   "fund": "competitive",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.41,
+   "cost100_2018": 0.55,
+   "ben100": 0.18,
+   "workersK": 10775.0,
+   "costTotalK": 3074002.0,
+   "sfK": 1120111.0,
+   "pcK": 1602248.0,
+   "siK": 351642.0
+  },
+  "UT": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.66,
+   "cost100_2018": 0.78,
+   "ben100": 0.31,
+   "workersK": 1607.0,
+   "costTotalK": 641814.0,
+   "sfK": 0.0,
+   "pcK": 593025.0,
+   "siK": 48789.0
+  },
+  "VT": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.26,
+   "cost100_2018": 1.65,
+   "ben100": 0.78,
+   "workersK": 291.0,
+   "costTotalK": 217023.0,
+   "sfK": 0.0,
+   "pcK": 196077.0,
+   "siK": 20946.0,
+   "arp": {
+    "pct": 7.8,
+    "risks": 2772
+   }
+  },
+  "VA": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 0.54,
+   "cost100_2018": 0.73,
+   "ben100": 0.31,
+   "workersK": 3698.0,
+   "costTotalK": 1374448.0,
+   "sfK": 0.0,
+   "pcK": 1164052.0,
+   "siK": 210396.0,
+   "arp": {
+    "pct": 4.4,
+    "risks": 13213
+   }
+  },
+  "WA": {
+   "fund": "exclusive",
+   "bureau": "monopolistic",
+   "dup": false,
+   "cost100": 1.16,
+   "cost100_2018": 1.49,
+   "ben100": 1.02,
+   "workersK": 3437.0,
+   "costTotalK": 3357062.0,
+   "sfK": 2468938.0,
+   "pcK": 26160.0,
+   "siK": 861964.0
+  },
+  "WV": {
+   "fund": "none",
+   "bureau": "ncci",
+   "dup": false,
+   "cost100": 1.09,
+   "cost100_2018": 1.48,
+   "ben100": 1.06,
+   "workersK": 648.0,
+   "costTotalK": 366077.0,
+   "sfK": 0.0,
+   "pcK": 291767.0,
+   "siK": 74309.0,
+   "arp": {
+    "pct": 4.0,
+    "risks": 2042
+   }
+  },
+  "WI": {
+   "fund": "none",
+   "bureau": "independent",
+   "dup": false,
+   "cost100": 1.28,
+   "cost100_2018": 1.58,
+   "ben100": 0.66,
+   "workersK": 2824.0,
+   "costTotalK": 2136298.0,
+   "sfK": 0.0,
+   "pcK": 1993338.0,
+   "siK": 142960.0,
+   "arp": {
+    "pct": null,
+    "risks": null
+   }
+  },
+  "WY": {
+   "fund": "exclusive",
+   "bureau": "monopolistic",
+   "dup": false,
+   "cost100": 1.68,
+   "cost100_2018": 2.12,
+   "ben100": 1.38,
+   "workersK": 219.0,
+   "costTotalK": 205131.0,
+   "sfK": 199535.0,
+   "pcK": 5596.0,
+   "siK": 0.0
+  }
+ }
+}

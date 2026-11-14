@@ -22,8 +22,8 @@ export interface Helpers extends Kit {
   mini: (kind: string, opts?: MiniOpts) => string;
 }
 
-/** cost: premiums, mods and coverage rules; states: one state's rates; classes: one class of work across the states. */
-export type Group = 'cost' | 'states' | 'classes';
+/** insurance: what workers' comp is and how it is bought; cost: premiums, mods and coverage rules; states: one state's rates; classes: one class of work across the states. */
+export type Group = 'insurance' | 'cost' | 'states' | 'classes';
 
 export interface PageDef {
   id: string; group: Group; order: number;
