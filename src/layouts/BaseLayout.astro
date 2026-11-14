@@ -138,7 +138,7 @@ const crumbAside = Astro.slots.has('crumb-aside') ? (await Astro.slots.render('c
           </button>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-navy-200 bg-white px-4 pb-4 lg:hidden">
+      <div id="mobile-menu" class="hidden h-[calc(100dvh-4rem)] max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-navy-200 bg-white px-4 pb-4 lg:hidden">
         {cats.map((cat) => (
           <div class="border-b border-navy-100 py-2">
             <button class="mobile-section-toggle flex w-full items-center justify-between gap-3 py-2 text-left text-sm font-semibold text-navy-900" aria-expanded="false"><span class="min-w-0 [overflow-wrap:anywhere]">{cat.label}</span><svg class="mobile-chevron h-4 w-4 shrink-0 text-navy-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
@@ -166,7 +166,7 @@ const crumbAside = Astro.slots.has('crumb-aside') ? (await Astro.slots.render('c
          téléphone avant l'affichage et le rouvre si l'écran s'élargit. Sur ordinateur le titre est masqué : jamais replié. */}
     <footer class="mt-16 border-t border-navy-200 bg-navy-50">
       <details open data-pied class="group mx-auto max-w-6xl px-4 py-6 md:py-12">
-        <summary data-pied-titre class="flex cursor-pointer list-none items-center justify-between gap-3 py-2 text-sm font-medium text-navy-800 md:hidden [&::-webkit-details-marker]:hidden"><span>{SITE_NAMES[lang]} · {libellesTrame(lang).piedDePage}</span><svg class="h-5 w-5 shrink-0 text-navy-500 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" /></svg></summary>
+        <summary data-pied-titre class="flex cursor-pointer list-none items-center justify-between gap-3 py-2 text-sm font-medium text-navy-800 md:hidden [&::-webkit-details-marker]:hidden"><span>{SITE_NAMES[lang]} · {libellesTrame(lang).piedDePage ?? libellesTrame('en').piedDePage}</span><svg class="h-5 w-5 shrink-0 text-navy-500 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" /></svg></summary>
         <div class="grid grid-cols-2 gap-8 max-md:mt-4 md:grid-cols-4">
           {footerCols.map((col) => (<div><h2 class="mb-3 text-sm font-semibold text-navy-900">{col.label}</h2><ul class="space-y-2 text-sm text-navy-600">{col.links.map((l) => <li><a href={l.href} class="hover:text-navy-900">{l.label}</a></li>)}</ul></div>))}
         </div>

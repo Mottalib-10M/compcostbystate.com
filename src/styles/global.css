@@ -132,3 +132,7 @@ p[id$="-help"]:not([role="status"]), [data-fixe], [data-actuellement], [aria-liv
 }
 
 .prose .not-prose table { margin-top: 0; margin-bottom: 0; }
+
+/* Long result tables folded to their first rows (SpecTool, naive testers 2026-11-14): a hidden row stays hidden even
+   when the phone layout turns rows into blocks. */
+table tr[hidden] { display: none !important; }

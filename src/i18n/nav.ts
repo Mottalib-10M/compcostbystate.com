@@ -4,7 +4,7 @@ import type { Group } from '../lib/page-types';
 export interface NavLink { href: string; label: string } export interface NavCategory { label: string; links: NavLink[] }
 const CORE: Record<string, string> = { home: 'Workers’ comp cost calculator', method: 'How the figures are built', about: 'About', widget: 'Embed the calculator', contact: 'Contact', editorial: 'Editorial policy', privacy: 'Privacy', terms: 'Legal notice', cookies: 'Cookies' };
 export const GROUPS: Array<{ id: Group; label: string }> = [
-  { id: 'insurance', label: 'Workers’ comp insurance' },
+  { id: 'insurance', label: 'The basics' },
   { id: 'cost', label: 'Cost and rules' },
   { id: 'states', label: 'Rates by state' },
   { id: 'classes', label: 'Rates by class code' },

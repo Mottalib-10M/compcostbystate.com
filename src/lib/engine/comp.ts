@@ -18,7 +18,26 @@ export interface Rule { kind: 'all' | 'count' | 'optional' | 'payroll'; min: num
 export const MEDIAN: number = D.median;
 export const NAMES: Record<string, string> = D.names;
 export const STATES: Record<string, StateRow> = D.states as Record<string, StateRow>;
-export const CLASSES: ClassRow[] = D.classes as unknown as ClassRow[];
+/**
+ * Plain-English name of each class (naive testers, 2026-11-14: "Logging Nonmech", "Clerical Office Employ", "NOC" were
+ * read as gibberish). The study's own wording stays in `scope`; `short` is what the reader sees everywhere.
+ */
+export const PLAIN: Record<string, string> = {
+  '5': 'Plant nurseries (farm)', '37': 'Field crop farms', '2003': 'Bakeries', '2702': 'Logging without heavy machinery',
+  '2710': 'Sawmills', '2731': 'Planing and molding mills', '2915': 'Veneer making', '3724': 'Machinery install and repair',
+  '5183': 'Plumbing', '5190': 'Electrical wiring in buildings', '5213': 'Concrete construction', '5221': 'Concrete floors and driveways',
+  '5403': 'Carpentry (general)', '5437': 'Cabinets and interior trim', '5474': 'Painting', '5506': 'Street and road paving',
+  '5537': 'Heating and air conditioning', '5551': 'Roofing', '5645': 'House framing (up to 3 stories)', '6217': 'Excavation',
+  '6504': 'Food manufacturing', '7219': 'Trucking', '7231': 'Parcel delivery and couriers', '7380': 'Drivers and chauffeurs',
+  '7403': 'Aviation ground staff', '7600': 'Telecom and cable TV', '7710': 'Firefighters', '7720': 'Police officers',
+  '8006': 'Gas stations, convenience stores', '8017': 'Retail stores', '8018': 'Wholesale stores', '8033': 'Grocery and meat stores',
+  '8232': 'Lumberyards', '8380': 'Auto repair shops', '8742': 'Outside salespeople', '8810': 'Office staff',
+  '8824': 'Retirement homes: care staff', '8826': 'Retirement homes: other staff', '8832': 'Doctors’ offices', '8833': 'Hospitals: professional staff',
+  '8835': 'Home health care', '8864': 'Social services', '8868': 'Colleges: teachers, office', '9014': 'Chimney cleaning',
+  '9015': 'Building maintenance', '9052': 'Hotels (not the restaurant)', '9058': 'Hotel restaurants', '9082': 'Restaurants',
+  '9083': 'Fast-food restaurants', '9084': 'Bars and nightclubs', '9101': 'Colleges: other staff', '9102': 'Parks', '9403': 'Garbage collection',
+};
+export const CLASSES: ClassRow[] = (D.classes as unknown as ClassRow[]).map((c) => ({ ...c, short: PLAIN[c.code] ?? c.short }));
 /** Wallboard classes are priced per square foot installed, not per hour (note ** of the L&I table): kept out of the hourly tool. */
 export const WA_SQFT = ['0540', '0541', '0550', '0551'];
 const WA_ALL = W.classes as Record<string, WaClass>;

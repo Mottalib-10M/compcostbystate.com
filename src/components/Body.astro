@@ -7,20 +7,30 @@
 import MiniSim from './calc/MiniSim';
 import { miniHref } from '../lib/mini-targets';
 import { foldSections } from '../lib/fold';
-import { pageOfTool } from '../lib/pages';
+import { pageOfTool, pageById } from '../lib/pages';
+import { route } from '../i18n/routes';
+import { classOf } from '../lib/engine/comp';
 import { label } from '../i18n/nav';
 interface Props { html: string; path: string; open?: number }
 const { html, path, open } = Astro.props;
 const parts = (open === undefined ? html : foldSections(html, open)).split(/<!--mini:([A-Za-z0-9_]+)(?:\|([A-Za-z0-9+/=]+))?-->/);
 const decode = (b?: string) => (b ? Buffer.from(b, 'base64').toString('utf8') : undefined);
 /** Where the mini's link goes, and what it says. */
+/** Naive testers 2026-11-14: "Full calculator: Contractors" under an office or a restaurant example. The link names what
+ *  it opens: the page of the class shown when there is one, else the page that carries the same calculator. */
 function link(kind: string, arg?: string) {
-  const target = miniHref(kind, path), o = arg ? JSON.parse(arg) : {};
+  const o = arg ? JSON.parse(arg) : {};
+  const code = o.d?.code ? String(o.d.code) : '';
+  const classPage = code && pageById(`class-code-${code}`) ? `class-code-${code}` : '';
+  if ((kind === 'rank' || kind === 'state' || kind === 'estimate') && classPage && route(classPage, 'en') !== path) {
+    return { href: route(classPage, 'en'), arg: o.c ? arg : JSON.stringify({ ...o, c: `Full calculator for ${classOf(code).short.toLowerCase()} (${code})` }) };
+  }
+  const target = miniHref(kind, path);
   const here = target === path, href = here ? '#calculator' : target;
   if (o.c) return { href, arg };
   const id = pageOfTool(kind);
-  const c = here ? 'Back to the full calculator at the top' : id ? `Full calculator: ${label(id)}` : 'Full estimator on the home page';
-  return { href, arg: c ? JSON.stringify({ ...o, c }) : arg };
+  const c = here ? 'Back to the full calculator at the top' : (kind === 'all' || kind === 'estimate') ? 'Full calculator on the home page' : id ? `Full calculator on the “${label(id)}” page` : 'Full calculator on the home page';
+  return { href, arg: JSON.stringify({ ...o, c }) };
 }
 ---
 <div class="prose prose-slate max-w-none prose-headings:font-serif">

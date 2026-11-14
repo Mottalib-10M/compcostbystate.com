@@ -12,13 +12,13 @@
     "dcbs_page": {
       "url": "https://www.oregon.gov/dcbs/reports/compensation/pages/wc-across-states.aspx",
       "label": {
-        "en": "Oregon DCBS, workers’ compensation premium rate ranking: study page and past editions"
+        "en": "Oregon Department of Consumer and Business Services, workers’ compensation premium rate ranking: study page and past editions"
       }
     },
     "or_cost": {
       "url": "https://www.oregon.gov/dcbs/cost/Pages/index.aspx",
       "label": {
-        "en": "Oregon DCBS, Oregon workers’ compensation costs for 2027 (pure premium, assessments)"
+        "en": "Oregon Department of Consumer and Business Services, Oregon workers’ compensation costs for 2027 (pure premium, assessments)"
       }
     },
     "wa_rates": {
@@ -30,25 +30,25 @@
     "wa_fund2026": {
       "url": "https://lni.wa.gov/insurance/_docs/2026RatesByClassCodeFund.xlsx",
       "label": {
-        "en": "Washington L&I, 2026 hourly rates by risk class and fund (spreadsheet)"
+        "en": "Washington Department of Labor & Industries, 2026 hourly rates by risk class and fund (spreadsheet)"
       }
     },
     "wa_fund2027": {
       "url": "https://lni.wa.gov/insurance/_docs/Proposed2027RatesByClassCodeFund.xlsx",
       "label": {
-        "en": "Washington L&I, proposed 2027 hourly rates by risk class and fund (spreadsheet)"
+        "en": "Washington Department of Labor & Industries, proposed 2027 hourly rates by risk class and fund (spreadsheet)"
       }
     },
     "wa_bus2027": {
       "url": "https://lni.wa.gov/insurance/_docs/Proposed2027RatesBusTypeClassCode.xlsx",
       "label": {
-        "en": "Washington L&I, proposed 2027 rates by business type, with the all-class average (spreadsheet)"
+        "en": "Washington Department of Labor & Industries, proposed 2027 rates by business type, with the all-class average (spreadsheet)"
       }
     },
     "wa_account": {
       "url": "https://lni.wa.gov/insurance/insurance-requirements/do-i-need-a-workers-comp-account/",
       "label": {
-        "en": "Washington L&I, do I need a workers’ comp account?"
+        "en": "Washington Department of Labor & Industries, do I need a workers’ comp account?"
       }
     },
     "ca_cdi": {

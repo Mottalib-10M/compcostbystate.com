@@ -7,7 +7,9 @@ export type Input = NumIn | ChoiceIn | SelectIn;
 export interface ToolOut {
   label: string; value: string; sub?: string;
   rows: Array<[string, string, number?]>;
-  table?: { caption?: string; headers: string[]; rows: string[][]; align?: Array<'l' | 'r'> };
+  table?: { caption?: string; headers: string[]; rows: string[][]; align?: Array<'l' | 'r'>;
+    /** Long tables (naive testers 2026-11-14: 51 cards = 10 screens on a phone): only the first rows and these rows are shown until "more" is pressed; every row stays in the HTML. */
+    keep?: number[]; more?: string };
   note?: string;
   /** What the example case assumes, in plain words ("Example: a $60,000 salary, plan paid by your employer"), shown
    *  while the reader has changed nothing (brief of 2026-11-09, second pass: never a vague "Example"). */

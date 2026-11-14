@@ -71,6 +71,11 @@ export default function SpecTool({ kind, arg, methodHref, idPrefix = 't' }: Prop
     return <NumberField key={i.id} id={id} label={i.label} value={Number(v[i.id])} onChange={set(i.id)} unit={i.unit} max={i.max} decimals={i.decimals} help={i.help} className={cls} />;
   };
   const main = spec.inputs.filter((i) => !i.adv), adv = spec.inputs.filter((i) => i.adv);
+  /** Long result tables: the first FIRST rows and the reader's own row, the rest after "Show all" (all rows stay in the HTML). */
+  const [all, setAll] = useState(false);
+  const FIRST = 10;
+  const long = !!out.table?.more && out.table.rows.length > FIRST + 2;
+  const shownRow = (k: number) => all || !long || k < FIRST || (out.table?.keep ?? []).includes(k);
   return (
     <div className="rounded-xl border border-navy-200 bg-white p-4 sm:p-5">
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]">
@@ -107,8 +112,9 @@ export default function SpecTool({ kind, arg, methodHref, idPrefix = 't' }: Prop
           <table className={`w-full text-sm ${attributsTableau('auto', out.table.headers.length).classe}`}>
             {out.table.caption && <caption className="mb-2 text-left text-sm text-navy-700">{out.table.caption}</caption>}
             <thead><tr>{out.table.headers.map((h, i) => <th key={h} scope="col" className={`border-b border-navy-200 px-2 py-1.5 font-semibold text-navy-900 ${out.table!.align?.[i] === 'r' ? 'text-right' : 'text-left'}`}>{h}</th>)}</tr></thead>
-            <tbody>{out.table.rows.map((r, k) => { const lab = etiquettes(out.table!.headers, r.length); return <tr key={k}>{r.map((c, i) => <td key={i} data-label={lab[i]} className={`tabular-nums border-b border-navy-100 px-2 py-1.5 text-navy-800 ${out.table!.align?.[i] === 'r' ? 'text-right' : 'text-left'}`}>{c}</td>)}</tr>; })}</tbody>
+            <tbody>{out.table.rows.map((r, k) => { const lab = etiquettes(out.table!.headers, r.length); return <tr key={k} hidden={!shownRow(k)} className={(out.table?.keep ?? []).includes(k) ? 'bg-amber-50 font-semibold' : undefined}>{r.map((c, i) => <td key={i} data-label={lab[i]} className={`tabular-nums border-b border-navy-100 px-2 py-1.5 text-navy-800 ${out.table!.align?.[i] === 'r' ? 'text-right' : 'text-left'}`}>{c}</td>)}</tr>; })}</tbody>
           </table>
+          {long && <button type="button" data-tout-voir aria-expanded={all} onClick={() => setAll((x) => !x)} className="mt-2 min-h-11 rounded-full border border-navy-300 bg-white px-4 py-2 text-sm font-medium text-navy-800 hover:bg-navy-50">{all ? 'Show fewer rows' : out.table.more}</button>}
         </div>
       )}
     </div>

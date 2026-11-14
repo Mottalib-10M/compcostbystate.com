@@ -2,14 +2,14 @@ import { definePage } from '../../lib/page-types';
 import { KIT as K } from '../../lib/kit';
 
 const CODE = '8810', R = K.R(CODE);
-const PAY = 200000;
+const PAY = K.EX.payroll;
 const under10 = R.list.filter((x) => x.rate < 0.1).length;
 const wa = K.WAC['4904'];
 const ratio = R.high.rate / R.low.rate;
 
 export default definePage({
   id: 'class-code-8810', group: 'classes', order: 40, slug: 'class-code-8810',
-  nav: '8810 Clerical office', card: 'The cheapest common class: clerical office rates in 51 states, and who qualifies for it.',
+  nav: '8810 Office staff', card: 'The cheapest common class: clerical office rates in 51 states, and who qualifies for it.',
   title: 'Class Code 8810 Rates 2026: Clerical Office by State',
   description: 'Class code 8810 rates in 2026: clerical office workers comp per $100 of payroll in 51 states, from 4 cents to 48 cents, and the rules for putting staff in it.',
   h1: 'Class code 8810: clerical office rates in every state',
@@ -22,9 +22,8 @@ export default definePage({
   ],
   body: (h) => `
 <h2>Class code 8810 rates: the highest and lowest states</h2>
-${h.table(['Rank', 'State', 'Per $100', `On ${K.usd(PAY)}`], [...R.list.slice(0, 5), ...R.list.slice(-5)].map((x) => [String(x.rank), K.name(x.st), K.r100(x.rate), K.usd(K.prem(PAY, x.rate))]), 'Class 8810, five highest and five lowest of 51 (rates in effect on January 1, 2024)', ['r', 'l', 'r', 'r'])}
-<p>The spread looks large in ratio and small in dollars. Even in Hawaii, office payroll costs less than half a cent per dollar of wages (${h.src('dcbs_2024', 'Oregon DCBS')}). For an office business, the minimum premium and the policy fees of a quote can weigh more than the rate itself.</p>
-${h.mini('estimate', { t: 'Office premium in your state', p: ['st', 'pay'], d: { code: CODE, st: 'NY', pay: PAY } })}
+<p>The spread looks large in ratio and small in dollars. Even in Hawaii, office payroll costs less than half a cent per dollar of wages (${h.src('dcbs_2024', 'Oregon state study')}). For an office business, the minimum premium and the policy fees of a quote can weigh more than the rate itself.</p>
+${h.mini('perEmployee', { t: 'Cost per office employee, a year', p: ['st', 'emp'], d: { code: CODE, st: 'CA' } })}
 <h2>Who belongs in 8810</h2>
 <p>The class exists so that office staff do not pay the rate of the field crews of the same employer. A contractor, a manufacturer or a trucking firm can report its bookkeeper, its receptionist and its office manager in 8810 rather than in the construction, factory or trucking class. The manuals require that the office be physically separated from the operations, and that the employee’s duties stay clerical. An employee who also loads trucks, visits job sites or works the shop floor is usually classified with the operations for all or part of the payroll.</p>
 <p>Insurers check this at the payroll audit by asking for job descriptions and sometimes visiting the premises. Keep a list of office staff with their duties, and time records for anyone who splits time between the office and the field. The ${h.a('workers-comp-class-codes', 'class code guide')} explains how a policy combines several classes.</p>

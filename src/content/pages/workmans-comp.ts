@@ -13,7 +13,7 @@ const bill = (k: number) => `$${K.dec(k / 1e6, 1)} billion`;
 
 export default definePage({
   id: 'workmans-comp', group: 'insurance', order: 1, slug: 'workmans-comp',
-  nav: 'Workmans comp explained', card: 'What workers’ compensation is, who pays for it and who sells it, with the total cost of every state.',
+  nav: 'What workers’ comp is', card: 'What workers’ compensation is, who pays for it and who sells it, with the total cost of every state.',
   title: 'Workmans Comp 2026: How Workers’ Comp Works in Each State',
   description: 'Workmans comp in 2026: what workers’ compensation covers, who pays, who sells it in each state and what it costs employers per $100 of wages, from public data.',
   h1: 'Workmans comp: how workers’ compensation works in each state',
@@ -32,7 +32,7 @@ export default definePage({
 <p>Because each state writes its own law, everything varies: who must be covered, the weekly benefit, the medical fees, the rating organization that prices the classes, and the insurers allowed to sell. The calculator above shows how these choices add up in your state, and the ${h.a('workers-comp-requirements-by-state', 'requirements page')} details who must carry it.</p>
 ${h.mini('required', { t: 'Must your business carry it?', p: ['st', 'emp'], d: { st: 'GA', emp: 3 } })}
 <h2 id="who-sells">Who sells workmans comp in each state</h2>
-<p>Four states run an exclusive state fund: North Dakota, Ohio, Washington and Wyoming. In North Dakota and Wyoming the state fund is the only way to insure; Ohio and Washington also let large employers self-insure (${h.src('dcbs_2024', 'Oregon DCBS study, notes')}). In 2022 the fund collected ${K.pct(sh('ND').fund * 100, 1)} of employer costs in North Dakota and ${K.pct(sh('OH').fund * 100, 1)} in Ohio, where self-insured employers paid most of the rest (${h.src('nasi_2022', 'NASI')}).</p>
+<p>Four states run an exclusive state fund: North Dakota, Ohio, Washington and Wyoming. In North Dakota and Wyoming the state fund is the only way to insure; Ohio and Washington also let large employers self-insure (${h.src('dcbs_2024', 'Oregon state study, notes')}). In 2022 the fund collected ${K.pct(sh('ND').fund * 100, 1)} of employer costs in North Dakota and ${K.pct(sh('OH').fund * 100, 1)} in Ohio, where self-insured employers paid most of the rest (${h.src('nasi_2022', 'National Academy of Social Insurance')}).</p>
 <p>Sixteen states have a competitive state fund that sells next to private insurers: California, Colorado, Hawaii, Idaho, Kentucky, Louisiana, Maryland, Missouri, Montana, New Mexico, New York, Oklahoma, Oregon, Pennsylvania, Rhode Island and Texas, in the count of the National Academy of Social Insurance. South Carolina has a fund for public employers only. Everywhere else, private insurance companies and self-insurance share the market. The ${h.a('state-fund-workers-comp', 'state fund page')} compares the funds.</p>
 ${h.table(['Who sells', 'States', 'Share of US employer costs, 2022'], [['Private insurers', '47 jurisdictions', K.pct((US.pcK / US.costTotalK) * 100, 1)], ['State funds', '20 states, 4 of them exclusive', K.pct(fund * 100, 1)], ['Self-insured employers', 'Most states, with approval', K.pct(self * 100, 1)]], 'Who carried the cost of workers’ compensation in 2022 (NASI)', ['l', 'l', 'r'])}
 <h2>What workmans comp costs employers, state by state</h2>

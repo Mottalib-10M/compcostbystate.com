@@ -20,7 +20,7 @@ export default definePage({
   ],
   body: (h) => `
 <h2>Oregon workers’ comp rates in its own study</h2>
-<p>Oregon chose the ${K.NCLASS} classes of the study from its own payroll, so every class in the table under the calculator matters to Oregon employers. Its index has ranged from ${K.pct(O.peakPct)} of the national median in ${O.peakYear} to ${K.pct(O.lowPct)} in ${O.lowYear}, and stood at ${K.pct(S.pctMedian)} in 2024 (${h.src('dcbs_2024', 'Oregon DCBS')}). The department adds that Oregon employers in the voluntary market paid the ${K.ord(O.voluntaryLowRank)} lowest rates in the nation.</p>
+<p>Oregon chose the ${K.NCLASS} classes of the study from its own payroll, so every class in the table under the calculator matters to Oregon employers. Its index has ranged from ${K.pct(O.peakPct)} of the national median in ${O.peakYear} to ${K.pct(O.lowPct)} in ${O.lowYear}, and stood at ${K.pct(S.pctMedian)} in 2024 (${h.src('dcbs_2024', 'Oregon state study')}). The department adds that Oregon employers in the voluntary market paid the ${K.ord(O.voluntaryLowRank)} lowest rates in the nation.</p>
 ${h.table(['Class', 'Work', 'Oregon per $100', 'Rank of 51', `Premium on ${K.usd(PAY)}`], ['8810', '9082', '8017', '5190', '5645', '5551', '2702'].map((c) => [c, K.cls(c).short, K.r100(r(c)), String(K.rank(c, ST)), K.usd(K.prem(PAY, r(c)))]), 'Oregon in the study of rates in effect on January 1, 2024', ['l', 'l', 'r', 'r', 'r'])}
 ${h.mini('change', { t: 'Apply the 2027 Oregon change to your premium', p: ['prem'], d: { ch: 'or', prem: 8000 } })}
 <h2>What changes in 2027</h2>

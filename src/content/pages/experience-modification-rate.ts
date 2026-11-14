@@ -8,7 +8,7 @@ const ROOF = K.prem(PAY, K.rate('5551', 'GA'));
 
 export default definePage({
   id: 'experience-modification-rate', group: 'cost', order: 4, slug: 'experience-modification-rate',
-  nav: 'Experience mod (EMR)', card: 'What a mod of 0.85 or 1.25 does to your premium, in dollars, and how claims feed it.',
+  nav: 'Claims score (experience mod)', card: 'What a mod of 0.85 or 1.25 does to your premium, in dollars, and how claims feed it.',
   title: 'Experience Modification Rate 2026: What Your Mod Costs',
   description: 'Experience modification rate in 2026: what a mod of 0.85, 1.00 or 1.25 does to a workers comp premium in dollars, how claims feed it and how long they weigh.',
   h1: 'Experience modification rate: what your mod costs or saves',

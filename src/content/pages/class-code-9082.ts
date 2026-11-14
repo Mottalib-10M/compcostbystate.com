@@ -2,7 +2,7 @@ import { definePage } from '../../lib/page-types';
 import { KIT as K } from '../../lib/kit';
 
 const CODE = '9082', R = K.R(CODE), FF = K.R('9083'), BAR = K.R('9084'), HOTEL = K.R('9058');
-const PAY = 400000;
+const PAY = K.EX.payroll;
 const same = R.list.filter((x) => K.rate('9083', x.st) === x.rate && K.rate('9084', x.st) === x.rate).length;
 const wa = K.WAC['3905'];
 const barsHigher = R.list.filter((x) => K.rate('9084', x.st) > K.rate('9083', x.st)).length;
@@ -24,8 +24,8 @@ export default definePage({
   body: (h) => `
 <h2>Class code 9082 against the other food classes</h2>
 ${h.table(['Class', 'Work', 'Median per $100', 'Highest', 'Lowest'], [R, FF, BAR, HOTEL].map((x, i) => [['9082', '9083', '9084', '9058'][i], K.cls(['9082', '9083', '9084', '9058'][i]).short, K.r100(x.median), `${K.r100(x.high.rate)} (${x.high.st})`, `${K.r100(x.low.rate)} (${x.low.st})`]), 'Food service classes, rates in effect on January 1, 2024', ['l', 'l', 'r', 'r', 'r'])}
-<p>The four classes came into the study together: Oregon’s own restaurant class, 9079, is not used elsewhere, so the department replaced it with the four classes other states use (${h.src('dcbs_2024', 'Oregon DCBS')}). Their medians are close, but individual states separate them: bars were priced above fast food in ${barsHigher} of the ${R.count} jurisdictions.</p>
-${h.mini('estimate', { t: 'Restaurant premium in your state', p: ['st', 'pay'], d: { code: CODE, st: 'NY', pay: PAY } })}
+<p>The four classes came into the study together: Oregon’s own restaurant class, 9079, is not used elsewhere, so the department replaced it with the four classes other states use (${h.src('dcbs_2024', 'Oregon state study')}). Their medians are close, but individual states separate them: bars were priced above fast food in ${barsHigher} of the ${R.count} jurisdictions.</p>
+${h.mini('perEmployee', { t: 'Cost per restaurant employee, a year', p: ['st', 'emp'], d: { code: CODE, st: 'NY' } })}
 <h2>A restaurant premium in practice</h2>
 <p>A restaurant with ${K.usd(PAY)} of payroll pays about ${K.usd(K.prem(PAY, K.rate(CODE, 'TX')))} a year at the Texas rate, ${K.usd(K.prem(PAY, K.rate(CODE, 'NY')))} at New York’s and ${K.usd(K.prem(PAY, K.rate(CODE, 'CA')))} at California’s. Office staff of a restaurant group can usually go in class 8810, and outside catering sales staff in 8742. The ${h.a('how-much-does-workers-comp-cost', 'cost guide')} turns the rate into a cost per employee.</p>
 <p>Washington prices restaurants and taverns together in its class 3905, at ${K.r4(wa.comp2026)} per hour worked in 2026 and ${K.r4(wa.comp2027)} proposed for 2027, with up to ${K.r4(wa.ded2026)} an hour taken from the worker’s pay. For a restaurant open long hours with part-time staff, the hourly basis gives a very different bill from the payroll basis of other states: the ${h.a('washington-workers-comp-rates', 'Washington calculator')} shows it.</p>
@@ -33,7 +33,7 @@ ${h.mini('estimate', { t: 'Restaurant premium in your state', p: ['st', 'pay'], 
 <h2>Restaurants in the largest states</h2>
 <p>After California, Hawaii and New Jersey, New York ranked ${K.ord(K.rank(CODE, 'NY'))} at ${K.r100(K.rate(CODE, 'NY'))}. Pennsylvania (${K.r100(K.rate(CODE, 'PA'))}), Illinois (${K.r100(K.rate(CODE, 'IL'))}) and Florida (${K.r100(K.rate(CODE, 'FL'))}) were in the middle, Texas (${K.r100(K.rate(CODE, 'TX'))}) and Ohio (${K.r100(K.rate(CODE, 'OH'))}) near the bottom. A restaurant group with locations in several states pays each state’s rate on the payroll of the locations there.</p>
 <h2>Kitchen, floor and office</h2>
-<p>The restaurant class covers the whole operation of a restaurant: cooks, dishwashers, servers, bartenders and hosts. That is why its rate is an average of very different jobs. A restaurant cannot usually split its kitchen staff into a dearer class or its servers into a cheaper one. What it can do is keep separate the payroll of a real office, such as the bookkeeping office of a restaurant group, in class 8810, when the office meets the state’s conditions.</p>
+<p>The restaurant class covers the whole operation of a restaurant: cooks, dishwashers, servers, bartenders and hosts. That is why its rate is an average of very different jobs. A restaurant cannot usually split its kitchen staff into a more expensive class or its servers into a cheaper one. What it can do is keep separate the payroll of a real office, such as the bookkeeping office of a restaurant group, in class 8810, when the office meets the state’s conditions.</p>
 <p>Two other choices shape the premium. Payroll includes the wages of part-time and seasonal staff, so a summer patio season raises the audited payroll. And the experience modification, once a restaurant is large enough to have one, rewards a kitchen with few burns, cuts and slips over three years. The ${h.a('experience-modification-rate', 'mod page')} puts that in dollars.</p>
 <h2>Full service against fast food</h2>
 <p>States that separate the two classes do not always charge more for table service. New York charged ${K.r100(K.rate('9083', 'NY'))} for fast food against ${K.r100(K.rate(CODE, 'NY'))} for full service; Illinois ${K.r100(K.rate('9083', 'IL'))} against ${K.r100(K.rate(CODE, 'IL'))}; Ohio ${K.r100(K.rate('9083', 'OH'))} against ${K.r100(K.rate(CODE, 'OH'))}. New Jersey, like California, priced them the same. The difference rarely exceeds a few cents per $100, so the class matters less than the state for a restaurant.</p>

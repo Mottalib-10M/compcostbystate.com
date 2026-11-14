@@ -87,3 +87,29 @@ describe('calculators', () => {
     }
   });
 });
+
+describe('naive testers, 2026-11-14', () => {
+  const run = (kind: string, arg: Record<string, string | number>) => { const t = getTool(kind, arg); return t.run(Object.fromEntries(t.inputs.map((i) => [i.id, i.def]))); };
+  it('class page: the big figure is the premium of the state asked, shown in the fields, not a national range', () => {
+    const t = getTool('rank', { code: '5645', st: 'PA', pay: 300000 });
+    const st = t.inputs.find((i) => i.id === 'st')!;
+    expect(st.adv).toBeFalsy();
+    const o = run('rank', { code: '5645', st: 'PA', pay: 300000 });
+    expect(o.value).toBe('$44,130');
+    expect(o.value).not.toMatch(/ to /);
+    const range = o.rows.find(([l]) => /cheapest to the most expensive/.test(l))![1];
+    const [lo, hi] = range.match(/\$[\d.]+/g)!.map((x) => Number(x.slice(1)));
+    expect(lo).toBeLessThan(hi);
+  });
+  it('state page: the index is never multiplied by a payroll', () => {
+    for (const k of ['state', 'index']) {
+      const o = run(k, { st: 'CA', pay: 300000 });
+      expect(o.rows.map((r) => r[0]).join(' ')).not.toMatch(/Index on/);
+      expect(o.rows.map((r) => r[1]).join(' ')).not.toContain('$5,580');
+    }
+    expect(run('state', { st: 'CA', pay: 300000 }).value).toBe('$8,340');
+  });
+  it('class names in plain words: no NOC, no cut abbreviations', () => {
+    for (const c of CLASSES) expect(c.short).not.toMatch(/\bNOC\b|Employ$|Nonmech|Refrig/);
+  });
+});

@@ -16,10 +16,12 @@
  *   une autre page, « Read the rest of this summary » qu'il existait un résumé ailleurs
  *   (dumpfeesbystate.com, goldbycarat.co.uk).
  */
-export interface LibellesTrame { exemple: string; exempleAide: string; lireTout: string; faqAide: string; plusDeReglages: string; actuellement: string }
+export interface LibellesTrame { exemple: string; exempleAide: string; lireTout: string; faqAide: string; plusDeReglages: string; actuellement: string;
+  /** Titre du pied de page replié sur téléphone (BaseLayout) ; absent ici avant le 2026-11-14, d'où « Comp Cost By State · » vide. */
+  piedDePage?: string }
 
 export const LIBELLES_TRAME: Record<string, LibellesTrame> = {
-  en: { exemple: 'Example, not your result yet', exempleAide: 'change a figure to see yours', lireTout: 'Show the whole paragraph', faqAide: 'Tap a question to see the answer.', plusDeReglages: 'More about your case (optional, already filled in)', actuellement: 'Now' },
+  en: { exemple: 'Example, not your result yet', exempleAide: 'change a figure to see yours', lireTout: 'Show the whole paragraph', faqAide: 'Tap a question to see the answer.', plusDeReglages: 'More about your case (optional, already filled in)', actuellement: 'Now', piedDePage: 'About this site, legal notices and all pages' },
   fr: { exemple: 'Exemple, pas encore votre résultat', exempleAide: 'modifiez un chiffre pour voir le vôtre', lireTout: 'Lire tout le paragraphe', faqAide: 'Touchez une question pour voir la réponse.', plusDeReglages: 'Plus de détails sur votre cas (facultatif, déjà remplis)', actuellement: 'Actuellement' },
   es: { exemple: 'Ejemplo, todavía no es su resultado', exempleAide: 'cambie una cifra para ver el suyo', lireTout: 'Leer todo el párrafo', faqAide: 'Toque una pregunta para ver la respuesta.', plusDeReglages: 'Más datos de su caso (opcional, ya rellenos)', actuellement: 'Ahora' },
   de: { exemple: 'Beispiel, noch nicht Ihr Ergebnis', exempleAide: 'ändern Sie eine Zahl, um Ihres zu sehen', lireTout: 'Ganzen Absatz lesen', faqAide: 'Tippen Sie auf eine Frage, um die Antwort zu sehen.', plusDeReglages: 'Mehr zu Ihrem Fall (freiwillig, schon ausgefüllt)', actuellement: 'Derzeit' },
