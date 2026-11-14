@@ -113,3 +113,27 @@ describe('naive testers, 2026-11-14', () => {
     for (const c of CLASSES) expect(c.short).not.toMatch(/\bNOC\b|Employ$|Nonmech|Refrig/);
   });
 });
+
+describe('Naive testers 2026-11-14, third pass', () => {
+  const run = (kind: string, arg: Record<string, string | number> = {}) => { const t = getTool(kind, arg); return t.run(Object.fromEntries(t.inputs.map((i) => [i.id, i.def]))); };
+  it('the state index is never shown in dollars', () => {
+    const o = run('index', { st: 'HI' });
+    expect(o.table!.headers.join(' ')).not.toMatch(/\$/);
+    expect(o.rows.map((r) => r.join(' ')).join(' ')).not.toMatch(/\$2\.52/);
+  });
+  it('cost per employee says where the payroll comes from', () => {
+    const o = run('perEmployee', { code: '5190', st: 'CA' });
+    expect(o.rows[0][0]).toBe('Whole payroll (5 × $60,000)');
+    expect(o.rows[0][1]).toBe('$300,000');
+  });
+  it('class codes are printed on four digits, the claims score as 1.00', () => {
+    const t = getTool('all');
+    expect(t.inputs.find((i) => i.id === 'code')!.kind === 'select' && (t.inputs.find((i) => i.id === 'code') as { options: { label: string }[] }).options.some((o) => o.label.endsWith('(0005)'))).toBe(true);
+    expect(t.inputs.find((i) => i.id === 'mod')).toMatchObject({ label: 'Past injury claims score', fixed: true, decimals: 2 });
+  });
+  it('home example: $8,340 a year, rate also as a share of wages', () => {
+    const o = run('all');
+    expect(o.value).toBe('$8,340');
+    expect(o.sub).toContain('(2.8% of wages)');
+  });
+});

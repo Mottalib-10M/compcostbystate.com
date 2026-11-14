@@ -24,7 +24,7 @@ export default definePage({
   body: (h) => `
 <h2>Class code 5190: highest and lowest states</h2>
 <p>New York stands apart, with a rate well above New Jersey and Hawaii (${h.src('dcbs_2024', 'Oregon state study')}). The bottom of the table holds West Virginia, North Dakota and Arkansas, which are also the three lowest states on the overall index. Between the two ends, ${mid} of the ${R.count} jurisdictions price electrical work between two and three dollars per $100.</p>
-${h.mini('perEmployee', { t: 'Cost per electrician, a year', p: ['st', 'emp'], d: { code: CODE, st: 'CA' } })}
+${h.mini('perEmployee', { t: 'Cost per electrician, a year', p: ['st', 'emp', 'wage'], d: { code: CODE, st: 'CA' } })}
 <h2>Electricians beside the other trades</h2>
 ${h.table(['Class', 'Trade', 'Median per $100', `Median premium on ${K.usd(PAY)}`], ['5190', '5183', '5537', '5403', '5551'].map((c) => [c, K.cls(c).short, K.r100(K.R(c).median), K.usd(K.prem(PAY, K.R(c).median))]), 'Medians of 51 jurisdictions, rates in effect on January 1, 2024', ['l', 'l', 'r', 'r'])}
 <p>For a mechanical contractor that does electrical, plumbing and heating work, each trade’s payroll goes in its own class when records separate them. The ${h.a('workers-comp-class-codes', 'class code guide')} explains the split. Washington prices electrical wiring by the hour in its class 0601: ${K.r4(wa.comp2026)} per hour worked in 2026 and ${K.r4(wa.comp2027)} proposed for 2027, on the ${h.a('washington-workers-comp-rates', 'Washington page')}.</p>

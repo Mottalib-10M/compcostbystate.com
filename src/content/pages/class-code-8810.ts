@@ -23,7 +23,7 @@ export default definePage({
   body: (h) => `
 <h2>Class code 8810 rates: the highest and lowest states</h2>
 <p>The spread looks large in ratio and small in dollars. Even in Hawaii, office payroll costs less than half a cent per dollar of wages (${h.src('dcbs_2024', 'Oregon state study')}). For an office business, the minimum premium and the policy fees of a quote can weigh more than the rate itself.</p>
-${h.mini('perEmployee', { t: 'Cost per office employee, a year', p: ['st', 'emp'], d: { code: CODE, st: 'CA' } })}
+${h.mini('perEmployee', { t: 'Cost per office employee, a year', p: ['st', 'emp', 'wage'], d: { code: CODE, st: 'CA' } })}
 <h2>Who belongs in 8810</h2>
 <p>The class exists so that office staff do not pay the rate of the field crews of the same employer. A contractor, a manufacturer or a trucking firm can report its bookkeeper, its receptionist and its office manager in 8810 rather than in the construction, factory or trucking class. The manuals require that the office be physically separated from the operations, and that the employee’s duties stay clerical. An employee who also loads trucks, visits job sites or works the shop floor is usually classified with the operations for all or part of the payroll.</p>
 <p>Insurers check this at the payroll audit by asking for job descriptions and sometimes visiting the premises. Keep a list of office staff with their duties, and time records for anyone who splits time between the office and the field. The ${h.a('workers-comp-class-codes', 'class code guide')} explains how a policy combines several classes.</p>

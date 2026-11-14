@@ -68,7 +68,7 @@ export default function SpecTool({ kind, arg, methodHref, idPrefix = 't' }: Prop
     const cls = i.wide ? 'sm:col-span-2' : '';
     if (i.kind === 'choice') return <div key={i.id} className={`grid grid-rows-subgrid row-span-3 ${cls}`}><Choice id={id} label={i.label} value={String(v[i.id])} options={i.options} onChange={set(i.id)} /></div>;
     if (i.kind === 'select') return <SelectField key={i.id} id={id} label={i.label} value={String(v[i.id])} onChange={set(i.id)} options={i.dyn ? i.dyn(v) : i.options} help={i.help} className={cls} />;
-    return <NumberField key={i.id} id={id} label={i.label} value={Number(v[i.id])} onChange={set(i.id)} unit={i.unit} max={i.max} decimals={i.decimals} help={i.help} className={cls} />;
+    return <NumberField key={i.id} id={id} label={i.label} value={Number(v[i.id])} onChange={set(i.id)} unit={i.unit} max={i.max} decimals={i.decimals} fixed={i.fixed} help={i.help} className={cls} />;
   };
   const main = spec.inputs.filter((i) => !i.adv), adv = spec.inputs.filter((i) => i.adv);
   /** Long result tables: the first FIRST rows and the reader's own row, the rest after "Show all" (all rows stay in the HTML). */
@@ -109,10 +109,14 @@ export default function SpecTool({ kind, arg, methodHref, idPrefix = 't' }: Prop
       </div>
       {out.table && (
         <div className="mt-4 overflow-x-auto">
-          <table className={`w-full text-sm ${attributsTableau('auto', out.table.headers.length).classe}`}>
+          <table className={`w-full text-sm ${out.table.compact ? '' : attributsTableau('auto', out.table.headers.length).classe}`}>
             {out.table.caption && <caption className="mb-2 text-left text-sm text-navy-700">{out.table.caption}</caption>}
             <thead><tr>{out.table.headers.map((h, i) => <th key={h} scope="col" className={`border-b border-navy-200 px-2 py-1.5 font-semibold text-navy-900 ${out.table!.align?.[i] === 'r' ? 'text-right' : 'text-left'}`}>{h}</th>)}</tr></thead>
-            <tbody>{out.table.rows.map((r, k) => { const lab = etiquettes(out.table!.headers, r.length); return <tr key={k} hidden={!shownRow(k)} className={(out.table?.keep ?? []).includes(k) ? 'bg-amber-50 font-semibold' : undefined}>{r.map((c, i) => <td key={i} data-label={lab[i]} className={`tabular-nums border-b border-navy-100 px-2 py-1.5 text-navy-800 ${out.table!.align?.[i] === 'r' ? 'text-right' : 'text-left'}`}>{c}</td>)}</tr>; })}</tbody>
+            <tbody>{out.table.rows.map((r, k) => { const lab = etiquettes(out.table!.headers, r.length);
+              // A kept row far below the first rows: say how many rows are hidden in between (naive testers, third pass: "10, then 15?").
+              const gap = !all && long && k >= FIRST && (out.table?.keep ?? []).includes(k) ? k - FIRST : 0;
+              return [gap > 0 && <tr key={`g${k}`} aria-hidden="true"><td colSpan={r.length} className="border-b border-navy-100 px-2 py-1 text-center text-xs text-navy-600">… {gap} {gap === 1 ? 'row' : 'rows'} not shown · yours:</td></tr>,
+                <tr key={k} hidden={!shownRow(k)} className={(out.table?.keep ?? []).includes(k) ? 'bg-amber-50 font-semibold' : undefined}>{r.map((c, i) => <td key={i} data-label={lab[i]} className={`tabular-nums border-b border-navy-100 px-2 py-1.5 text-navy-800 ${out.table!.align?.[i] === 'r' ? 'text-right' : 'text-left'}`}>{c}</td>)}</tr>]; })}</tbody>
           </table>
           {long && <button type="button" data-tout-voir aria-expanded={all} onClick={() => setAll((x) => !x)} className="mt-2 min-h-11 rounded-full border border-navy-300 bg-white px-4 py-2 text-sm font-medium text-navy-800 hover:bg-navy-50">{all ? 'Show fewer rows' : out.table.more}</button>}
         </div>

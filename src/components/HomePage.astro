@@ -23,27 +23,27 @@ const h = helpers();
 const sources = x.sources.map((k) => ({ name: SOURCES[k].label, url: SOURCES[k].url }));
 const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(x.faqs, lang)];
 const doors = [
-  { label: 'Rank of my state among 51', href: route('workers-comp-rates-by-state', lang) },
+  { label: 'Rank of my state (50 states and DC)', href: route('workers-comp-rates-by-state', lang) },
   { label: 'What my class code costs', href: route('workers-comp-class-codes', lang) },
   { label: 'Do I have to carry it?', href: route('workers-comp-requirements-by-state', lang) },
-  { label: 'Washington: hourly state fund rates', href: route('washington-workers-comp-rates', lang) },
+  { label: 'What it costs per employee', href: route('how-much-does-workers-comp-cost', lang) },
 ];
 ---
 <PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} sources={sources} faqOuverte={0}>
   <header class="mb-3">
     <h1 class="font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{x.h1}</h1>
     <p class="mt-2 text-base font-medium text-navy-900 sm:text-lg">{x.answer}</p>
-    <p class="mt-2 text-sm font-medium text-navy-700">Independent site: not an insurer, an agent or a broker. No quote, no policy sold, no contact details asked.</p>
+    <p class="mt-2 text-sm text-navy-700">{x.dates} <span class="font-medium">Independent site: not an insurer, an agent or a broker. No quote, no policy sold, no contact details asked.</span></p>
   </header>
   {/* Doors by profile (brief of 2026-11-10, rule 2): the question a reader comes with, before the form. */}
   <nav data-chrome data-profils aria-label="Start from your question" class="mb-4">
     <p class="mb-2 text-base font-semibold text-navy-900">Start from your question</p>
-    <ul class="grid gap-2 sm:grid-cols-2">
+    <ul class="grid grid-cols-2 gap-2 lg:grid-cols-4">
       {doors.map((d) => <li><a href={d.href} class="flex min-h-11 items-center justify-between gap-3 rounded-lg border border-navy-300 bg-white px-4 py-1.5 text-[0.95rem] leading-snug font-medium text-accent-700 hover:bg-navy-50"><span>{d.label}</span><span aria-hidden="true">→</span></a></li>)}
     </ul>
   </nav>
   <div id="calculator" data-outil data-chrome class="scroll-mt-20"><Tool kind="all" idPrefix="home" /></div>
-  <p class="mt-3 text-sm text-navy-600">Rates of 51 jurisdictions in effect on January 1, 2024 (Oregon state study, published June 2025) · <a href={route('method', lang)} class="underline">How the figures are built</a> · <a href={route('about', lang)} class="underline">Who publishes this</a></p>
+  <p class="mt-3 text-sm text-navy-600"><a href={route('method', lang)} class="underline">How the figures are built</a> · <a href={route('about', lang)} class="underline">Who publishes this</a></p>
   <section class="mt-6"><Body html={x.start(h)} path={path} /></section>
   <Clamp text={x.resume} lang={lang} id="clamp-home" class="my-6" />
   <section class="mt-6"><Body html={x.guide(h)} path={path} /></section>

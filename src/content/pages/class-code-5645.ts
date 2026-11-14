@@ -25,7 +25,7 @@ export default definePage({
 <h2>Class code 5645 rates in eight states</h2>
 ${h.table(['State', 'Per $100', 'Rank of 51', `On ${K.usd(PAY)}`], states.map((s) => [K.name(s), K.r100(K.rate(CODE, s)), String(K.rank(CODE, s)), K.usd(K.prem(PAY, K.rate(CODE, s)))]), 'Residential carpentry (5645), rates in effect on January 1, 2024', ['l', 'r', 'r', 'r'])}
 <p>The table shows how far apart large building states are (${h.src('dcbs_2024', 'Oregon state study')}). Pennsylvania priced residential carpentry at ${K.r100(K.rate(CODE, 'PA'))}, ${K.ord(K.rank(CODE, 'PA'))} highest, while California, often the more expensive state, charged ${K.r100(K.rate(CODE, 'CA'))}. Florida and Texas sat near or below the median. The full ranking of the ${R.count} jurisdictions is under the calculator.</p>
-${h.mini('perEmployee', { t: 'Cost per framer, a year', p: ['st', 'emp'], d: { code: CODE, st: 'PA' } })}
+${h.mini('perEmployee', { t: 'Cost per framer, a year', p: ['st', 'emp', 'wage'], d: { code: CODE, st: 'PA' } })}
 <h2>Three stories as the dividing line</h2>
 <p>The class description stops at three stories. Above that height, carpentry on a residential building usually moves to another class. The line matters most to builders of small apartment buildings, who should ask the insurer how a four-story building is classified before bidding.</p>
 <h2>Washington and other comparisons</h2>

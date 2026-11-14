@@ -13,8 +13,8 @@ const jumps = [...idx].sort((a, b) => (b.rank2022 - b.rank) - (a.rank2022 - a.ra
 const CO = K.S('CO');
 
 export default definePage({
-  id: 'workers-comp-rates-by-state', group: 'cost', order: 1, slug: 'workers-comp-rates-by-state',
-  nav: 'Rates by state: the 51 ranking', card: 'The premium index of every state and DC, its rank and its distance from the median.',
+  id: 'workers-comp-rates-by-state', group: 'states', order: 19, slug: 'workers-comp-rates-by-state',
+  nav: 'All 50 states and DC, ranked', card: 'The premium index of every state and DC, its rank and its distance from the median.',
   title: 'Workers Comp Rates by State 2026: 51-State Index Ranking',
   description: 'Workers comp rates by state in 2026: the premium index of 50 states and DC per $100 of payroll, rank, change since 2022 and distance from the $1.09 median.',
   h1: 'Workers’ comp rates by state: the 51-state ranking',

@@ -22,7 +22,7 @@ export default definePage({
   body: (h) => `
 <h2>Class code 5551: the most expensive states</h2>
 <p>Georgia and New York lead, followed by ${K.name(R.list[2].st)}, ${K.name(R.list[3].st)} and ${K.name(R.list[4].st)} (${h.src('dcbs_2024', 'Oregon state study')}). The full ranking sits under the calculator. A roofing business working across state lines pays the rate of the state where each job is done, so a crew that crosses from Florida into Georgia multiplies its rate several times for that payroll.</p>
-${h.mini('perEmployee', { t: 'Cost per roofer, a year', p: ['st', 'emp'], d: { code: CODE, st: 'GA' } })}
+${h.mini('perEmployee', { t: 'Cost per roofer, a year', p: ['st', 'emp', 'wage'], d: { code: CODE, st: 'GA' } })}
 <h2>Keeping roofing payroll accurate</h2>
 <p>Because the rate is high, mistakes in payroll weigh heavily. Report under 5551 only the wages of employees who do roofing work or drive for it. Estimators and office staff who stay off roofs may qualify for clerical or outside sales classes under the state’s manual. Subcontractors without their own coverage can be added to your payroll at the audit: keep their certificates. The ${h.a('workers-comp-class-codes', 'class code guide')} explains how payroll is split between classes.</p>
 <p>Some states adjust contracting classes for employers who pay high wages. The study counts nineteen states with such a program: a contractor that pays its employees more than the average wage can have part of its construction payroll left out of the premium. Ask your insurer whether your state has one and how to qualify.</p>

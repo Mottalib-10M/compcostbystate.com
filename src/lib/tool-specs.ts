@@ -7,7 +7,7 @@
 import type { ToolSpec, V, Input, ToolOut } from './tool-types';
 import { formatMoney, formatNumber } from './format';
 import {
-  CLASSES, NAMES, STATE_CODES, STATES, MEDIAN, WA, RULES, CHANGES, N_STATES,
+  CLASSES, NAMES, STATE_CODES, STATES, WA, RULES, CHANGES, N_STATES,
   rate, rankOf, statesWith, premium, classRanking, stateClasses, modEffect, perHead, waCost, required, applyChange, stateName, classOf,
 } from './engine/comp';
 import { MARKET, US, ARP_AVG, COMPETITIVE, EXCLUSIVE, FUND_LABEL, shares, costRanking, whereToBuy, impliedRate } from './engine/market';
@@ -24,7 +24,11 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 export const longDate = (iso: string) => `${MONTHS[Number(iso.slice(5, 7)) - 1]} ${Number(iso.slice(8, 10))}, ${iso.slice(0, 4)}`;
 export const ordinal = (k: number) => `${k}${k % 100 >= 11 && k % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][k % 10] ?? 'th'}`;
 /** "the most expensive of 51 states", "15th most expensive of 51 states" (naive testers 2026-11-14: "1st highest of 51"). */
-export const rankText = (k: number, of: number) => (k === 1 ? `the most expensive of ${of} states` : k === of ? `the cheapest of ${of} states` : `${ordinal(k)} most expensive of ${of} states`);
+export const rankText = (k: number, of: number) => { const w = of === N_STATES ? 'the 50 states and DC' : `${of} states`; return k === 1 ? `the most expensive of ${w}` : k === of ? `the cheapest of ${w}` : `${ordinal(k)} most expensive of ${w}`; };
+/** A class code as printed on a policy, four digits: "0005", not "5" (naive testers 2026-11-14, third pass). */
+export const cc = (code: string) => code.padStart(4, '0');
+/** "$2.78 per $100 of payroll (2.8% of wages)": the rate also as a share of wages (naive testers, third pass). */
+export const per100 = (r: number) => `${r100(r)} per $100 of payroll (${formatNumber(r, r < 1 ? 2 : 1)}% of wages)`;
 
 /**
  * ONE example case for the whole site, so that a reader never sees two amounts for one case: a five-person
@@ -34,13 +38,13 @@ export const EX = { st: 'CA', code: '5190', payroll: 300000, mod: 1, employees: 
 
 const STATE_OPTIONS = STATE_CODES.map((c) => ({ value: c, label: NAMES[c] }));
 /** Trades in plain words, sorted by name, the code after the name (naive testers 2026-11-14: "how do I find my code?"). */
-const CLASS_OPTIONS = CLASSES.map((c) => ({ value: c.code, label: `${c.short} (${c.code})` })).sort((a, b) => a.label.localeCompare(b.label));
+const CLASS_OPTIONS = CLASSES.map((c) => ({ value: c.code, label: `${c.short} (${cc(c.code)})` })).sort((a, b) => a.label.localeCompare(b.label));
 const ST = (def: string = EX.st, label = 'State where the work is done'): Input => ({ kind: 'select', id: 'st', label, def, options: STATE_OPTIONS, help: 'Rates follow the state where the employee works, not the head office' });
 /** Class select limited to the 53 classes of the study; states without the class drop out of the state list. */
 const CODE = (def: string = EX.code): Input => ({ kind: 'select', id: 'code', label: 'What kind of work? (class code)', def, options: CLASS_OPTIONS, help: 'Pick the work your employees do. The four-digit number is the class code printed on a policy; office staff are 8810', wide: true });
 const STW = (def: string = EX.st, label = 'State where the work is done'): Input => ({ kind: 'select', id: 'st', label, def, options: STATE_OPTIONS, dyn: (v) => STATE_OPTIONS.filter((o) => rate(s(v, 'code'), o.value) !== null), help: 'Where the employee works' });
-const PAYROLL = (def: number = EX.payroll): Input => ({ id: 'pay', label: 'Yearly payroll in this class', def, unit: '$', max: 50000000, help: 'Gross wages of the employees in that class; owners usually apart' });
-const MOD: Input = { id: 'mod', label: 'Claims score (mod)', def: EX.mod, max: 5, decimals: 2, help: 'Leave 1.00 if you don’t know. Below 1 (few claims) lowers the premium, above 1 raises it', short: 'mod' };
+const PAYROLL = (def: number = EX.payroll): Input => ({ id: 'pay', label: 'Yearly payroll in this class', def, unit: '$', max: 50000000, help: 'Gross wages of the employees who do this work. Leave out the owners’ own pay: owners are usually covered separately' });
+const MOD: Input = { id: 'mod', label: 'Past injury claims score', def: EX.mod, max: 5, decimals: 2, fixed: true, help: 'Leave 1.00 if you don’t know. Your policy calls it the “mod” or “EMR”: few past claims puts it below 1 and lowers the price, many claims put it above 1', short: 'claims score' };
 
 /** A Washington class in plain words for a select: "NOC" (not otherwise classified) dropped, cut at 34 characters. */
 const waDesc = (d: string) => { const x = d.replace(/,?\s*\bN\.?O\.?C\.?\b/g, '').replace(/\bHVAC-R\b/g, 'Heating/cooling').trim(); return x.length > 34 ? `${x.slice(0, 33).trim()}…` : x; };
@@ -50,9 +54,10 @@ function spec(inputs: Input[], arg: Record<string, number | string>, run: (v: V)
     run,
   };
 }
-const caseText = (v: V) => `Example: ${classOf(s(v, 'code')).short.toLowerCase()} (${s(v, 'code')}) in ${stateName(s(v, 'st'))}, ${usd(n(v, 'pay'))} of payroll`;
+const caseText = (v: V) => `Example: ${classOf(s(v, 'code')).short.toLowerCase()} (${cc(s(v, 'code'))}) in ${stateName(s(v, 'st'))}, ${usd(n(v, 'pay'))} of payroll`;
 /** One date sentence (naive testers 2026-11-14: "2024, 2023, 2022, 2026: which one counts?"). */
-const STUDY = 'Rates: the latest study that compares all 50 states and DC, made by the state of Oregon every two years. It reads the rates in force on January 1, 2024 (published June 2025), averaged across insurers. Your insurer’s rate, minimum premium and fees differ: this is an order of magnitude, not a quote.';
+/** Third pass: one short line (the long paragraph was skipped, and "Oregon" read as "Oregon prices"). */
+const STUDY = 'Rates of January 1, 2024, from the latest official comparison of all 50 states and DC (published in June 2025 by Oregon’s insurance regulator). A ballpark figure, not a quote.';
 
 /** Premium of a class in a state, and the same payroll in the cheapest and dearest states. */
 function estimate(v: V): ToolOut {
@@ -62,11 +67,11 @@ function estimate(v: V): ToolOut {
   const k = classRanking(code), p = premium(pay, r, mod);
   return {
     label: 'Estimated yearly premium', value: usd(p), example: caseText(v),
-    sub: `${r100(r)} per $100 of payroll · ${rankText(rankOf(code, st)!, k.count)} for this class`,
+    sub: `${per100(r)} · ${rankText(rankOf(code, st)!, k.count)} for this class`,
     rows: [
       ['Rate per $100 of payroll', r100(r), r],
       ['Per month', usd(p / 12)],
-      [`Median state for class ${code}`, `${r100(k.median)}, so ${usd(premium(pay, k.median, mod))} a year`],
+      [`Median state for this work`, `${r100(k.median)}, so ${usd(premium(pay, k.median, mod))} a year`],
       [`Cheapest: ${stateName(k.low.st)}`, `${r100(k.low.rate)}, so ${usd(premium(pay, k.low.rate, mod))}`],
       [`Most expensive: ${stateName(k.high.st)}`, `${r100(k.high.rate)}, so ${usd(premium(pay, k.high.rate, mod))}`],
       ...(mod !== 1 ? [['Without your mod (1.00)', usd(premium(pay, r, 1))] as [string, string]] : []),
@@ -93,21 +98,21 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
 
   /** One class across the 51 jurisdictions: the premium in the reader's state first (naive testers 2026-11-14: the big
    *  figure was a national range written high to low, and the state was hidden in a fold). */
-  rank: (arg = {}) => spec([CODE(), STW(EX.st, 'Your state'), PAYROLL()], arg, (v) => {
+  rank: (arg = {}) => spec([CODE(), { ...STW(EX.st, 'Your state'), help: 'This page starts from an example state: pick the one where your employees work' }, PAYROLL()], arg, (v) => {
     const code = s(v, 'code'), pay = n(v, 'pay'), st = s(v, 'st');
     const k = classRanking(code), mine = rate(code, st), name = classOf(code).short;
     const idx = k.list.findIndex((x) => x.st === st);
     return {
       label: `Yearly premium in ${stateName(st)}`, value: mine === null ? 'No rate' : usd(premium(pay, mine)),
-      example: `Example: ${name.toLowerCase()} (${code}) in ${stateName(st)}, ${usd(pay)} of payroll`, exampleAide: 'pick your work and your state',
-      sub: mine === null ? `${stateName(st)} uses no comparable class` : `${r100(mine)} per $100 of payroll · ${rankText(rankOf(code, st)!, k.count)} for this class`,
+      example: `Example: ${name.toLowerCase()} (${cc(code)}) in ${stateName(st)}, ${usd(pay)} of payroll`, exampleAide: 'pick your kind of work',
+      sub: mine === null ? `${stateName(st)} uses no comparable class` : `${per100(mine)} · ${rankText(rankOf(code, st)!, k.count)} for this class`,
       rows: [
         [`Cheapest: ${stateName(k.low.st)}`, `${r100(k.low.rate)}, ${usd(premium(pay, k.low.rate))} a year`],
         ['Median state', `${r100(k.median)}, ${usd(premium(pay, k.median))} a year`],
         [`Most expensive: ${stateName(k.high.st)}`, `${r100(k.high.rate)}, ${usd(premium(pay, k.high.rate))} a year`],
         ['From the cheapest to the most expensive state', `${r100(k.low.rate)} to ${r100(k.high.rate)} per $100`],
       ],
-      table: { caption: `${name} (${code}) in ${k.count} states, most expensive first`, headers: ['Rank', 'State', 'Per $100', 'Yearly premium'], align: ['r', 'l', 'r', 'r'], rows: k.list.map((x) => [String(x.rank), NAMES[x.st], r100(x.rate), usd(premium(pay, x.rate))]), keep: idx >= 0 ? [idx] : [], more: `Show all ${k.count} states` },
+      table: { compact: true, caption: `${name} (${cc(code)}) in ${k.count} states, most expensive first`, headers: ['Rank', 'State', 'Per $100', 'Yearly premium'], align: ['r', 'l', 'r', 'r'], rows: k.list.map((x) => [String(x.rank), NAMES[x.st], r100(x.rate), usd(premium(pay, x.rate))]), keep: idx >= 0 ? [idx] : [], more: `Show all ${k.count} states` },
       note: `${k.missing.length ? `No comparable class in ${k.missing.map(stateName).join(', ')}. ` : ''}${STUDY}`,
     };
   }),
@@ -121,15 +126,14 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
     const idx = list.findIndex((c) => c.code === code);
     return {
       label: `Yearly premium in ${stateName(st)}`, value: r === null ? 'No rate' : usd(premium(pay, r)),
-      example: `Example: ${name.toLowerCase()} (${code}) in ${stateName(st)}, ${usd(pay)} of payroll`, exampleAide: 'pick your state, your work and your payroll',
-      sub: r === null ? `${stateName(st)} uses no class comparable to ${code}` : `${r100(r)} per $100 of payroll · ${rankText(rankOf(code, st)!, k.count)} for this class`,
+      example: `Example: ${name.toLowerCase()} (${cc(code)}) in ${stateName(st)}, ${usd(pay)} of payroll`, exampleAide: 'pick your state, your work and your payroll',
+      sub: r === null ? `${stateName(st)} uses no class comparable to ${cc(code)}` : `${per100(r)} · ${rankText(rankOf(code, st)!, k.count)} for this class`,
       rows: [
         ['Per month', r === null ? 'no rate' : usd(premium(pay, r) / 12)],
         ['Same work, median state', `${r100(k.median)}, ${usd(premium(pay, k.median))} a year`],
-        [`${stateName(st)} overall, all work mixed`, `${formatNumber(x.pctMedian, 0)}% of the median state, ${ordinal(x.rank)} most expensive of ${N_STATES}`],
-        ['Date of these rates', `In force on January 1, 2024 (set on ${x.effective})`],
-      ],
-      table: { caption: `${stateName(st)}: ${list.length} kinds of work, yearly premium on ${usd(pay)} of payroll`, headers: ['Work', 'Class code', 'Per $100', 'Rank among states (1 = most expensive)', 'Yearly premium'], align: ['l', 'l', 'r', 'r', 'r'], rows: list.map((c) => [c.short, c.code, r100(c.rate), `${ordinal(c.rank)} of ${c.of}`, usd(premium(pay, c.rate))]), keep: idx >= 0 ? [idx] : [], more: `Show all ${list.length} kinds of work` },
+        [`${stateName(st)} overall, all work mixed`, `${formatNumber(x.pctMedian, 0)}% of the median state, ${rankText(x.rank, N_STATES)}`],
+              ],
+      table: { caption: `${stateName(st)}: ${list.length} kinds of work, yearly premium on ${usd(pay)} of payroll`, compact: true, headers: ['Work (class code)', 'Per $100', 'Yearly premium'], align: ['l', 'r', 'r'], rows: list.map((c) => [`${c.short} (${cc(c.code)})`, r100(c.rate), usd(premium(pay, c.rate))]), keep: idx >= 0 ? [idx] : [], more: `Show all ${list.length} kinds of work` },
       note: `“All work mixed” compares states on one footing, by weighting the 53 kinds of work the same way everywhere; it is a price level, not a rate any employer pays. ${STUDY}`,
     };
   }),
@@ -142,13 +146,12 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
       label: `${stateName(st)}: rank among ${N_STATES}`, value: ordinal(x.rank), example: `Example: ${stateName(st)}`, exampleAide: 'pick your state',
       sub: `${x.rank === 1 ? 'the most expensive state' : `${ordinal(x.rank)} most expensive`} · price level ${formatNumber(x.pctMedian, 0)}% of the median state`,
       rows: [
-        ['Price level (index)', `${r100(x.index)} per $100, against ${r100(MEDIAN)} in the median state`],
         [`Most expensive: ${stateName(all[0].c)}`, `${formatNumber(all[0].pctMedian, 0)}% of the median`],
         [`Cheapest: ${stateName(all[all.length - 1].c)}`, `${formatNumber(all[all.length - 1].pctMedian, 0)}% of the median`],
         ['Your own premium', 'follows your class code: use the class calculator'],
       ],
-      table: { caption: 'Premium index of 51 jurisdictions, highest first (study of rates in effect on January 1, 2024)', headers: ['Rank', 'State', 'Index per $100', '% of median'], align: ['r', 'l', 'r', 'r'], rows: all.map((y) => [String(y.rank), NAMES[y.c], r100(y.index), `${formatNumber(y.pctMedian, 0)}%`]), keep: [all.findIndex((y) => y.c === st)], more: `Show all ${N_STATES} states` },
-      note: 'The index applies one payroll mix (Oregon’s) to every state, so it ranks price levels; it is not a rate to multiply your payroll by. Use the class calculator for that.',
+      table: { compact: true, caption: '50 states and DC, most expensive first: price level, all work mixed (rates of January 1, 2024)', headers: ['Rank', 'State', 'Price level (median state = 100%)'], align: ['r', 'l', 'r'], rows: all.map((y) => [String(y.rank), NAMES[y.c], `${formatNumber(y.pctMedian, 0)}%`]), keep: [all.findIndex((y) => y.c === st)], more: `Show all ${N_STATES} states` },
+      note: 'A price level compares states on one footing, all work mixed: 200% means about twice the median state. Your own premium follows your kind of work: the class calculator gives it in dollars.',
     };
   }),
 
@@ -165,14 +168,14 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
   }),
 
   /** Cost per employee and per hour. */
-  perEmployee: (arg = {}) => spec([CODE(), STW(), { id: 'emp', label: 'Employees in this class', def: EX.employees, max: 100000 }, { id: 'wage', label: 'Yearly wage of one employee', def: EX.payroll / EX.employees, unit: '$', max: 5000000 }, { id: 'hrs', label: 'Hours worked a year by one employee', def: EX.hours, max: 8784, adv: true, short: 'hours' }, MOD], arg, (v) => {
+  perEmployee: (arg = {}) => spec([CODE(), STW(), { id: 'emp', label: 'Employees in this class', def: EX.employees, max: 100000 }, { id: 'wage', label: 'Average yearly wage of one employee', def: EX.payroll / EX.employees, unit: '$', max: 5000000 }, { id: 'hrs', label: 'Hours worked a year by one employee', def: EX.hours, max: 8784, adv: true, short: 'hours' }, MOD], arg, (v) => {
     const code = s(v, 'code'), st = s(v, 'st'), emp = n(v, 'emp'), wage = n(v, 'wage'), r = rate(code, st);
     if (r === null) return { label: 'Cost per employee', value: 'No rate', rows: [], note: `${stateName(st)} uses no class comparable to ${code} in the study.` };
     const p = premium(emp * wage, r, n(v, 'mod') || 1), h = perHead(p, emp, n(v, 'hrs'));
     return {
-      label: 'Cost per employee, a year', value: usd(h.perEmployee), example: `Example: ${emp} employees at ${usd(wage)} in class ${code}, ${stateName(st)}`,
+      label: 'Cost per employee, a year', value: usd(h.perEmployee), example: `Example: ${emp} employees at ${usd(wage)} each in class ${cc(code)}, ${stateName(st)}`,
       sub: `${usd(h.perMonth)} a month · ${h.perHour > 0 ? `$${formatNumber(h.perHour, 2)} an hour` : ''}`,
-      rows: [['Whole payroll', usd(emp * wage)], ['Yearly premium', usd(p)], ['Share of wages', pct(p / Math.max(1, emp * wage), 1)], ['Rate per $100', r100(r)]],
+      rows: [[`Whole payroll (${formatNumber(emp, 0)} × ${usd(wage)})`, usd(emp * wage)], ['Yearly premium', usd(p)], ['Share of wages', pct(p / Math.max(1, emp * wage), 1)], ['Rate per $100', r100(r)]],
       note: STUDY,
     };
   }),
@@ -231,7 +234,7 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
     const st = s(v, 'st'), pay = n(v, 'pay'), m = MARKET[st], x = STATES[st], rule = RULES[st];
     const c = m.cost100 ?? null;
     return {
-      label: `Workers’ comp in ${stateName(st)}`, value: c === null ? `${r100(x.index)} index` : `${r100(c)} per $100 of wages`,
+      label: `Workers’ comp in ${stateName(st)}`, value: c === null ? `${formatNumber(x.pctMedian, 0)}% of the median state` : `${r100(c)} per $100 of wages`,
       example: `Example: ${stateName(st)}, ${usd(pay)} of payroll`, exampleAide: 'pick your state',
       sub: c === null ? `overall price level ${rankText(x.rank, N_STATES)}` : `what employers paid in all in 2022, against ${r100(US.cost100)} nationally · overall price level ${rankText(x.rank, N_STATES)}`,
       rows: [
@@ -242,7 +245,7 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
           ['Benefits paid per $100 of wages, 2022', r100(m.ben100!)] as [string, string],
           ['Cost per $100 in 2018', r100(m.cost100_2018!)] as [string, string],
         ]),
-        ['Premium index (Oregon study)', `${r100(x.index)} per $100, ${formatNumber(x.pctMedian, 0)}% of the median`],
+        ['Overall price level (Oregon study)', `${formatNumber(x.pctMedian, 0)}% of the median state`],
       ],
       table: { caption: 'Employer cost per $100 of covered wages, 2018 and 2022, lowest first (NASI)', headers: ['State', '2022', '2018', 'Who sells coverage'], align: ['l', 'r', 'r', 'l'], rows: costRanking().map((y) => [NAMES[y.st], r100(y.cost100), r100(y.cost100_2018), FUND_LABEL[y.fund]]) },
       note: 'The cost per $100 of wages is every employer of the state together: premiums, deductible benefits and self-insured costs (National Academy of Social Insurance, 2022 data). Your own price follows your class code: the class calculator gives it.',
@@ -278,7 +281,7 @@ const SPECS: Record<string, (arg?: Arg) => ToolSpec> = {
     const imp = impliedRate(q, pay, mod), avg = premium(pay, r, mod), gap = avg > 0 ? q / avg - 1 : 0;
     const k = classRanking(code), above = k.list.filter((x) => x.rate > imp).length;
     return {
-      label: 'Your quote against the state average', value: `${gap >= 0 ? '+' : ''}${formatNumber(gap * 100, 0)}%`, example: `Example: a ${usd(q)} quote for ${classOf(code).short.toLowerCase()} (${code}) in ${stateName(st)}`,
+      label: 'Your quote against the state average', value: `${gap >= 0 ? '+' : ''}${formatNumber(gap * 100, 0)}%`, example: `Example: a ${usd(q)} quote for ${classOf(code).short.toLowerCase()} (${cc(code)}) in ${stateName(st)}`,
       sub: `${r100(imp)} per $100 quoted, against an average of ${r100(r)} in the study`,
       rows: [
         ['Premium at the study rate', usd(avg)],
